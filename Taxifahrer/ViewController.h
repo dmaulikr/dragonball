@@ -15,6 +15,7 @@
     IBOutlet UITextField* txtUsername;
     IBOutlet UITextField* txtPassword;
     IBOutlet UITextField* txtPhone;
+    IBOutlet UITextField* txtFirma;
     
     IBOutlet UIButton* btnSpeichern;
 }

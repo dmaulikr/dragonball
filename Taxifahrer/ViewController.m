@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UserdataManager.h"
 @interface ViewController ()
 
 @end
@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,6 +30,12 @@
 -(IBAction) speichern:(id)sender
 {
     NSLog(@"Registrier Button wurde aufgerufen!");
+    UserdataManager* um = [UserdataManager getInstance];
+    um.username =  txtUsername.text;
+    um.password = txtPassword.text;
+    um.phone = txtPhone.text;
+    
+    [um saveData];
 }
 
 
