@@ -26,14 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)UserRegistrierenGedureckt:(id)sender
+-(IBAction) speichern:(id)sender
 {
     NSLog(@"Registrier Button wurde aufgerufen!");
 }
 
 
 - (void)dealloc {
-    [_registrierenbut release];
+   
     [super dealloc];
 }
 @end

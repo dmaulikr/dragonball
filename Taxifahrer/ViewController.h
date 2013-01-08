@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+#import <UIKit/UIKit.h>
+
 @interface ViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UIButton *registrierenbut;
+{
+    IBOutlet UITextField* txtUsername;
+    IBOutlet UITextField* txtPassword;
+    IBOutlet UITextField* txtPhone;
+    
+    IBOutlet UIButton* btnSpeichern;
+}
+
+-(IBAction) registrieren:(id)sender;
 
 @end
