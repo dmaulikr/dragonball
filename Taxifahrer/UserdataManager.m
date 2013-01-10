@@ -30,6 +30,7 @@ static UserdataManager* umanager = nil;
     [userdaten setObject:self.phone forKey:UDKey_Phone];
     [userdaten setObject:self.firma forKey:UDKey_Firma];
     [userdaten synchronize];
+    NSLog(@"Daten gesichert");
 }
 
 -(void) loadData
