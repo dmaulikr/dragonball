@@ -35,7 +35,28 @@
     um.password = txtPassword.text;
     um.phone = txtPhone.text;
     
+    if ([txtUsername.text isEqualToString:@""])
+    {
+        NSLog(@"Ich bin leer");
+    }
+    
+    if ([txtPassword.text isEqualToString:@""])
+    {
+        NSLog(@"Ich bin leer");
+    }
+    
+    if ([txtPhone.text isEqualToString:@""])
+    {
+        NSLog(@"Ich bin leer");
+    }
+    
+    if ([txtFirma.text isEqualToString:@""])
+    {
+        NSLog(@"Ich bin leer");
+    }
+ 
     [um saveData];
+   
 }
 
 

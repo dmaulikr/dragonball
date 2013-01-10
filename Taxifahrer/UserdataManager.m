@@ -40,6 +40,7 @@ static UserdataManager* umanager = nil;
     self.password = [userdaten objectForKey:UDKey_Password];
     self.phone = [userdaten objectForKey:UDKey_Phone];
     self.firma = [userdaten objectForKey:UDKey_Firma];
+    NSLog(@"Daten geladen");
 }
 
 @end
