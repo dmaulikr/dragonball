@@ -43,7 +43,6 @@
 - (IBAction)buttonRegi:(id)sender {
     NSLog(@"Regi pressed");
     [[ViewMediator getInstance] vonLoginZuRegi];
-    NSLog(@"Noovb");
 }
 
 - (IBAction)buttonMap:(id)sender {
