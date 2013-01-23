@@ -7,26 +7,18 @@
 //
 
 #import "LoginScreenViewController.h"
-
-@interface LoginScreenViewController ()
-
-@end
+#import "LoginRequest.h"
 
 @implementation LoginScreenViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize txtUsername;
+@synthesize txtPassword;
+@synthesize btnLogin;
+@synthesize lblErgebnis;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +27,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonGedrueckt:(id)sender {
+    NSLog(@"button gedrueckt");
+    LoginRequest* request  = [LoginRequest getInstance];
+    [request requestActivation:txtUsername.text :txtPassword.text];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 @end
