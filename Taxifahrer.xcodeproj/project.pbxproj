@@ -37,6 +37,9 @@
 		0A6FF077169C7F4D00BA9F51 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FF075169C7F4D00BA9F51 /* ViewController_iPhone.xib */; };
 		0A6FF07A169C7F4D00BA9F51 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FF078169C7F4D00BA9F51 /* ViewController_iPad.xib */; };
 		0A6FF096169C870900BA9F51 /* UserdataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6FF095169C870900BA9F51 /* UserdataManager.m */; };
+		909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934EA16B02BB4007CB613 /* LoginScreenViewController.m */; };
+		909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */; };
+		909934F116B02C0B007CB613 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934F016B02C0B007CB613 /* LoginRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,11 @@
 		0A6FF079169C7F4D00BA9F51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		0A6FF094169C870900BA9F51 /* UserdataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserdataManager.h; sourceTree = "<group>"; };
 		0A6FF095169C870900BA9F51 /* UserdataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserdataManager.m; sourceTree = "<group>"; };
+		909934E916B02BB4007CB613 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
+		909934EA16B02BB4007CB613 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
+		909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		909934EF16B02C0B007CB613 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		909934F016B02C0B007CB613 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,9 @@
 				0A6FF073169C7F4D00BA9F51 /* ViewController.m */,
 				0A6FF075169C7F4D00BA9F51 /* ViewController_iPhone.xib */,
 				0A6FF078169C7F4D00BA9F51 /* ViewController_iPad.xib */,
+				909934E916B02BB4007CB613 /* LoginScreenViewController.h */,
+				909934EA16B02BB4007CB613 /* LoginScreenViewController.m */,
+				909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -234,6 +245,8 @@
 			children = (
 				0A6FF094169C870900BA9F51 /* UserdataManager.h */,
 				0A6FF095169C870900BA9F51 /* UserdataManager.m */,
+				909934EF16B02C0B007CB613 /* LoginRequest.h */,
+				909934F016B02C0B007CB613 /* LoginRequest.m */,
 			);
 			name = UserdataManager;
 			sourceTree = "<group>";
@@ -295,6 +308,7 @@
 				0A6FF071169C7F4D00BA9F51 /* Default-568h@2x.png in Resources */,
 				0A6FF077169C7F4D00BA9F51 /* ViewController_iPhone.xib in Resources */,
 				0A6FF07A169C7F4D00BA9F51 /* ViewController_iPad.xib in Resources */,
+				909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +340,8 @@
 				0A50B4A116AF44BF00257B59 /* SBJsonTokeniser.m in Sources */,
 				0A50B4A216AF44BF00257B59 /* SBJsonUTF8Stream.m in Sources */,
 				0A50B4A316AF44BF00257B59 /* SBJsonWriter.m in Sources */,
+				909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */,
+				909934F116B02C0B007CB613 /* LoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
