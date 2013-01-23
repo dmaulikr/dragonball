@@ -8,6 +8,7 @@
 
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"
+#import "ViewMediator.h"
 
 @implementation LoginScreenViewController
 @synthesize txtUsername;
@@ -38,4 +39,16 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (IBAction)buttonRegi:(id)sender {
+    NSLog(@"Regi pressed");
+    [[ViewMediator getInstance] vonLoginZuRegi];
+    NSLog(@"Noovb");
+}
+
+- (IBAction)buttonMap:(id)sender {
+    NSLog(@"Map pressed");
+    [[ViewMediator getInstance] vonLoginZuMap];
+}
+
 @end

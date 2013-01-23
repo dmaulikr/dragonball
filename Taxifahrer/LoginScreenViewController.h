@@ -21,5 +21,7 @@
 @property (nonatomic,retain) IBOutlet UIButton* btnLogin;
 @property (nonatomic,retain) IBOutlet UILabel* lblErgebnis;
 - (IBAction)buttonGedrueckt:(id)sender;
+- (IBAction)buttonRegi:(id)sender;
+- (IBAction)buttonMap:(id)sender;
 
 @end

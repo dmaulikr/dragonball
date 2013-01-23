@@ -35,11 +35,13 @@
 		0A6FF071169C7F4D00BA9F51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FF070169C7F4D00BA9F51 /* Default-568h@2x.png */; };
 		0A6FF074169C7F4D00BA9F51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6FF073169C7F4D00BA9F51 /* ViewController.m */; };
 		0A6FF077169C7F4D00BA9F51 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FF075169C7F4D00BA9F51 /* ViewController_iPhone.xib */; };
-		0A6FF07A169C7F4D00BA9F51 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6FF078169C7F4D00BA9F51 /* ViewController_iPad.xib */; };
 		0A6FF096169C870900BA9F51 /* UserdataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6FF095169C870900BA9F51 /* UserdataManager.m */; };
 		909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934EA16B02BB4007CB613 /* LoginScreenViewController.m */; };
 		909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */; };
 		909934F116B02C0B007CB613 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934F016B02C0B007CB613 /* LoginRequest.m */; };
+		9099350016B03814007CB613 /* ViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934FF16B03814007CB613 /* ViewMediator.m */; };
+		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
+		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +98,6 @@
 		0A6FF072169C7F4D00BA9F51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A6FF073169C7F4D00BA9F51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A6FF076169C7F4D00BA9F51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		0A6FF079169C7F4D00BA9F51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		0A6FF094169C870900BA9F51 /* UserdataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserdataManager.h; sourceTree = "<group>"; };
 		0A6FF095169C870900BA9F51 /* UserdataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserdataManager.m; sourceTree = "<group>"; };
 		909934E916B02BB4007CB613 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
@@ -104,6 +105,11 @@
 		909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
 		909934EF16B02C0B007CB613 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		909934F016B02C0B007CB613 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		909934FE16B03814007CB613 /* ViewMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewMediator.h; sourceTree = "<group>"; };
+		909934FF16B03814007CB613 /* ViewMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewMediator.m; sourceTree = "<group>"; };
+		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,10 +222,12 @@
 				0A6FF072169C7F4D00BA9F51 /* ViewController.h */,
 				0A6FF073169C7F4D00BA9F51 /* ViewController.m */,
 				0A6FF075169C7F4D00BA9F51 /* ViewController_iPhone.xib */,
-				0A6FF078169C7F4D00BA9F51 /* ViewController_iPad.xib */,
 				909934E916B02BB4007CB613 /* LoginScreenViewController.h */,
 				909934EA16B02BB4007CB613 /* LoginScreenViewController.m */,
 				909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */,
+				9099350716B039C2007CB613 /* MapViewController.h */,
+				9099350816B039C2007CB613 /* MapViewController.m */,
+				9099350916B039C2007CB613 /* MapViewController.xib */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -247,6 +255,8 @@
 				0A6FF095169C870900BA9F51 /* UserdataManager.m */,
 				909934EF16B02C0B007CB613 /* LoginRequest.h */,
 				909934F016B02C0B007CB613 /* LoginRequest.m */,
+				909934FE16B03814007CB613 /* ViewMediator.h */,
+				909934FF16B03814007CB613 /* ViewMediator.m */,
 			);
 			name = UserdataManager;
 			sourceTree = "<group>";
@@ -307,8 +317,8 @@
 				0A6FF06F169C7F4D00BA9F51 /* Default@2x.png in Resources */,
 				0A6FF071169C7F4D00BA9F51 /* Default-568h@2x.png in Resources */,
 				0A6FF077169C7F4D00BA9F51 /* ViewController_iPhone.xib in Resources */,
-				0A6FF07A169C7F4D00BA9F51 /* ViewController_iPad.xib in Resources */,
 				909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */,
+				9099350B16B039C2007CB613 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +352,8 @@
 				0A50B4A316AF44BF00257B59 /* SBJsonWriter.m in Sources */,
 				909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */,
 				909934F116B02C0B007CB613 /* LoginRequest.m in Sources */,
+				9099350016B03814007CB613 /* ViewMediator.m in Sources */,
+				9099350A16B039C2007CB613 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +374,6 @@
 				0A6FF076169C7F4D00BA9F51 /* en */,
 			);
 			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		0A6FF078169C7F4D00BA9F51 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A6FF079169C7F4D00BA9F51 /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
