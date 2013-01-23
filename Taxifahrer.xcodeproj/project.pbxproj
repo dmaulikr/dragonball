@@ -24,6 +24,7 @@
 		0A64CD0416A4625300CEB4F2 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCFC16A4625300CEB4F2 /* DDXMLElementAdditions.m */; };
 		0A64CD0516A4625300CEB4F2 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCFE16A4625300CEB4F2 /* DDXMLNode.m */; };
 		0A64CD0616A4625300CEB4F2 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CD0116A4625300CEB4F2 /* NSStringAdditions.m */; };
+		0A6530B416B03DDE0002C95B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6530B316B03DDE0002C95B /* MapKit.framework */; };
 		0A6FF05B169C7F4D00BA9F51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6FF05A169C7F4D00BA9F51 /* UIKit.framework */; };
 		0A6FF05D169C7F4D00BA9F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6FF05C169C7F4D00BA9F51 /* Foundation.framework */; };
 		0A6FF05F169C7F4D00BA9F51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6FF05E169C7F4D00BA9F51 /* CoreGraphics.framework */; };
@@ -82,6 +83,7 @@
 		0A64CCFF16A4625300CEB4F2 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		0A64CD0016A4625300CEB4F2 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
 		0A64CD0116A4625300CEB4F2 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		0A6530B316B03DDE0002C95B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0A6FF056169C7F4D00BA9F51 /* Taxifahrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxifahrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6FF05A169C7F4D00BA9F51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A6FF05C169C7F4D00BA9F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6530B416B03DDE0002C95B /* MapKit.framework in Frameworks */,
 				0A6FF05B169C7F4D00BA9F51 /* UIKit.framework in Frameworks */,
 				0A6FF05D169C7F4D00BA9F51 /* Foundation.framework in Frameworks */,
 				0A6FF05F169C7F4D00BA9F51 /* CoreGraphics.framework in Frameworks */,
@@ -189,6 +192,7 @@
 		0A6FF04B169C7F4D00BA9F51 = {
 			isa = PBXGroup;
 			children = (
+				0A6530B316B03DDE0002C95B /* MapKit.framework */,
 				0A6FF060169C7F4D00BA9F51 /* Taxifahrer */,
 				0A6FF059169C7F4D00BA9F51 /* Frameworks */,
 				0A6FF057169C7F4D00BA9F51 /* Products */,
