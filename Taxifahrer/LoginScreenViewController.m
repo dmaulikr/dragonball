@@ -9,16 +9,25 @@
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"
 #import "ViewMediator.h"
+#import "UserdataManager.h"
 
 @implementation LoginScreenViewController
+{
+@public
+    LoginScreenViewController* lsvc;
+}
 @synthesize txtUsername;
 @synthesize txtPassword;
 @synthesize btnLogin;
 @synthesize lblErgebnis;
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   // self.loadData;
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -30,9 +39,13 @@
 
 - (IBAction)buttonGedrueckt:(id)sender {
     NSLog(@"button gedrueckt");
+    
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
+  //  self.saveData;
+
 }
+
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
@@ -48,6 +61,29 @@
 - (IBAction)buttonMap:(id)sender {
     NSLog(@"Map pressed");
     [[ViewMediator getInstance] vonLoginZuMap];
+   
 }
+
+
+-(void) saveData
+{
+    NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
+    [userdaten setObject:lsvc.txtUsername forKey:(UDKeyUsername)];
+    [userdaten setObject:self.txtPassword forKey:(UDKeyPassword)];
+    [userdaten synchronize];
+    NSLog(@"Daten gespeichert");
+    
+}
+
+-(void) loadData
+
+{
+    NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
+    self.txtUsername = [userdaten objectForKey:UDKeyUsername];
+    self.txtPassword = [userdaten objectForKey:UDKeyPassword];
+    NSLog(@"Daten geladen");
+    
+}
+
 
 @end
