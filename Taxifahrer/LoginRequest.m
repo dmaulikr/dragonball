@@ -7,7 +7,7 @@
 //
 
 #import "LoginRequest.h"
-
+#import "ViewMediator.h"
 @implementation LoginRequest
 
 static LoginRequest* loginrequest = nil;
@@ -92,6 +92,7 @@ static LoginRequest* loginrequest = nil;
     NSString* status = [[rootElement elementForName:XMLTagStatus] stringValue];
     if ([status isEqualToString:@"ok"]) {
         NSLog(@"Login-Daten erfolgreich");
+          [[ViewMediator getInstance] vonLoginZuMap];
     } else {
         NSLog(@"Login fehlgeschlagen");
     }
