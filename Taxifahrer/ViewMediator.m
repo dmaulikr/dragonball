@@ -50,4 +50,9 @@ static ViewMediator* mediator = nil;
     [self.Login.navigationController pushViewController:self.Karte animated:YES];
 }
 
+-(void) vonRegiZuMap
+{
+    [self.Registrieren.navigationController pushViewController:self.Karte animated:YES];
+}
+
 @end

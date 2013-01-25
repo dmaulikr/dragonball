@@ -26,5 +26,6 @@
 
 -(void) vonLoginZuRegi;
 -(void) vonLoginZuMap;
+-(void) vonRegiZuMap;
 
 @end
