@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1FAB5216B3380800AE6A76 /* ConfigRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FAB5116B3380800AE6A76 /* ConfigRequest.m */; };
 		0A50B49816AF44BF00257B59 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */; };
 		0A50B49916AF44BF00257B59 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48316AF44BF00257B59 /* SBJsonParser.m */; };
 		0A50B49A16AF44BF00257B59 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48516AF44BF00257B59 /* SBJsonStreamParser.m */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1FAB5016B3380800AE6A76 /* ConfigRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigRequest.h; path = ../../../Dropbox/ProjekteUndHausaufgaben/Hausaufgabe4KW/Config/Config/ConfigRequest.h; sourceTree = "<group>"; };
+		0A1FAB5116B3380800AE6A76 /* ConfigRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigRequest.m; path = ../../../Dropbox/ProjekteUndHausaufgaben/Hausaufgabe4KW/Config/Config/ConfigRequest.m; sourceTree = "<group>"; };
 		0A50B47F16AF44BF00257B59 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0A50B48116AF44BF00257B59 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				9099350716B039C2007CB613 /* MapViewController.h */,
 				9099350816B039C2007CB613 /* MapViewController.m */,
 				9099350916B039C2007CB613 /* MapViewController.xib */,
+				0A1FAB5016B3380800AE6A76 /* ConfigRequest.h */,
+				0A1FAB5116B3380800AE6A76 /* ConfigRequest.m */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -358,6 +363,7 @@
 				909934F116B02C0B007CB613 /* LoginRequest.m in Sources */,
 				9099350016B03814007CB613 /* ViewMediator.m in Sources */,
 				9099350A16B039C2007CB613 /* MapViewController.m in Sources */,
+				0A1FAB5216B3380800AE6A76 /* ConfigRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
