@@ -9,6 +9,7 @@
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"
 #import "ViewMediator.h"
+#import "ConfigRequest.h"
 
 @implementation LoginScreenViewController
 @synthesize txtUsername;
@@ -33,6 +34,7 @@
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
     
+    [[ConfigRequest getInstance]requestConfig:txtUsername:txtPassword];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
