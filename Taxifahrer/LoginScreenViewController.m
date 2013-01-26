@@ -32,6 +32,7 @@
     NSLog(@"button gedrueckt");
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
+    
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField

@@ -44,6 +44,8 @@
 		9099350016B03814007CB613 /* ViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934FF16B03814007CB613 /* ViewMediator.m */; };
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
+		90BF041A16B4070A0039767E /* appdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 90BF041816B4070A0039767E /* appdata.json */; };
+		90BF041B16B4070A0039767E /* appdatalok.json in Resources */ = {isa = PBXBuildFile; fileRef = 90BF041916B4070A0039767E /* appdatalok.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		90BF041816B4070A0039767E /* appdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appdata.json; sourceTree = "<group>"; };
+		90BF041916B4070A0039767E /* appdatalok.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appdatalok.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		0A64CCEF16A4621A00CEB4F2 /* Libary */ = {
 			isa = PBXGroup;
 			children = (
+				90BF041816B4070A0039767E /* appdata.json */,
+				90BF041916B4070A0039767E /* appdatalok.json */,
 				0A50B47D16AF44AD00257B59 /* JSON */,
 				0A64CCF516A4623D00CEB4F2 /* XMLDOM */,
 			);
@@ -235,8 +241,6 @@
 				9099350716B039C2007CB613 /* MapViewController.h */,
 				9099350816B039C2007CB613 /* MapViewController.m */,
 				9099350916B039C2007CB613 /* MapViewController.xib */,
-				0A1FAB5016B3380800AE6A76 /* ConfigRequest.h */,
-				0A1FAB5116B3380800AE6A76 /* ConfigRequest.m */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -264,6 +268,8 @@
 				0A6FF095169C870900BA9F51 /* UserdataManager.m */,
 				909934EF16B02C0B007CB613 /* LoginRequest.h */,
 				909934F016B02C0B007CB613 /* LoginRequest.m */,
+				0A1FAB5016B3380800AE6A76 /* ConfigRequest.h */,
+				0A1FAB5116B3380800AE6A76 /* ConfigRequest.m */,
 				909934FE16B03814007CB613 /* ViewMediator.h */,
 				909934FF16B03814007CB613 /* ViewMediator.m */,
 			);
@@ -328,6 +334,8 @@
 				0A6FF077169C7F4D00BA9F51 /* ViewController.xib in Resources */,
 				909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */,
 				9099350B16B039C2007CB613 /* MapViewController.xib in Resources */,
+				90BF041A16B4070A0039767E /* appdata.json in Resources */,
+				90BF041B16B4070A0039767E /* appdatalok.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
