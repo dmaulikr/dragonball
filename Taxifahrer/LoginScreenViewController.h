@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface LoginScreenViewController : UIViewController
+
 {
+    
     IBOutlet UITextField* txtUsername;
     IBOutlet UITextField* txtPassword;
     IBOutlet UIButton* btnLogin;
@@ -23,5 +26,7 @@
 - (IBAction)buttonGedrueckt:(id)sender;
 - (IBAction)buttonRegi:(id)sender;
 - (IBAction)buttonMap:(id)sender;
+-(void) saveData;
+-(void) loadData;
 
 @end

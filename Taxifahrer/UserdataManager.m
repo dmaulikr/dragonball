@@ -7,6 +7,7 @@
 //
 
 #import "UserdataManager.h"
+#import "LoginScreenViewController.h"
 
 @implementation UserdataManager
 static UserdataManager* umanager = nil;
@@ -140,6 +141,7 @@ static UserdataManager* umanager = nil;
     [userdefaults setObject:password forKey:UDKeyPassword];
     [userdefaults synchronize];
 }
+
 
 
 /*
