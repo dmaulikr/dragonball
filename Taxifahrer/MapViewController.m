@@ -22,20 +22,8 @@
     [super viewDidLoad];
     NSLog(@"viewDidLoad des MapViewControllers");
     
-    NSLog(@"Melde mich beim Observer an...");
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(locationErhalten:)
-                                                 name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(locationFehler:)
-                                                 name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil];
-    
  
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationErhalten:) name:@"kSimpleLocationManagerLocationUpdateNotification" object:self];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationFehler::) name:@"kSimpleLocationManagerLocationUpdateErrorNotification" object:self];
-    
-    NSLog(@"Bei den Observern angemeldet");
     
  
     
@@ -92,6 +80,14 @@
     // Hier meldet sich der ViewController als Empfänger für die Daten des SimpleLocationManager beim NotificationCenter an
     // Schaut euch locationErhalten und locationFehler an. Dies sind Funktionen, die hier in der Klasse von uns 'aus freien Stücken' definiert werden. Der Dopppelpunkt hinter beiden Funktionen zeigt an, dass noch ein Objekt übergeben wird.
     // Bei diesem Objekt handelt es sich um das CLLocation-Objek, dass vom SimpleLocationManager an die Nachricht gehängt wurde (sowie eine Datei an eine EMail gehangen wird).
+    
+     NSLog(@"Melde mich beim Observer an...");
+     [[NSNotificationCenter defaultCenter] addObserver:self
+     selector:@selector(locationErhalten:)
+     name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
+     [[NSNotificationCenter defaultCenter] addObserver:self
+     selector:@selector(locationFehler:)
+     name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil]; 
     
 
 }
