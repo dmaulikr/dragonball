@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2A6B8D16B7FB0A00C24418 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8B16B7FB0A00C24418 /* Default.png */; };
+		0A2A6B8E16B7FB0A00C24418 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8C16B7FB0A00C24418 /* Default@2x.png */; };
+		0A2A6B9016B7FB6000C24418 /* owntaxi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */; };
+		0A2A6B9216B7FB8200C24418 /* owntaxi2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */; };
 		0A50B49816AF44BF00257B59 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */; };
 		0A50B49916AF44BF00257B59 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48316AF44BF00257B59 /* SBJsonParser.m */; };
 		0A50B49A16AF44BF00257B59 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48516AF44BF00257B59 /* SBJsonStreamParser.m */; };
@@ -54,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2A6B8B16B7FB0A00C24418 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/Default.png"; sourceTree = "<group>"; };
+		0A2A6B8C16B7FB0A00C24418 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/Default@2x.png"; sourceTree = "<group>"; };
+		0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = owntaxi2.png; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/owntaxi2.png"; sourceTree = "<group>"; };
+		0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "owntaxi2@2x.png"; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/owntaxi2@2x.png"; sourceTree = "<group>"; };
 		0A50B47F16AF44BF00257B59 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0A50B48116AF44BF00257B59 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -149,6 +157,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2A6B8916B7FAF000C24418 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */,
+				0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */,
+				0A2A6B8B16B7FB0A00C24418 /* Default.png */,
+				0A2A6B8C16B7FB0A00C24418 /* Default@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		0A50B47D16AF44AD00257B59 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +261,7 @@
 		0A6FF060169C7F4D00BA9F51 /* Taxifahrer */ = {
 			isa = PBXGroup;
 			children = (
+				0A2A6B8916B7FAF000C24418 /* Images */,
 				0A64CCEF16A4621A00CEB4F2 /* Libary */,
 				0A6FF069169C7F4D00BA9F51 /* AppDelegate.h */,
 				0A6FF06A169C7F4D00BA9F51 /* AppDelegate.m */,
@@ -359,6 +379,10 @@
 				90BF041B16B4070A0039767E /* appdatalok.json in Resources */,
 				90BA434816B7D97200969B5E /* PasswortZuruecksetzenViewController.xib in Resources */,
 				90BA435F16B7E37700969B5E /* AnfangViewController.xib in Resources */,
+				0A2A6B8D16B7FB0A00C24418 /* Default.png in Resources */,
+				0A2A6B8E16B7FB0A00C24418 /* Default@2x.png in Resources */,
+				0A2A6B9016B7FB6000C24418 /* owntaxi2.png in Resources */,
+				0A2A6B9216B7FB8200C24418 /* owntaxi2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
