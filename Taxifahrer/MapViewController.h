@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController : UIViewController
+#define MAP_DELTA_RANGE 0.0600 // 0.0025
+
+@class ImageAnnotation;
+
+@interface MapViewController : UIViewController <MKMapViewDelegate>
+
+@property (retain, nonatomic) IBOutlet MKMapView *mapview;
+
+@property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
+
+
+-(void) locationErhalten:(NSNotification*) nachricht;
+-(void) locationFehler:(NSNotification*) nachricht;
 
 @end
