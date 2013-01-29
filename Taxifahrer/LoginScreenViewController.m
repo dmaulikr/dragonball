@@ -46,13 +46,10 @@
     
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
-
-    LoginSpeichern* um = [LoginSpeichern getInstance];
     
-    txtPassword.text = um.password;
-    txtUsername.text = um.username;
+    request.username = txtUsername.text;
+    request.password = txtPassword.text;
     
-    [um saveData];
 }
 
 

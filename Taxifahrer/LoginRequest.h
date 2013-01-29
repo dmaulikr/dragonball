@@ -31,6 +31,10 @@
     NSMutableData* _receivedData;
     NSURLConnection* _connection;
 }
+
+@property (copy) NSString* password;
+@property (copy) NSString* username;
+
 +(LoginRequest*) getInstance;
 -(void)requestActivation:(NSString*)username :(NSString*)password;
 

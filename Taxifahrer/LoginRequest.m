@@ -12,6 +12,9 @@
 
 @implementation LoginRequest
 
+@synthesize username;
+@synthesize password;
+
 static LoginRequest* loginrequest = nil;
 +(LoginRequest*) getInstance {
     if (loginrequest == nil) {
@@ -98,8 +101,8 @@ static LoginRequest* loginrequest = nil;
         
         LoginSpeichern* um = [LoginSpeichern getInstance];
         
-        [DDXMLNode elementWithName:XMLTagUsername stringValue:username] = um.password;
-        txtUsername.text = um.username;
+        um.password = self.password;
+        um.username = self.username;
         
         [um saveData];
     } else {
