@@ -134,7 +134,7 @@
 		909934FE16B03814007CB613 /* ViewMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewMediator.h; sourceTree = "<group>"; };
 		909934FF16B03814007CB613 /* ViewMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewMediator.m; sourceTree = "<group>"; };
 		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		90BA434116B7D8D000969B5E /* EmailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailRequest.h; sourceTree = "<group>"; };
 		90BA434216B7D8D000969B5E /* EmailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailRequest.m; sourceTree = "<group>"; };

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MapKit/MapKit.h>
+#import "MapViewController.h"
 
 @interface ImageAnnotation : NSObject <MKAnnotation> {
     CLLocationCoordinate2D coordinate;

@@ -31,6 +31,8 @@
     
     NSLog(@"Bei den Observern angemeldet");
     
+ 
+    
     
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
@@ -110,10 +112,12 @@
 {
     NSLog(@"locationErhalten");
     
+    
     // Wir packen das CLLocation* aus dem übergebenen NSNotification-Objekt (dem StandardObjekt für Nachrichten aus dem NSNotifictionCenter) aus.
     // Hier muss man wissen, welchen Typ das Objekt in der Nachricht haben soll. Da wir wissen, dass die Nachricht vom SimpleLocationManager kommt und wir den SimpleLocationManager selbst geschrieben haben, wandeln wir das Objekt in der Nachricht in eine CLLocation um.
     // Der Anhang der Nachricht befindet sich in dem Property .object.
     CLLocation* loc = (CLLocation*) nachricht.object;
+    
     
     // Aus dem Location-Objekt holen wir uns nun eine Koordinate.
     CLLocationCoordinate2D coord = loc.coordinate;
@@ -121,6 +125,9 @@
     // Diese geben wir nun auf dem Bildschirm aus.
     NSString* bildschirmtext = [[NSString alloc] initWithFormat:@"Längengrad: %f  Breitengrad: %f",coord.longitude,coord.latitude];
     self.lblKoordinate.text = bildschirmtext;
+
+    
+    
 }
 
 -(void) locationFehler:(NSNotification*) nachricht

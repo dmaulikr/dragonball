@@ -18,6 +18,7 @@
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
 
+
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 
 
