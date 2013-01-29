@@ -11,6 +11,7 @@
 		0A2A6B8E16B7FB0A00C24418 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8C16B7FB0A00C24418 /* Default@2x.png */; };
 		0A2A6B9016B7FB6000C24418 /* owntaxi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */; };
 		0A2A6B9216B7FB8200C24418 /* owntaxi2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */; };
+		0A2A6B9516B7FC0400C24418 /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A6B9416B7FC0400C24418 /* CJob.m */; };
 		0A50B49816AF44BF00257B59 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */; };
 		0A50B49916AF44BF00257B59 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48316AF44BF00257B59 /* SBJsonParser.m */; };
 		0A50B49A16AF44BF00257B59 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48516AF44BF00257B59 /* SBJsonStreamParser.m */; };
@@ -62,6 +63,8 @@
 		0A2A6B8C16B7FB0A00C24418 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/Default@2x.png"; sourceTree = "<group>"; };
 		0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = owntaxi2.png; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/owntaxi2.png"; sourceTree = "<group>"; };
 		0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "owntaxi2@2x.png"; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/owntaxi2@2x.png"; sourceTree = "<group>"; };
+		0A2A6B9316B7FC0400C24418 /* CJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJob.h; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/CJob.h"; sourceTree = "<group>"; };
+		0A2A6B9416B7FC0400C24418 /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJob.m; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/CJob.m"; sourceTree = "<group>"; };
 		0A50B47F16AF44BF00257B59 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0A50B48116AF44BF00257B59 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				90BA434216B7D8D000969B5E /* EmailRequest.m */,
 				90BA435516B7DDE800969B5E /* LoginSpeichern.h */,
 				90BA435616B7DDE800969B5E /* LoginSpeichern.m */,
+				0A2A6B9316B7FC0400C24418 /* CJob.h */,
+				0A2A6B9416B7FC0400C24418 /* CJob.m */,
 			);
 			name = UserdataManager;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				90BA434716B7D97200969B5E /* PasswortZuruecksetzenViewController.m in Sources */,
 				90BA435716B7DDE800969B5E /* LoginSpeichern.m in Sources */,
 				90BA435E16B7E37700969B5E /* AnfangViewController.m in Sources */,
+				0A2A6B9516B7FC0400C24418 /* CJob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
