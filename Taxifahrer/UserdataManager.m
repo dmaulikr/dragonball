@@ -142,29 +142,4 @@ static UserdataManager* umanager = nil;
     [userdefaults synchronize];
 }
 
-
-
-/*
- -(void) saveData
- {
- NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
- [userdaten setObject:self.email forKey:UDKey_Email];
- [userdaten setObject:self.username forKey:UDKey_Username];
- [userdaten setObject:self.password forKey:UDKey_Password];
- [userdaten setObject:self.phone forKey:UDKey_Phone];
- [userdaten synchronize];
- NSLog(@"Daten gesichert.");
- }
- 
- -(void) loadData
- {
- NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
- self.email = [userdaten objectForKey:UDKey_Email];
- self.username = [userdaten objectForKey:UDKey_Username];
- self.password = [userdaten objectForKey:UDKey_Password];
- self.phone = [userdaten objectForKey:UDKey_Phone];
- NSLog(@"Daten geladen.");
- }
- */
-
 @end

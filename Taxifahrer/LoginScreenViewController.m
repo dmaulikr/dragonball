@@ -6,10 +6,14 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
+// Test@test.de
+// 677497
+
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"
 #import "ViewMediator.h"
 #import "UserdataManager.h"
+#import "LoginSpeichern.h"
 
 
 @implementation LoginScreenViewController
@@ -28,9 +32,8 @@
 {
     [super viewDidLoad];
    // self.loadData;
-    
-	// Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,7 +47,12 @@
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
 
-  //  self.saveData;
+    LoginSpeichern* um = [LoginSpeichern getInstance];
+    
+    txtPassword.text = um.password;
+    txtUsername.text = um.username;
+    
+    [um saveData];
 }
 
 
@@ -69,27 +77,6 @@
 {
     NSLog(@"PW pressed");
     [[ViewMediator getInstance] vonLoginZuPW];
-}
-
-
--(void) saveData
-{
-    NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
-    [userdaten setObject:lsvc.txtUsername forKey:(UDKeyUsername)];
-    [userdaten setObject:self.txtPassword forKey:(UDKeyPassword)];
-    [userdaten synchronize];
-    NSLog(@"Daten gespeichert");
-    
-}
-
--(void) loadData
-
-{
-    NSUserDefaults* userdaten = [NSUserDefaults standardUserDefaults];
-    self.txtUsername = [userdaten objectForKey:UDKeyUsername];
-    self.txtPassword = [userdaten objectForKey:UDKeyPassword];
-    NSLog(@"Daten geladen");
-    
 }
 
 

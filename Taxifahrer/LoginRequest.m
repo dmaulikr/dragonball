@@ -8,6 +8,7 @@
 
 #import "LoginRequest.h"
 #import "ViewMediator.h"
+#import "LoginSpeichern.h"
 @implementation LoginRequest
 
 static LoginRequest* loginrequest = nil;
@@ -93,6 +94,13 @@ static LoginRequest* loginrequest = nil;
     if ([status isEqualToString:@"ok"]) {
         NSLog(@"Login-Daten erfolgreich");
           [[ViewMediator getInstance] vonLoginZuMap];
+        
+        LoginSpeichern* um = [LoginSpeichern getInstance];
+        
+        [DDXMLNode elementWithName:XMLTagUsername stringValue:username] = um.password;
+        txtUsername.text = um.username;
+        
+        [um saveData];
     } else {
         NSLog(@"Login fehlgeschlagen");
     }
