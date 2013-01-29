@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
+
 // Diese Nachrichten werden von dem SimpleLocationManager verschickt
 #define kSimpleLocationManagerLocationUpdateNotification @"kSimpleLocationManagerLocationUpdateNotification"
 #define kSimpleLocationManagerLocationUpdateErrorNotification @"kSimpleLocationManagerLocationUpdateErrorNotification"

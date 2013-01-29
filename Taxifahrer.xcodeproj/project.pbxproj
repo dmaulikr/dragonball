@@ -12,6 +12,7 @@
 		0A2A6B9016B7FB6000C24418 /* owntaxi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B8F16B7FB6000C24418 /* owntaxi2.png */; };
 		0A2A6B9216B7FB8200C24418 /* owntaxi2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */; };
 		0A2A6B9516B7FC0400C24418 /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A6B9416B7FC0400C24418 /* CJob.m */; };
+		0A2A6B9B16B8101300C24418 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2A6B9A16B8101300C24418 /* CoreLocation.framework */; };
 		0A50B49816AF44BF00257B59 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */; };
 		0A50B49916AF44BF00257B59 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48316AF44BF00257B59 /* SBJsonParser.m */; };
 		0A50B49A16AF44BF00257B59 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48516AF44BF00257B59 /* SBJsonStreamParser.m */; };
@@ -68,6 +69,7 @@
 		0A2A6B9116B7FB8200C24418 /* owntaxi2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "owntaxi2@2x.png"; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/owntaxi2@2x.png"; sourceTree = "<group>"; };
 		0A2A6B9316B7FC0400C24418 /* CJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJob.h; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/CJob.h"; sourceTree = "<group>"; };
 		0A2A6B9416B7FC0400C24418 /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJob.m; path = "../../../Dropbox/ProjekteUndHausaufgaben/5KW Vorbereitung/CJob.m"; sourceTree = "<group>"; };
+		0A2A6B9A16B8101300C24418 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A50B47F16AF44BF00257B59 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		0A50B48116AF44BF00257B59 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2A6B9B16B8101300C24418 /* CoreLocation.framework in Frameworks */,
 				0A6530B416B03DDE0002C95B /* MapKit.framework in Frameworks */,
 				0A6FF05B169C7F4D00BA9F51 /* UIKit.framework in Frameworks */,
 				0A6FF05D169C7F4D00BA9F51 /* Foundation.framework in Frameworks */,
@@ -245,6 +248,7 @@
 		0A6FF04B169C7F4D00BA9F51 = {
 			isa = PBXGroup;
 			children = (
+				0A2A6B9A16B8101300C24418 /* CoreLocation.framework */,
 				0A6530B316B03DDE0002C95B /* MapKit.framework */,
 				0A6FF060169C7F4D00BA9F51 /* Taxifahrer */,
 				0A6FF059169C7F4D00BA9F51 /* Frameworks */,
