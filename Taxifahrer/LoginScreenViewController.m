@@ -11,6 +11,7 @@
 #import "ViewMediator.h"
 #import "UserdataManager.h"
 
+
 @implementation LoginScreenViewController
 {
 @public
@@ -62,6 +63,12 @@
     NSLog(@"Map pressed");
     [[ViewMediator getInstance] vonLoginZuMap];
    
+}
+
+-(IBAction)buttonPasswortZuruecksetzen:(id)sender
+{
+    NSLog(@"PW pressed");
+    [[ViewMediator getInstance] vonLoginZuPW];
 }
 
 

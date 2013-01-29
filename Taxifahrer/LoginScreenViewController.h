@@ -26,6 +26,7 @@
 - (IBAction)buttonGedrueckt:(id)sender;
 - (IBAction)buttonRegi:(id)sender;
 - (IBAction)buttonMap:(id)sender;
+- (IBAction)buttonPasswortZuruecksetzen:(id)sender;
 -(void) saveData;
 -(void) loadData;
 

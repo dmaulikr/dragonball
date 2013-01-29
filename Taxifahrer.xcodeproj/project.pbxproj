@@ -43,6 +43,9 @@
 		9099350016B03814007CB613 /* ViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934FF16B03814007CB613 /* ViewMediator.m */; };
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
+		90BA434316B7D8D000969B5E /* EmailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434216B7D8D000969B5E /* EmailRequest.m */; };
+		90BA434716B7D97200969B5E /* PasswortZuruecksetzenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */; };
+		90BA434816B7D97200969B5E /* PasswortZuruecksetzenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */; };
 		90BF041A16B4070A0039767E /* appdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 90BF041816B4070A0039767E /* appdata.json */; };
 		90BF041B16B4070A0039767E /* appdatalok.json in Resources */ = {isa = PBXBuildFile; fileRef = 90BF041916B4070A0039767E /* appdatalok.json */; };
 /* End PBXBuildFile section */
@@ -114,6 +117,11 @@
 		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		90BA434116B7D8D000969B5E /* EmailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailRequest.h; sourceTree = "<group>"; };
+		90BA434216B7D8D000969B5E /* EmailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailRequest.m; sourceTree = "<group>"; };
+		90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswortZuruecksetzenViewController.h; sourceTree = "<group>"; };
+		90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswortZuruecksetzenViewController.m; sourceTree = "<group>"; };
+		90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswortZuruecksetzenViewController.xib; sourceTree = "<group>"; };
 		90BF041816B4070A0039767E /* appdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appdata.json; sourceTree = "<group>"; };
 		90BF041916B4070A0039767E /* appdatalok.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appdatalok.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +246,9 @@
 				9099350716B039C2007CB613 /* MapViewController.h */,
 				9099350816B039C2007CB613 /* MapViewController.m */,
 				9099350916B039C2007CB613 /* MapViewController.xib */,
+				90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */,
+				90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */,
+				90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -267,6 +278,8 @@
 				909934F016B02C0B007CB613 /* LoginRequest.m */,
 				909934FE16B03814007CB613 /* ViewMediator.h */,
 				909934FF16B03814007CB613 /* ViewMediator.m */,
+				90BA434116B7D8D000969B5E /* EmailRequest.h */,
+				90BA434216B7D8D000969B5E /* EmailRequest.m */,
 			);
 			name = UserdataManager;
 			sourceTree = "<group>";
@@ -331,6 +344,7 @@
 				9099350B16B039C2007CB613 /* MapViewController.xib in Resources */,
 				90BF041A16B4070A0039767E /* appdata.json in Resources */,
 				90BF041B16B4070A0039767E /* appdatalok.json in Resources */,
+				90BA434816B7D97200969B5E /* PasswortZuruecksetzenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +380,8 @@
 				909934F116B02C0B007CB613 /* LoginRequest.m in Sources */,
 				9099350016B03814007CB613 /* ViewMediator.m in Sources */,
 				9099350A16B039C2007CB613 /* MapViewController.m in Sources */,
+				90BA434316B7D8D000969B5E /* EmailRequest.m in Sources */,
+				90BA434716B7D97200969B5E /* PasswortZuruecksetzenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "LoginScreenViewController.h"
 #import "MapViewController.h"
 #import "ViewController.h"
+#import "PasswortZuruecksetzenViewController.h"
 
 static ViewMediator* mediator = nil;
 
@@ -17,6 +18,7 @@ static ViewMediator* mediator = nil;
 @synthesize Registrieren;
 @synthesize Karte;
 @synthesize Login;
+@synthesize PW;
 @synthesize navController;
 
 +(ViewMediator*) getInstance {
@@ -32,6 +34,7 @@ static ViewMediator* mediator = nil;
         self.Registrieren = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
         self.Karte = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
         self.Login = [[LoginScreenViewController alloc] initWithNibName:@"LoginScreenViewController" bundle:nil];
+        self.PW = [[PasswortZuruecksetzenViewController alloc] initWithNibName:@"PasswortZuruecksetzenViewController" bundle:nil];
         
         navController = [[UINavigationController alloc] initWithRootViewController:self.Login];
     }
@@ -53,6 +56,16 @@ static ViewMediator* mediator = nil;
 -(void) vonRegiZuMap
 {
     [self.Registrieren.navigationController pushViewController:self.Karte animated:YES];
+}
+
+-(void) vonLoginZuPW
+{
+    [self.Login.navigationController pushViewController:self.PW animated:YES];
+}
+
+-(void) vonPWZuLogin
+{
+    [self.PW.navigationController pushViewController:self.Login animated:YES];
 }
 
 @end
