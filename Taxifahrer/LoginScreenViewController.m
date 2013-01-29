@@ -9,7 +9,6 @@
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"
 #import "ViewMediator.h"
-#import "ConfigRequest.h"
 #import "UserdataManager.h"
 
 @implementation LoginScreenViewController
@@ -43,8 +42,6 @@
     
     LoginRequest* request  = [LoginRequest getInstance];
     [request requestActivation:txtUsername.text :txtPassword.text];
-    
-    [[ConfigRequest getInstance]requestConfig:txtUsername:txtPassword];
 
   //  self.saveData;
 }
