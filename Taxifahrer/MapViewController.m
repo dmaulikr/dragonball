@@ -20,7 +20,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
+    NSLog(@"viewDidLoad des MapViewControllers");
+    
+    NSLog(@"Melde mich beim Observer an...");
+    
+ 
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationErhalten:) name:@"kSimpleLocationManagerLocationUpdateNotification" object:self];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationFehler::) name:@"kSimpleLocationManagerLocationUpdateErrorNotification" object:self];
+    
+    NSLog(@"Bei den Observern angemeldet");
+    
     
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
