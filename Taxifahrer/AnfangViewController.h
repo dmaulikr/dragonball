@@ -10,6 +10,6 @@
 
 @interface AnfangViewController : UIViewController
 
--(void) zumLoginWechselNachTimer;
+-(IBAction)zumLoginWechseln:(id)sender;
 
 @end

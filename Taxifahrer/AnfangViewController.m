@@ -54,7 +54,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) zumLoginWechselNachTimer
+-(IBAction)zumLoginWechseln:(id)sender
 {
     [[ViewMediator getInstance] vonAnfangZuLogin];
 }
