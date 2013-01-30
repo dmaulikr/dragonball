@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
-// Test@test.de
-// 677497
+//Username: Test1@test.de
+//Passwort: 637a2d
 
 #import "LoginScreenViewController.h"
 #import "LoginRequest.h"

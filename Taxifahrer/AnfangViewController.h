@@ -10,4 +10,6 @@
 
 @interface AnfangViewController : UIViewController
 
+-(void) zumLoginWechselNachTimer;
+
 @end
