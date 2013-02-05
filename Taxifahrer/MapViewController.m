@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 #import "ImageAnnotation.h"
-//#import "SimpleLocationManager.h"
+#import "SimpleLocationManager.h"
 #import "CJob.h"
 #import "JobButton.h"
 
@@ -27,13 +27,13 @@
     
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
-//    [[SimpleLocationManager getInstance] startUpdatingLocation];
+    [[SimpleLocationManager getInstance] startUpdatingLocation];
     
     // Ort zuweisen
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 53.55f;
-    coordinate.longitude = 10.0f;
+    coordinate.latitude = coordinate.latitude;
+    coordinate.longitude = coordinate.longitude;
     
     NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
@@ -111,13 +111,29 @@
             button.Job = Job;
             
             // UILabel mit Namen des Kunden hinzufügen
-            UILabel* meinLabel = [[UILabel alloc] initWithFrame:CGRectMake(3, 3, 74, 23)];
-            meinLabel.text = Job.name;
+            UILabel* meinLabel = [[UILabel alloc] initWithFrame:CGRectMake(3, -3, 74, 23)];
+            meinLabel.text = Job.street;
             meinLabel.textAlignment = NSTextAlignmentCenter;
-            meinLabel.font = [UIFont fontWithName:@"Marker-Felt" size:10.0];
+            meinLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
             meinLabel.textColor = [UIColor greenColor];
             meinLabel.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel];
+            
+            UILabel* meinLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(3, 6, 74, 23)];
+            meinLabel2.text = Job.name;
+            meinLabel2.textAlignment = NSTextAlignmentCenter;
+            meinLabel2.font = [UIFont fontWithName:@"Arial" size:10.0];
+            meinLabel2.textColor = [UIColor greenColor];
+            meinLabel2.backgroundColor = [UIColor clearColor];
+            [_annotationView addSubview:meinLabel2];
+            
+            UILabel* meinLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(3, 15, 74, 23)];
+            meinLabel3.text = Job.taxisize;
+            meinLabel3.textAlignment = NSTextAlignmentCenter;
+            meinLabel3.font = [UIFont fontWithName:@"Arial" size:10.0];
+            meinLabel3.textColor = [UIColor greenColor];
+            meinLabel3.backgroundColor = [UIColor clearColor];
+            [_annotationView addSubview:meinLabel3];
             
             // Malfläche zurückliefern
             return _annotationView;
@@ -134,7 +150,7 @@
     }
     return nil;
 }
-/*
+
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -153,7 +169,7 @@
     
 
 }
-*/
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -176,7 +192,7 @@
     
     NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
 }
-/*
+
 -(void) locationErhalten:(NSNotification*) nachricht
 {
     NSLog(@"locationErhalten");
@@ -203,7 +219,7 @@
 {
     NSLog(@"Fehler!");
 }
-*/
+
 - (void)dealloc {
     [super dealloc];
 }
