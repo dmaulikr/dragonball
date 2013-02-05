@@ -45,8 +45,8 @@
     beispielJob.token = @"HH12345";
     beispielJob.street = @"Jungfernstieg 1";
     beispielJob.taxisize = @"3";
-    beispielJob.latitude = @"53.5533";
-    beispielJob.longitude = @"10.005";
+    beispielJob.latitude = @"6.957889";
+    beispielJob.longitude = @"51.476583";
     beispielJob.name = @"Schmidt";
     
     double breitengrad = [beispielJob.latitude doubleValue];
