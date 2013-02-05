@@ -61,6 +61,10 @@
 		90C0DA6816C17F660008FF87 /* blackbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA6716C17F660008FF87 /* blackbutton.png */; };
 		90C0DA6B16C17FCB0008FF87 /* owntaxi2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA6916C17FCB0008FF87 /* owntaxi2@2x.png */; };
 		90C0DA6C16C17FCB0008FF87 /* owntaxi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA6A16C17FCB0008FF87 /* owntaxi2.png */; };
+		90C0DA7416C192D00008FF87 /* AGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C0DA7216C192D00008FF87 /* AGBViewController.m */; };
+		90C0DA7516C192D00008FF87 /* AGBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA7316C192D00008FF87 /* AGBViewController.xib */; };
+		90C0DA7916C193050008FF87 /* VorRegiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C0DA7716C193050008FF87 /* VorRegiViewController.m */; };
+		90C0DA7A16C193050008FF87 /* VorRegiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA7816C193050008FF87 /* VorRegiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +161,12 @@
 		90C0DA6716C17F660008FF87 /* blackbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbutton.png; sourceTree = "<group>"; };
 		90C0DA6916C17FCB0008FF87 /* owntaxi2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "owntaxi2@2x.png"; sourceTree = "<group>"; };
 		90C0DA6A16C17FCB0008FF87 /* owntaxi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owntaxi2.png; sourceTree = "<group>"; };
+		90C0DA7116C192D00008FF87 /* AGBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGBViewController.h; sourceTree = "<group>"; };
+		90C0DA7216C192D00008FF87 /* AGBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGBViewController.m; sourceTree = "<group>"; };
+		90C0DA7316C192D00008FF87 /* AGBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGBViewController.xib; sourceTree = "<group>"; };
+		90C0DA7616C193050008FF87 /* VorRegiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VorRegiViewController.h; sourceTree = "<group>"; };
+		90C0DA7716C193050008FF87 /* VorRegiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VorRegiViewController.m; sourceTree = "<group>"; };
+		90C0DA7816C193050008FF87 /* VorRegiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VorRegiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +311,12 @@
 				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
 				90BA437516B7FCE500969B5E /* ImageAnnotation.h */,
 				90BA437616B7FCE500969B5E /* ImageAnnotation.m */,
+				90C0DA7616C193050008FF87 /* VorRegiViewController.h */,
+				90C0DA7716C193050008FF87 /* VorRegiViewController.m */,
+				90C0DA7816C193050008FF87 /* VorRegiViewController.xib */,
+				90C0DA7116C192D00008FF87 /* AGBViewController.h */,
+				90C0DA7216C192D00008FF87 /* AGBViewController.m */,
+				90C0DA7316C192D00008FF87 /* AGBViewController.xib */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -412,6 +428,8 @@
 				90C0DA6816C17F660008FF87 /* blackbutton.png in Resources */,
 				90C0DA6B16C17FCB0008FF87 /* owntaxi2@2x.png in Resources */,
 				90C0DA6C16C17FCB0008FF87 /* owntaxi2.png in Resources */,
+				90C0DA7516C192D00008FF87 /* AGBViewController.xib in Resources */,
+				90C0DA7A16C193050008FF87 /* VorRegiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +474,8 @@
 				0AF6B2E016BBFAFE00E877C4 /* JobGenerator.m in Sources */,
 				90A853A616BD0E6100BB3D2A /* CJob.m in Sources */,
 				90C0DA6616C17EA30008FF87 /* JobButton.m in Sources */,
+				90C0DA7416C192D00008FF87 /* AGBViewController.m in Sources */,
+				90C0DA7916C193050008FF87 /* VorRegiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

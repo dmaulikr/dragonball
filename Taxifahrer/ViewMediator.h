@@ -13,6 +13,8 @@
 @class MapViewController;
 @class PasswortZuruecksetzenViewController;
 @class AnfangViewController;
+@class VorRegiViewController;
+@class AGBViewController;
 
 @interface ViewMediator : NSObject
 {}
@@ -24,6 +26,8 @@
 @property (nonatomic,retain) LoginScreenViewController* Login;
 @property (nonatomic,retain) PasswortZuruecksetzenViewController* PW;
 @property (nonatomic,retain) AnfangViewController* Anfang;
+@property (nonatomic,retain) VorRegiViewController* VorRegi;
+@property (nonatomic,retain) AGBViewController* AGB;
 
 +(ViewMediator*) getInstance;
 -(id) init;
@@ -34,5 +38,12 @@
 -(void) vonLoginZuPW;
 -(void) vonAnfangZuMap;
 -(void) vonAnfangZuLogin;
+
+-(void) vonLoginZuVorRegi;
+-(void) vonVorRegiZuAGB;
+-(void) vonAGBZuRegi;
+-(void) vonVorRegiZuRegi;
+-(void) vonAGBZuLogin;
+-(void) vonAGBZuVorRegi;
 
 @end

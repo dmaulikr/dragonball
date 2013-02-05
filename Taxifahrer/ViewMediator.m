@@ -12,6 +12,8 @@
 #import "ViewController.h"
 #import "PasswortZuruecksetzenViewController.h"
 #import "AnfangViewController.h"
+#import "VorRegiViewController.h"
+#import "AGBViewController.h"
 
 static ViewMediator* mediator = nil;
 
@@ -21,6 +23,8 @@ static ViewMediator* mediator = nil;
 @synthesize Login;
 @synthesize PW;
 @synthesize Anfang;
+@synthesize VorRegi;
+@synthesize AGB;
 @synthesize navController;
 
 +(ViewMediator*) getInstance {
@@ -38,6 +42,8 @@ static ViewMediator* mediator = nil;
         self.Login = [[LoginScreenViewController alloc] initWithNibName:@"LoginScreenViewController" bundle:nil];
         self.PW = [[PasswortZuruecksetzenViewController alloc] initWithNibName:@"PasswortZuruecksetzenViewController" bundle:nil];
         self.Anfang = [[AnfangViewController alloc] initWithNibName:@"AnfangViewController" bundle:nil];
+        self.VorRegi = [[VorRegiViewController alloc] initWithNibName:@"VorRegiViewController" bundle:nil];
+        self.AGB = [[AGBViewController alloc] initWithNibName:@"AGBViewController" bundle:nil];
         
         navController = [[UINavigationController alloc] initWithRootViewController:self.Anfang];
     }
@@ -74,6 +80,36 @@ static ViewMediator* mediator = nil;
 -(void) vonAnfangZuLogin
 {
     [self.Anfang.navigationController pushViewController:self.Login animated:YES];
+}
+
+-(void) vonLoginZuVorRegi
+{
+    [self.Login.navigationController pushViewController:self.VorRegi animated:YES];
+}
+
+-(void) vonVorRegiZuAGB
+{
+    [self.VorRegi.navigationController pushViewController:self.AGB animated:YES];
+}
+
+-(void) vonAGBZuRegi
+{
+    [self.AGB.navigationController pushViewController:self.Registrieren animated:YES];
+}
+
+-(void) vonVorRegiZuRegi
+{
+    [self.VorRegi.navigationController pushViewController:self.Registrieren animated:YES];
+}
+
+-(void) vonAGBZuLogin
+{
+    [self.AGB.navigationController pushViewController:self.Login animated:YES];
+}
+
+-(void) vonAGBZuVorRegi
+{
+    [self.AGB.navigationController pushViewController:self.VorRegi animated:YES];
 }
 
 @end

@@ -27,7 +27,7 @@
 @synthesize lblErgebnis;
 
 
-
+ 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -61,7 +61,7 @@
 
 - (IBAction)buttonRegi:(id)sender {
     NSLog(@"Regi pressed");
-    [[ViewMediator getInstance] vonLoginZuRegi];
+    [[ViewMediator getInstance] vonLoginZuVorRegi];
 }
 
 - (IBAction)buttonMap:(id)sender {
