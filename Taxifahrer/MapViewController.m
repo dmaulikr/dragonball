@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     NSLog(@"viewDidLoad des MapViewControllers");
+    [mapview setShowsUserLocation:YES];
+  
     
     
     _lblKoordinate.text = @"Noch keine Daten";
@@ -34,6 +36,7 @@
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = coordinate.latitude;
     coordinate.longitude = coordinate.longitude;
+   
     
     NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
@@ -66,6 +69,8 @@
     
     ImageAnnotation* taxiAnnotation = [[ImageAnnotation alloc] initWithCoordinate:coordinate];
     taxiAnnotation.mytitle = ANNOTATION_TAXI;
+    
+    
     [mapview addAnnotation:taxiAnnotation];
 }
 
@@ -165,7 +170,11 @@
      name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
      [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationFehler:)
-     name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil]; 
+     name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil];
+    
+    //Springe zum Ort des Benutzers 
+    [mapview setCenterCoordinate:mapview.userLocation.coordinate];
+    
     
 
 }

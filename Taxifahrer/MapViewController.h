@@ -21,6 +21,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 
 
+
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
 

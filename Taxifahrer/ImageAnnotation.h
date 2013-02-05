@@ -25,6 +25,7 @@
 @property (nonatomic,copy) NSString* mytitle;
 @property (nonatomic,copy) NSString* mysubtitle;
 
+
 @property (nonatomic,retain) CJob* Job;
 
 @property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;

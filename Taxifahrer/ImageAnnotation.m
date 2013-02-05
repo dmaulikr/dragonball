@@ -7,6 +7,7 @@
 //
 
 #import "ImageAnnotation.h"
+#import "MapViewController.h"
 
 @implementation ImageAnnotation
 @synthesize coordinate;
@@ -24,7 +25,12 @@
 }
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D) c{
-	mytitle = @"TAXI";
+	
+    
+    
+    mytitle = @"TAXI";
+  
+   
     coordinate=c;
     self.m_ImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blackbutton.png"]];
 	return self;
