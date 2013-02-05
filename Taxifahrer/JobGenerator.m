@@ -81,7 +81,7 @@
 
 -(void) JobFrage
 {
-    //Hier array auswerten und jobannahmefrage stellen‚
+
 }
 
 
