@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 #import "ImageAnnotation.h"
-#import "SimpleLocationManager.h"
+//#import "SimpleLocationManager.h"
 #import "CJob.h"
 #import "JobButton.h"
 
@@ -24,15 +24,18 @@
     [super viewDidLoad];
     NSLog(@"viewDidLoad des MapViewControllers");
     
+    
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
-    [[SimpleLocationManager getInstance] startUpdatingLocation];
+//    [[SimpleLocationManager getInstance] startUpdatingLocation];
     
     // Ort zuweisen
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude = coordinate.latitude;
-    coordinate.longitude = coordinate.longitude;
+    coordinate.latitude = 53.55f;
+    coordinate.longitude = 10.0f;
+    
+    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
 	region.center = coordinate;
     region.span.longitudeDelta=MAP_DELTA_RANGE;
@@ -45,8 +48,8 @@
     beispielJob.token = @"HH12345";
     beispielJob.street = @"Jungfernstieg 1";
     beispielJob.taxisize = @"3";
-    beispielJob.latitude = @"6.957889";
-    beispielJob.longitude = @"51.476583";
+    beispielJob.latitude = @"53.5533";
+    beispielJob.longitude = @"10.005";
     beispielJob.name = @"Schmidt";
     
     double breitengrad = [beispielJob.latitude doubleValue];
@@ -131,7 +134,7 @@
     }
     return nil;
 }
-
+/*
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -150,7 +153,7 @@
     
 
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -173,7 +176,7 @@
     
     NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
 }
-
+/*
 -(void) locationErhalten:(NSNotification*) nachricht
 {
     NSLog(@"locationErhalten");
@@ -200,7 +203,7 @@
 {
     NSLog(@"Fehler!");
 }
-
+*/
 - (void)dealloc {
     [super dealloc];
 }
