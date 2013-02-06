@@ -12,7 +12,7 @@
 @interface JobGenerator : NSObject
 
 
--(NSMutableArray*) JobArray;
+@property (nonatomic,retain) NSMutableArray* JobArray;
 
 
 

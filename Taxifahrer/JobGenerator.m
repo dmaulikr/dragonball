@@ -10,6 +10,7 @@
 #import "CJob.h"
 
 @implementation JobGenerator
+@synthesize JobArray;
 
 
 /*NSString* token;		// das eindeutige Kennzeichen des Jobs
@@ -31,64 +32,61 @@
 
 
 
-
-
 -(void) ArrayErstellen
 {
-  NSMutableArray* JA = [[NSMutableArray alloc]init];
+ JobArray = [[NSMutableArray alloc]init];
    
-    
-    
 }
 
--(void) FestgelegtenAuftragGenerieren
+-(void) FestgelegtenAuftragGenerieren1
 
 {
-    CJob* job = [[CJob alloc]init];
+    CJob* job1 = [[CJob alloc]init];
     
-    job.token = @"Job-Ab343";
-    job.street = @"Germaniaplatz";
-    job.plz = @"45355";
-    job.longitude = @"6.9518103";
-    job.latitude = @"51.4748754";
-    job.time = @"15:30";
-    job.taxisize = @"1";
-    job.name = @"Herr ZuFaulZumGehen";
-    job.phone = @"0201575858";
-    job.jobdone = @"0";
-    job.jobstatus = @"open";
-    job.userinfo = @"-";
-    job.distance = @"5000000000"; //Wird sicherlich mit den GPS eintragen. Zu Testzwecken auf 5000000000 (Da wir angeblich in den USA sind)
-    job.iconurl = @"";
-    [self.JobArray addObject:job.token];
-    [self.JobArray addObject:job.street];
-    [self.JobArray addObject:job.plz];
-    [self.JobArray addObject:job.longitude];
-    [self.JobArray addObject:job.latitude];
-    [self.JobArray addObject:job.time];
-    [self.JobArray addObject:job.taxisize];
-    [self.JobArray addObject:job.name];
-    [self.JobArray addObject:job.phone];
-    [self.JobArray addObject:job.jobdone];
-    [self.JobArray addObject:job.jobstatus];
-    [self.JobArray addObject:job.userinfo];
-    [self.JobArray addObject:job.distance];
+    job1.token = @"Job-Ab343";
+    job1.street = @"Germaniaplatz";
+    job1.plz = @"45355";
+    job1.longitude = @"6.9518103";
+    job1.latitude = @"51.4748754";
+    job1.time = @"15:30";
+    job1.taxisize = @"1";
+    job1.name = @"Herr ZuFaulZumGehen";
+    job1.phone = @"0201575858";
+    job1.jobdone = @"0";
+    job1.jobstatus = @"open";
+    job1.userinfo = @"-";
+    job1.distance = @"5000000000"; //Wird sicherlich mit den GPS eintragen. Zu Testzwecken auf 5000000000 (Da wir angeblich in den USA sind)
+    job1.iconurl = @"";
+    [self.JobArray addObject:job1];
     //Iconurl ausgelassen
-    
-    
-    
+   
 }
 
--(void) JobFrage
+
+-(void) FestgelegtenAuftragGenerieren2
 {
-
+    CJob* job2 = [[CJob alloc]init];
+    job2.token = @"Job-fds";
+    job2.street = @"Johannes-Brokamp-Straße 11";
+    job2.plz = @"45355";
+    job2.latitude = @"51.476570";
+    job2.longitude = @"6.957730";
+    job2.time = @"15:25";
+    job2.taxisize = @"3";
+    job2.name = @"Koenig Kevin";
+    job2.phone = @"0201454545";
+    job2.jobdone = @"0"; 
+    job2.jobstatus= @"closed"; //Job hat schon ein anderer übernommen
+    job2.userinfo =@"";
+    job2.distance = @"4";
+    [self.JobArray addObject:job2];
+    
+    
 }
 
 
--(void) OffeneJobs
-{
-    //Für Samstag erstellt
-}
+
+
 
 
 
