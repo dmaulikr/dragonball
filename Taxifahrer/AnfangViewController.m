@@ -8,7 +8,7 @@
 
 #import "AnfangViewController.h"
 #import "AnfangViewController.h"
-//#import "ViewMediator.h"
+#import "ViewMediator.h"
 #import "LoginSpeichern.h"
 #import "LoginRequest.h"
 #import "MapViewController.h"
@@ -42,18 +42,12 @@
         LoginRequest* request  = [LoginRequest getInstance];
         [request requestActivation:um.username :um.password];
         
-     //   [[ViewMediator getInstance] vonAnfangZuMap];
-        
-        MapViewController *Map = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
-        [self presentModalViewController:Map animated:NO];
+        [[ViewMediator getInstance] vonAnfangZuMap];
     }
     else
     {
         // Wenn nicht, gehe zum LoginBildschirm
-        
-        LoginScreenViewController *Login = [[LoginScreenViewController alloc]initWithNibName:@"LoginScreenViewController" bundle:nil];
-        [self presentModalViewController:Login animated:NO];
-        //[[ViewMediator getInstance] vonAnfangZuLogin];
+        [[ViewMediator getInstance] vonAnfangZuLogin];
     }
 }
 
@@ -65,10 +59,7 @@
 
 -(IBAction)zumLoginWechseln:(id)sender
 {
-    LoginScreenViewController *Login = [[LoginScreenViewController alloc]initWithNibName:@"LoginScreenViewController" bundle:nil];
-    [self presentModalViewController:Login animated:NO];
-    
-    //[[ViewMediator getInstance] vonAnfangZuLogin];
+    [[ViewMediator getInstance] vonAnfangZuLogin];
 }
 
 @end

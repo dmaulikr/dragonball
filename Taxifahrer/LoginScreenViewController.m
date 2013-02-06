@@ -32,6 +32,10 @@
 {
     [super viewDidLoad];
    // self.loadData;
+    
+    self.navigationItem.leftBarButtonItem=nil;
+    self.navigationItem.hidesBackButton=YES;
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 
