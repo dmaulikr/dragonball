@@ -32,6 +32,27 @@
 
 
 
+
+- (void)viewDidLoad
+{
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Job verfuegbar" message:@"Möchten Sie diesen Job annehmen?" delegate:self cancelButtonTitle:@"Ja" otherButtonTitles:@"Nein", nil];
+    [alert show];
+}
+
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        NSLog(@"Ja");
+        //Job angenommen! Job belegen und ausführen
+    }
+    else
+    {
+        NSLog(@"Nein");
+        //Man wird nicht nocheinmal über den Job unterrichtet
+    }
+}
+
 -(void) ArrayErstellen
 {
  JobArray = [[NSMutableArray alloc]init];
@@ -59,8 +80,12 @@
     job1.iconurl = @"";
     [self.JobArray addObject:job1];
     //Iconurl ausgelassen
+    
+//Altert frage: Möchtest Du den Job, ja oder nein? Wenn ja, färbe job grün, wenn nein, halt nicht
    
 }
+
+
 
 
 -(void) FestgelegtenAuftragGenerieren2
@@ -79,6 +104,12 @@
     job2.jobstatus= @"closed"; //Job hat schon ein anderer übernommen
     job2.userinfo =@"";
     job2.distance = @"4";
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Job verfuegbar" message:@"Möchten Sie diesen Job annehmen?" delegate:self cancelButtonTitle:@"Ja" otherButtonTitles:@"Nein", nil];
+    [alert show];
+  //Wenn Ja mach das und das
+    //wenn nein mach das und das 
+
     [self.JobArray addObject:job2];
     
     
