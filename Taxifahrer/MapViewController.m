@@ -42,10 +42,10 @@
     
     NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
-	region.center = coordinate;
+    region.center = coordinate;
     region.span.longitudeDelta=MAP_DELTA_RANGE;
-	region.span.latitudeDelta=MAP_DELTA_RANGE;
-	mapview.region=region;
+    region.span.latitudeDelta=MAP_DELTA_RANGE;
+    mapview.region=region;
     
     mapview.delegate=self;
 
@@ -66,8 +66,10 @@
     ImageAnnotation* JobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
     
     // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
-    JobAnnotation.mytitle = ANNOTATION_GREENJOB;
-    JobAnnotation.Job = beispielJob;
+    JobAnnotation.mytitle = kJobGeneratorNewJob;
+    //JobAnnotation.mytitle = ANNOTATION_GREENJOB;
+    //JobAnnotation.Job = beispielJob;
+    JobAnnotation.Job = 
     [mapview addAnnotation:JobAnnotation];
     
     
@@ -80,7 +82,7 @@
 }
 
 #pragma mark implementation of MKMapViewDelegate
-
+/*
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation
 {
     static NSString* CustomerAnnotationIdentifier = @"pin";
@@ -102,7 +104,7 @@
             _annotationView.frame = CGRectMake(_annotationView.frame.origin.x, _annotationView.frame.origin.y, 80.0f, 47.0f);
             _annotationView.center = temp_annocenter;
             
-            // Gelbes Taxi auf Malfläche kleben
+            // Button auf Malfläche kleben
             ImageAnnotation* JobAnnotation = (ImageAnnotation*) annotation;
             [_annotationView addSubview:JobAnnotation.m_ImageView];
             JobAnnotation.m_ImageView.center = CGPointMake(_annotationView.frame.size.width/2, _annotationView.frame.size.height/2);
@@ -160,7 +162,7 @@
     }
     return nil;
 }
-
+*/
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -187,7 +189,6 @@
 
 -(void)JobAngekommen
 {
-    
     
 }
 
