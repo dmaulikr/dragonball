@@ -10,7 +10,9 @@
 
 
 @interface JobGenerator : NSObject
-
+{
+    int jobcheck;
+}
 
 @property (nonatomic,retain) NSMutableArray* JobArray;
 

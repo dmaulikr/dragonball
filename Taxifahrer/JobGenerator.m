@@ -40,18 +40,7 @@
 }
 
 
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0)
-    {
-        NSLog(@"Ja");
-        //Job angenommen! Job belegen und ausführen
-    }
-    else
-    {
-        NSLog(@"Nein");
-        //Man wird nicht nocheinmal über den Job unterrichtet
-    }
-}
+
 
 -(void) ArrayErstellen
 {
@@ -78,11 +67,44 @@
     job1.userinfo = @"-";
     job1.distance = @"5000000000"; //Wird sicherlich mit den GPS eintragen. Zu Testzwecken auf 5000000000 (Da wir angeblich in den USA sind)
     job1.iconurl = @"";
+    jobcheck=1;
     [self.JobArray addObject:job1];
     //Iconurl ausgelassen
     
-//Altert frage: Möchtest Du den Job, ja oder nein? Wenn ja, färbe job grün, wenn nein, halt nicht
+
    
+}
+
+
+-(void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        NSLog(@"Ja, Job annehmen");
+        
+        
+        
+        if (jobcheck == 2)
+           {
+            CJob* job2 = [[CJob alloc]init];
+            NSLog(@"Es handelt sich um Job 2.");
+            job2.jobstatus = @"closed";
+            NSLog(@"Job2 wurde auf closed gesetzt");
+            }
+        
+        else if (jobcheck==1)
+        {
+            CJob* job1 = [[CJob alloc]init];
+            NSLog(@"Es handelt sich um Job 1.");
+            job1.jobstatus = @"closed";
+            NSLog(@"Job1 wurde auf closed gesetzt");
+        }
+        
+    }
+    else
+    {
+        NSLog(@"Nein");
+        [self.JobArray removeAllObjects];
+    }
 }
 
 
@@ -104,16 +126,26 @@
     job2.jobstatus= @"closed"; //Job hat schon ein anderer übernommen
     job2.userinfo =@"";
     job2.distance = @"4";
+    jobcheck = 2;
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Job verfuegbar" message:@"Möchten Sie diesen Job annehmen?" delegate:self cancelButtonTitle:@"Ja" otherButtonTitles:@"Nein", nil];
-    [alert show];
-  //Wenn Ja mach das und das
-    //wenn nein mach das und das 
-
-    [self.JobArray addObject:job2];
+    if 	([job2.jobstatus isEqualToString:@"open"])
+    {
+        NSLog(@"Job ist offen, zum Array adden");
+        [self.JobArray addObject:job2];
+    }
+    
+    else
+    {
+        NSLog(@"Job2 ist vergeben");
+        [self.JobArray removeAllObjects];
+    }
+    
     
     
 }
+
+
+
 
 
 
