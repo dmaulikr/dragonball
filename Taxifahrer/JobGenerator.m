@@ -68,8 +68,22 @@
     job1.distance = @"5000000000"; //Wird sicherlich mit den GPS eintragen. Zu Testzwecken auf 5000000000 (Da wir angeblich in den USA sind)
     job1.iconurl = @"";
     jobcheck=1;
-    [self.JobArray addObject:job1];
+
     //Iconurl ausgelassen
+    
+    
+    if 	([job1.jobstatus isEqualToString:@"open"])
+    {
+        NSLog(@"Job ist offen, zum Array adden");
+        [self.JobArray addObject:job1];
+    }
+    
+    else
+    {
+        NSLog(@"Job1 ist vergeben");
+        [self.JobArray removeAllObjects];
+    }
+    
     
 
    
