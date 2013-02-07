@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#define kJobGeneratorNewJob @"kJobGeneratorNewJob"
 
 @interface JobGenerator : NSObject
 {
@@ -19,7 +20,7 @@
 
 @property (nonatomic,retain) NSMutableArray* JobArray;
 
-
+-(void) JobAngekommen:(NSNotification*) notification;
 
 
 

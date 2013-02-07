@@ -73,6 +73,7 @@
     job1.distance = @"5000000000"; //Wird sicherlich mit den GPS eintragen. Zu Testzwecken auf 5000000000 (Da wir angeblich in den USA sind)
     job1.iconurl = @"";
     jobcheck=1;
+    [[NSNotificationCenter defaultCenter] postNotificationName: kJobGeneratorNewJob object:JobArray];
 
     //Iconurl ausgelassen
     
@@ -147,6 +148,7 @@
     job2.userinfo =@"";
     job2.distance = @"4";
     jobcheck = 2;
+    [[NSNotificationCenter defaultCenter] postNotificationName: kJobGeneratorNewJob object:JobArray];
     
     if 	([job2.jobstatus isEqualToString:@"open"])
     {

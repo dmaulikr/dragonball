@@ -178,12 +178,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationFehler:)
      name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil];
-
+    
+    [[NSNotificationCenter defaultCenter] addobserver:self selector:@selector(JobAngekommen:) name:kJobGeneratorNewJob object:nil];
     
 
-    
-    
+}
 
+
+-(void)JobAngekommen
+{
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
