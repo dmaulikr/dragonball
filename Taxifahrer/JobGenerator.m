@@ -8,9 +8,14 @@
 
 #import "JobGenerator.h"
 #import "CJob.h"
+#import "MapViewController.h"
+#import "ImageAnnotation.h"
+#import "SimpleLocationManager.h"
+#import "JobButton.h"
 
 @implementation JobGenerator
 @synthesize JobArray;
+
 
 
 /*NSString* token;		// das eindeutige Kennzeichen des Jobs
@@ -76,6 +81,7 @@
     {
         NSLog(@"Job ist offen, zum Array adden");
         [self.JobArray addObject:job1];
+        
     }
     
     else

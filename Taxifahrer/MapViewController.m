@@ -11,6 +11,7 @@
 #import "SimpleLocationManager.h"
 #import "CJob.h"
 #import "JobButton.h"
+#import "JobGenerator.h"
 
 @interface MapViewController ()
 
@@ -24,7 +25,8 @@
     [super viewDidLoad];
     NSLog(@"viewDidLoad des MapViewControllers");
     [mapview setShowsUserLocation:YES];
-  
+    //Springe zum Ort des Benutzers
+
     
     
     _lblKoordinate.text = @"Noch keine Daten";
@@ -46,6 +48,7 @@
 	mapview.region=region;
     
     mapview.delegate=self;
+
     
     CJob* beispielJob = [[CJob alloc] init ];
     beispielJob.token = @"HH12345";
@@ -61,6 +64,7 @@
     
     // Wir erschaffen ein Objekt vom Typ ImageAnnotation. Dieses haben wir selbst definiert
     ImageAnnotation* JobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
+    
     // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
     JobAnnotation.mytitle = ANNOTATION_GREENJOB;
     JobAnnotation.Job = beispielJob;
@@ -72,6 +76,7 @@
     
     
     [mapview addAnnotation:taxiAnnotation];
+     
 }
 
 #pragma mark implementation of MKMapViewDelegate
@@ -168,12 +173,14 @@
      [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationErhalten:)
      name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
-     [[NSNotificationCenter defaultCenter] addObserver:self
+    
+        [mapview setCenterCoordinate:mapview.userLocation.coordinate];
+    [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationFehler:)
      name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil];
+
     
-    //Springe zum Ort des Benutzers 
-    [mapview setCenterCoordinate:mapview.userLocation.coordinate];
+
     
     
 
