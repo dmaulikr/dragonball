@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JobGenerator.h"
 #import "ViewMediator.h"
 
 @implementation AppDelegate
@@ -25,6 +25,9 @@
     // Override point for customization after application launch.
     self.window.rootViewController = (UIViewController*) [ViewMediator getInstance].navController;
     [self.window makeKeyAndVisible];
+    // JobGenerator zu Testzwecken starten
+    JobGenerator* zeiger = [JobGenerator getInstance];
+    [zeiger starteGenerator];
     return YES;
 }
 

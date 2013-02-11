@@ -31,7 +31,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
     if (self)
     {
         //Object inizialisieren
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobEmpfangen) name:NOTIFICATION_NEWJOB object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobEmpfangen:) name:NOTIFICATION_NEWJOB object:nil];
         offeneJobs = [[NSMutableArray alloc] init];
     }
     return self;
