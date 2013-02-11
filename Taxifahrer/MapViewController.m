@@ -13,6 +13,8 @@
 #import "JobButton.h"
 #import "JobGenerator.h"
 #import "JobCenter.h"
+#import "ViewMediator.h"
+
 
 @interface MapViewController ()
 
@@ -60,6 +62,12 @@
     
     [self jobsZeichnen];
      
+}
+
+- (IBAction)buttonZuRegi:(id)sender
+{
+    [[ViewMediator getInstance] VonMapzuRegi];
+
 }
 
 -(void) jobsZeichnen

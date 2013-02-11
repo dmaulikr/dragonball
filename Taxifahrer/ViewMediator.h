@@ -40,6 +40,7 @@
 -(void) vonAnfangZuLogin;
 -(void) vonRegiZuLogin;
 -(void) vonPWZuLogin;
+-(void) VonMapzuRegi;
 
 -(void) vonLoginZuVorRegi;
 -(void) vonVorRegiZuAGB;

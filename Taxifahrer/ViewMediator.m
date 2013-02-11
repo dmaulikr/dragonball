@@ -55,6 +55,11 @@ static ViewMediator* mediator = nil;
     [self.PW.navigationController pushViewController:self.Login animated:YES];
 }
 
+-(void) VonMapzuRegi
+{
+    [self.Karte.navigationController pushViewController:self.Registrieren animated:YES];
+}
+
 -(void) vonRegiZuLogin
 {
     [self.Registrieren.navigationController pushViewController:self.Login animated:YES];
