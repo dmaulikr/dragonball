@@ -31,7 +31,7 @@ static JobGenerator* generator = nil;
 {
     CJob* beispieljob = nil;
     
-    int zahl = arc4random()%3;
+    int zahl = arc4random()%4;
     if (zahl == 0)
     {
         NSLog(@"JobGenerator == 0");
@@ -67,7 +67,7 @@ static JobGenerator* generator = nil;
         beispieljob.longitude = @"10.010";
         beispieljob.name = @"Becker";
     }
-    else
+    else if (zahl == 3)
     {
         NSLog(@"Jobgenerator == %d" , zahl);
         beispieljob = [[CJob alloc] init];

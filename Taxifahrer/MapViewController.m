@@ -28,7 +28,8 @@
     [mapview setShowsUserLocation:YES];
     //Springe zum Ort des Benutzers
 
-    
+    JobGenerator* zeiger = [JobGenerator getInstance];
+    [zeiger starteGenerator];
     
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
@@ -53,28 +54,6 @@
     
     mapview.delegate=self;
 
-    /*
-    CJob* beispielJob = [[CJob alloc] init ];
-    beispielJob.token = @"HH12345";
-    beispielJob.street = @"Jungfernstieg 1";
-    beispielJob.taxisize = @"3";
-    beispielJob.latitude = @"53.5533";
-    beispielJob.longitude = @"10.005";
-    beispielJob.name = @"Schmidt";
-    
-    double breitengrad = [beispielJob.latitude doubleValue];
-    double laengengrad = [beispielJob.longitude doubleValue];
-    CLLocationCoordinate2D unsereKoordinate = CLLocationCoordinate2DMake(breitengrad, laengengrad);
-    
-    // Wir erschaffen ein Objekt vom Typ ImageAnnotation. Dieses haben wir selbst definiert
-    ImageAnnotation* JobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
-    
-    // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
-    JobAnnotation.mytitle = ANNOTATION_GREENJOB;
-    JobAnnotation.Job = beispielJob;
-    [mapview addAnnotation:JobAnnotation];
-    
-    */
     ImageAnnotation* taxiAnnotation = [[ImageAnnotation alloc] initWithCoordinate:coordinate];
     taxiAnnotation.mytitle = ANNOTATION_TAXI;
     [mapview addAnnotation:taxiAnnotation];
