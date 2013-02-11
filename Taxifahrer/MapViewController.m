@@ -66,10 +66,8 @@
     ImageAnnotation* JobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
     
     // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
-    JobAnnotation.mytitle = kJobGeneratorNewJob;
-    //JobAnnotation.mytitle = ANNOTATION_GREENJOB;
-    //JobAnnotation.Job = beispielJob;
-    JobAnnotation.Job = 
+    JobAnnotation.mytitle = ANNOTATION_GREENJOB;
+    JobAnnotation.Job = beispielJob;
     [mapview addAnnotation:JobAnnotation];
     
     
@@ -82,9 +80,43 @@
 }
 
 #pragma mark implementation of MKMapViewDelegate
-/*
+
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation
 {
+    static NSString* CustomerAnnotationIdentifier = @"pin";
+    
+    MKAnnotationView *_annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:CustomerAnnotationIdentifier];
+    
+    ImageAnnotation* neueAnnotation = (ImageAnnotation*) annotation;
+    
+    CGPoint temp_annocenter = _annotationView.center;
+    _annotationView.userInteractionEnabled=YES;
+    _annotationView.frame = CGRectMake(_annotationView.frame.origin.x, _annotationView.frame.origin.y, 80.0f, 47.0f);
+    _annotationView.center = temp_annocenter;
+    
+    // Button für Job 1 auf Malfläche kleben
+    ImageAnnotation* JobAnnotation = (ImageAnnotation*) annotation;
+    [_annotationView addSubview:JobAnnotation.m_ImageView];
+    JobAnnotation.m_ImageView.center = CGPointMake(_annotationView.frame.size.width/2, _annotationView.frame.size.height/2);
+    
+    CJob* Job = JobAnnotation.Job;
+    
+    // Button für Annotation erschaffen
+    JobButton* button = [JobButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:JobAnnotation.m_ImageView.image forState:UIControlStateNormal];
+    
+    button.frame = CGRectMake(0, 0, _annotationView.frame.size.width, _annotationView.frame.size.height);
+    [button addTarget:self action:@selector(buttonGedrueckt:) forControlEvents:UIControlEventTouchUpInside];
+    [_annotationView addSubview:button];
+    
+    button.Job = Job;
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"Auftrag"
+     object:self];
+}
+
+/*
     static NSString* CustomerAnnotationIdentifier = @"pin";
     
     // Ist es eine unserer Pins oder ein Pin vom System (ImageAnnotation ist von uns)

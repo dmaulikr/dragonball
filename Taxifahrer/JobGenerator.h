@@ -12,6 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #define kJobGeneratorNewJob @"kJobGeneratorNewJob"
+#define kJobGeneratorNewButton @"kJobGeneratorNewButton"
 
 @interface JobGenerator : NSObject
 {
