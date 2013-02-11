@@ -20,7 +20,7 @@
 
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 
-
+-(void) jobsZeichnen;
 
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;

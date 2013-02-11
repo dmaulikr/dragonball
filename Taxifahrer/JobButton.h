@@ -12,6 +12,6 @@
 
 @interface JobButton : UIButton
 
-@property (nonatomic,retain) CJob* Job;
+@property (nonatomic,retain) CJob* job;
 
 @end

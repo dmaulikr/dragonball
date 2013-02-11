@@ -7,22 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
+#define NOTIFICATION_NEWJOB @"newjob"
 
-#define kJobGeneratorNewJob @"kJobGeneratorNewJob"
-#define kJobGeneratorNewButton @"kJobGeneratorNewButton"
 
 @interface JobGenerator : NSObject
-{
-    int jobcheck;
-}
-
-@property (nonatomic,retain) NSMutableArray* JobArray;
-
--(void) JobAngekommen:(NSNotification*) notification;
-
-
++(JobGenerator*) getInstance; // SINGLETON-Funktion
+-(void) starteGenerator;
+-(void) jobsSenden;
 
 @end
+
+

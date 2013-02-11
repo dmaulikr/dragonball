@@ -24,13 +24,9 @@
 	return mytitle;
 }
 
--(id)initWithCoordinate:(CLLocationCoordinate2D) c{
-	
-    
-    
-    mytitle = @"TAXI";
-  
-   
+-(id)initWithCoordinate:(CLLocationCoordinate2D) c
+{
+	mytitle = @"TAXI";
     coordinate=c;
     self.m_ImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blackbutton.png"]];
 	return self;

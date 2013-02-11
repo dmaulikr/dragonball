@@ -8,10 +8,11 @@
 
 #import "MapViewController.h"
 #import "ImageAnnotation.h"
-#import "SimpleLocationManager.h"
+//#import "SimpleLocationManager.h"
 #import "CJob.h"
 #import "JobButton.h"
 #import "JobGenerator.h"
+#import "JobCenter.h"
 
 @interface MapViewController ()
 
@@ -31,14 +32,17 @@
     
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
-    [[SimpleLocationManager getInstance] startUpdatingLocation];
+   // [[SimpleLocationManager getInstance] startUpdatingLocation];
     
     // Ort zuweisen
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 53.55f;
+    coordinate.longitude = 10.0f;
+    /*
     coordinate.latitude = coordinate.latitude;
     coordinate.longitude = coordinate.longitude;
-   
+   */
     
     NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
@@ -49,7 +53,7 @@
     
     mapview.delegate=self;
 
-    
+    /*
     CJob* beispielJob = [[CJob alloc] init ];
     beispielJob.token = @"HH12345";
     beispielJob.street = @"Jungfernstieg 1";
@@ -70,53 +74,48 @@
     JobAnnotation.Job = beispielJob;
     [mapview addAnnotation:JobAnnotation];
     
-    
+    */
     ImageAnnotation* taxiAnnotation = [[ImageAnnotation alloc] initWithCoordinate:coordinate];
     taxiAnnotation.mytitle = ANNOTATION_TAXI;
-    
-    
     [mapview addAnnotation:taxiAnnotation];
+    
+    [self jobsZeichnen];
      
+}
+
+-(void) jobsZeichnen
+{
+    NSLog(@"jobsZeichnen");
+    
+    // Alle alten Annotations loeschen
+    [mapview removeAnnotations:mapview.annotations];
+    
+    JobCenter* jobcenterzeiger = [JobCenter getInstance];
+    NSMutableArray* alleJobs = jobcenterzeiger.offeneJobs;
+    
+    for (int i = 0; i < [alleJobs count];i++) {
+        CJob* beispieljob = [alleJobs objectAtIndex:i];
+        
+        double breitengrad = [beispieljob.latitude doubleValue];
+        double laengengrad = [beispieljob.longitude doubleValue];
+        CLLocationCoordinate2D unsereKoordinate = CLLocationCoordinate2DMake(breitengrad, laengengrad);
+        
+        // Wir erschaffen ein Objekt vom Typ ImageAnnotation. Dieses haben wir selbst definiert
+        ImageAnnotation* jobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
+        // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
+        jobAnnotation.mytitle = ANNOTATION_GREENJOB;
+        jobAnnotation.job = beispieljob;
+        [mapview addAnnotation:jobAnnotation];
+        
+    }
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(jobsZeichnen) userInfo:nil repeats:NO];
 }
 
 #pragma mark implementation of MKMapViewDelegate
 
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation
 {
-    static NSString* CustomerAnnotationIdentifier = @"pin";
-    
-    MKAnnotationView *_annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:CustomerAnnotationIdentifier];
-    
-    ImageAnnotation* neueAnnotation = (ImageAnnotation*) annotation;
-    
-    CGPoint temp_annocenter = _annotationView.center;
-    _annotationView.userInteractionEnabled=YES;
-    _annotationView.frame = CGRectMake(_annotationView.frame.origin.x, _annotationView.frame.origin.y, 80.0f, 47.0f);
-    _annotationView.center = temp_annocenter;
-    
-    // Button für Job 1 auf Malfläche kleben
-    ImageAnnotation* JobAnnotation = (ImageAnnotation*) annotation;
-    [_annotationView addSubview:JobAnnotation.m_ImageView];
-    JobAnnotation.m_ImageView.center = CGPointMake(_annotationView.frame.size.width/2, _annotationView.frame.size.height/2);
-    
-    CJob* Job = JobAnnotation.Job;
-    
-    // Button für Annotation erschaffen
-    JobButton* button = [JobButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:JobAnnotation.m_ImageView.image forState:UIControlStateNormal];
-    
-    button.frame = CGRectMake(0, 0, _annotationView.frame.size.width, _annotationView.frame.size.height);
-    [button addTarget:self action:@selector(buttonGedrueckt:) forControlEvents:UIControlEventTouchUpInside];
-    [_annotationView addSubview:button];
-    
-    button.Job = Job;
-    
-    [[NSNotificationCenter defaultCenter]
-     postNotificationName:@"Auftrag"
-     object:self];
-}
-
-/*
     static NSString* CustomerAnnotationIdentifier = @"pin";
     
     // Ist es eine unserer Pins oder ein Pin vom System (ImageAnnotation ist von uns)
@@ -194,7 +193,7 @@
     }
     return nil;
 }
-*/
+/*
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -206,9 +205,9 @@
      NSLog(@"Melde mich beim Observer an...");
      [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationErhalten:)
-     name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
+    // name:kSimpleLocationManagerLocationUpdateNotification  object:nil];
     
-        [mapview setCenterCoordinate:mapview.userLocation.coordinate];
+       [mapview setCenterCoordinate:mapview.userLocation.coordinate];
     [[NSNotificationCenter defaultCenter] addObserver:self
      selector:@selector(locationFehler:)
      name:kSimpleLocationManagerLocationUpdateErrorNotification  object:nil];
@@ -217,7 +216,7 @@
     
 
 }
-
+*/
 
 -(void)JobAngekommen
 {
@@ -241,8 +240,8 @@
 {
     NSLog(@"Button gedrückt!");
     
-    JobButton* JB = (JobButton*) sender;
-    CJob* unserJob = JB.Job;
+    JobButton* jb = (JobButton*) sender;
+    CJob* unserJob = jb.job;
     
     NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
 }
