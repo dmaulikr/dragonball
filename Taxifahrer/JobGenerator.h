@@ -15,6 +15,8 @@
 -(void) starteGenerator;
 -(void) jobsSenden;
 
+@property (nonatomic,retain) NSMutableArray* beispieljobs;
+
 @end
 
 
