@@ -30,6 +30,7 @@ static JobGenerator* generator = nil;
 
 -(void) jobsSenden
 {
+    NSLog(@"Jobs senden");
     beispieljobs = [[NSMutableArray alloc]init];
     
     
@@ -37,12 +38,14 @@ static JobGenerator* generator = nil;
     CJob* beispieljob2 = nil;
 
     
-    int zahl = arc4random()%1;
+    int zahl = arc4random()%3;
     
     NSLog(@"Jobgenerator hat eine %d gewuerfelt" , zahl);
     if (zahl == 0)
     {
-        NSLog(@"Jobgenerator == %d", zahl);
+      
+        
+        beispieljob = [[CJob alloc] init];
         
         beispieljob.token = @"HH12345";
         beispieljob.street = @"Jungfernstieg 1";
@@ -52,7 +55,7 @@ static JobGenerator* generator = nil;
         beispieljob.name = @"Schmidt";
    
     
-        
+        beispieljob2 = [[CJob alloc] init];
         beispieljob2.token = @"HH78912";
         beispieljob2.street = @"Hauptstrasse 1";
         beispieljob2.taxisize = @"1";
@@ -60,22 +63,26 @@ static JobGenerator* generator = nil;
         beispieljob2.longitude = @"10.009";
         beispieljob2.name = @"Meier";
         
+        
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
+        NSLog(@"Beispieljobs erfolgreich objekte hinzugefuegt");
     }
     
     else if (zahl == 1)
     {
-        NSLog(@"Jobgenerator == %d" , zahl);
+ 
+        beispieljob = [[CJob alloc] init];
         
         beispieljob.token = @"HH78fdf";
-        beispieljob.street = @"Trollallee";
+        beispieljob.street = @"Trollstraße";
         beispieljob.taxisize = @"2";
         beispieljob.latitude = @"53.5578";
         beispieljob.longitude = @"10.010";
         beispieljob.name = @"Becker";
   
       
+        beispieljob2 = [[CJob alloc] init];
         
         beispieljob2.token = @"HH666";
         beispieljob2.street = @"Himmelsweg";
@@ -83,9 +90,38 @@ static JobGenerator* generator = nil;
         beispieljob2.latitude = @"53.5588";
         beispieljob2.longitude = @"10.016";
         beispieljob2.name = @"Varian";
+          
+        [beispieljobs addObject:beispieljob];
+        [beispieljobs addObject:beispieljob2];
+         NSLog(@"Beispieljobs erfolgreich objekte hinzugefuegt");
+    }
+    
+    
+    else
+    {
+        beispieljob = [[CJob alloc]init];
+        
+        beispieljob.token = @"ff854fdf";
+        beispieljob.street = @"Entenhausen";
+        beispieljob.taxisize = @"3";
+        beispieljob.longitude = @"10.018";
+        beispieljob.latitude = @"10.018";
+        beispieljob.name = @"Dagobert";
+        
+        beispieljob2 = [[CJob alloc] init];
+        
+        beispieljob2.token = @"HH7836";
+        beispieljob2.street = @"Winterfeste";
+        beispieljob2.taxisize = @"4";
+        beispieljob2.latitude = @"53.5575";
+        beispieljob2.longitude = @"10.012";
+        beispieljob2.name = @"Jarl Kevin";
         
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
+        NSLog(@"Beispieljobs erfolgreich objekte hinzugefuegt");
+        
+        
     }
     
     
