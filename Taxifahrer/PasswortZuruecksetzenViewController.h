@@ -13,5 +13,6 @@
 @property (retain, nonatomic) IBOutlet UITextField *txtEmail;
 
 -(IBAction)PWButton:(id)sender;
+-(IBAction)backToLogin:(id)sender;
 
 @end

@@ -40,7 +40,6 @@ static JobCenter* jobcenter_fernbedienung = nil;
 -(void) jobEmpfangen:(NSNotification*) briefumschlag //notification
 {
     
-    
     NSLog(@"jobEmpfangen aufgerufen");
     [offeneJobs removeAllObjects];
     

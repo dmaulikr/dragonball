@@ -32,7 +32,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erfolg!" message:@"Dein Passwort wurde an die angegebene E-Mail gesendet." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
         [alert show];
         
-        [[ViewMediator getInstance] vonPWZuLogin];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     else
     {
@@ -57,6 +57,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction) backToLogin:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -66,8 +66,7 @@
 
 - (IBAction)buttonZuRegi:(id)sender
 {
-    [[ViewMediator getInstance] VonMapzuRegi];
-
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) jobsZeichnen
