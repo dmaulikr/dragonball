@@ -34,9 +34,8 @@ static JobGenerator* generator = nil;
     
     
     CJob* beispieljob = nil;
-    CJob* beispieljob1 = nil;
     CJob* beispieljob2 = nil;
-    CJob* beispieljob3 = nil;
+
     
     int zahl = arc4random()%1;
     
@@ -54,39 +53,39 @@ static JobGenerator* generator = nil;
    
     
         
-        beispieljob1.token = @"HH78912";
-        beispieljob1.street = @"Hauptstrasse 1";
-        beispieljob1.taxisize = @"1";
-        beispieljob1.latitude = @"53.5573";
-        beispieljob1.longitude = @"10.009";
-        beispieljob1.name = @"Meier";
+        beispieljob2.token = @"HH78912";
+        beispieljob2.street = @"Hauptstrasse 1";
+        beispieljob2.taxisize = @"1";
+        beispieljob2.latitude = @"53.5573";
+        beispieljob2.longitude = @"10.009";
+        beispieljob2.name = @"Meier";
         
         [beispieljobs addObject:beispieljob];
-        [beispieljobs addObject:beispieljob1];
+        [beispieljobs addObject:beispieljob2];
     }
     
     else if (zahl == 1)
     {
         NSLog(@"Jobgenerator == %d" , zahl);
         
-        beispieljob2.token = @"HH78fdf";
-        beispieljob2.street = @"Trollallee";
-        beispieljob2.taxisize = @"2";
-        beispieljob2.latitude = @"53.5578";
-        beispieljob2.longitude = @"10.010";
-        beispieljob2.name = @"Becker";
+        beispieljob.token = @"HH78fdf";
+        beispieljob.street = @"Trollallee";
+        beispieljob.taxisize = @"2";
+        beispieljob.latitude = @"53.5578";
+        beispieljob.longitude = @"10.010";
+        beispieljob.name = @"Becker";
   
       
         
-        beispieljob3.token = @"HH666";
-        beispieljob3.street = @"Himmelsweg";
-        beispieljob3.taxisize = @"4";
-        beispieljob3.latitude = @"53.5588";
-        beispieljob3.longitude = @"10.016";
-        beispieljob3.name = @"Varian";
+        beispieljob2.token = @"HH666";
+        beispieljob2.street = @"Himmelsweg";
+        beispieljob2.taxisize = @"4";
+        beispieljob2.latitude = @"53.5588";
+        beispieljob2.longitude = @"10.016";
+        beispieljob2.name = @"Varian";
         
+        [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
-        [beispieljobs addObject:beispieljob3];
     }
     
     
