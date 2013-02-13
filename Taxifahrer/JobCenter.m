@@ -2,7 +2,7 @@
 //  JobCenter.m
 //  kartemitbild
 //
-//  Created by Dennis Brunne on 09.02.13.
+//  Created by Kevin Wagner on 09.02.13.
 //  Copyright (c) 2013 talex. All rights reserved.
 //
 
@@ -54,6 +54,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
         {
             CJob* job = [incommingjobarray objectAtIndex:i];
             [offeneJobs addObject:job];
+          
         }
     }
 }

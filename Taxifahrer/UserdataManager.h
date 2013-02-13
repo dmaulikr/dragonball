@@ -64,22 +64,7 @@
 								   phone:(NSString*)phone
                             licenseplate:(NSString*)licenseplate;
 
-/*
- #define UDKey_Email @"email"
- #define UDKey_Username @"username"
- #define UDKey_Password @"password"
- #define UDKey_Phone @"phone"
- 
- @property (nonatomic, copy) NSString* email;
- @property (nonatomic,copy) NSString* username;
- @property (nonatomic,copy) NSString* password;
- @property (nonatomic,copy) NSString* phone;
- 
- +(UserdataManager*) getInstance;
- 
- -(void) saveData;
- -(void) loadData;
- */
+
 
 
 @end
