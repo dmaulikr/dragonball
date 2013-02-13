@@ -40,9 +40,10 @@ static JobCenter* jobcenter_fernbedienung = nil;
     return self;
 }
 
--(void) jobEmpfangen:(NSNotification*) briefumschlag //notification
+-(void) jobEmpfangen:(NSNotification*) briefumschlag
 {
     
+<<<<<<< HEAD
     NSLog(@"jobEmpfangen aufgerufen");
     [offeneJobs removeAllObjects];
     
@@ -70,6 +71,20 @@ static JobCenter* jobcenter_fernbedienung = nil;
         for (int i=0; i < [angenommeneJobs count];i++) {
             CJob* j = [angenommeneJobs objectAtIndex:i];
             NSLog(@"%@",job.street);
+=======
+    // Eigenes Array leeren
+    [offeneJobs removeAllObjects];
+    
+    // Array aus Notification auspacken
+    NSMutableArray* array = (NSMutableArray*) briefumschlag.object;
+    
+    // Wenn Jobs in ausgepacktem Array, Jobs aus ausgepacktem Array in eigenes Array packen
+    if (array != nil && [array count] > 0)
+    {
+        for (int i = 0; i < [array count];i++) {
+            CJob* job = [array objectAtIndex:i];
+            [offeneJobs addObject:job];
+>>>>>>> 78f2ccee329a8316cf78dd94cf6eb7126674299e
         }
     }
 }
