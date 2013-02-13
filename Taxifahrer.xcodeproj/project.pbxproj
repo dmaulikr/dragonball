@@ -41,7 +41,6 @@
 		0AB98C5E16CB2D8D00DD63E0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C5D16CB2D8D00DD63E0 /* Icon.png */; };
 		0AB98C6016CB2DD600DD63E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C5F16CB2DD600DD63E0 /* Default.png */; };
 		0AB98C6216CB2EAC00DD63E0 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */; };
-		0AB98C6416CB2F1B00DD63E0 /* fragezeichen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C6316CB2F1B00DD63E0 /* fragezeichen.png */; };
 		0AF6B2E016BBFAFE00E877C4 /* JobGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */; };
 		9096CDEE16C95CBC00125084 /* JobCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9096CDED16C95CBC00125084 /* JobCenter.m */; };
 		909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934EA16B02BB4007CB613 /* LoginScreenViewController.m */; };
@@ -133,7 +132,6 @@
 		0AB98C5D16CB2D8D00DD63E0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0AB98C5F16CB2DD600DD63E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Dropbox/ProjekteUndHausaufgaben/TaxiDriverProjekt/iphone/TaxiButton/TaxiButton/Default.png; sourceTree = "<group>"; };
 		0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = ../../../Dropbox/ProjekteUndHausaufgaben/TaxiDriverProjekt/iphone/TaxiCaller/TargetFiles/base/iTunesArtwork.png; sourceTree = "<group>"; };
-		0AB98C6316CB2F1B00DD63E0 /* fragezeichen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fragezeichen.png; path = ../../../Downloads/fragezeichen.png; sourceTree = "<group>"; };
 		0AF6B2DE16BBFAFE00E877C4 /* JobGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobGenerator.h; sourceTree = "<group>"; };
 		0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobGenerator.m; sourceTree = "<group>"; };
 		9096CDEC16C95CBC00125084 /* JobCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobCenter.h; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 		0A2A6B8916B7FAF000C24418 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0AB98C6316CB2F1B00DD63E0 /* fragezeichen.png */,
 				0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */,
 				90BA437016B7FCB100969B5E /* mapTaxi20.png */,
 				90C0DA6716C17F660008FF87 /* blackbutton.png */,
@@ -450,7 +447,6 @@
 				0AB98C5E16CB2D8D00DD63E0 /* Icon.png in Resources */,
 				0AB98C6016CB2DD600DD63E0 /* Default.png in Resources */,
 				0AB98C6216CB2EAC00DD63E0 /* iTunesArtwork.png in Resources */,
-				0AB98C6416CB2F1B00DD63E0 /* fragezeichen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
