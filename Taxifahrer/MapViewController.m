@@ -33,6 +33,8 @@
     JobGenerator* zeiger = [JobGenerator getInstance];
     [zeiger starteGenerator];
     
+    JobCenterZeiger = [JobCenter getInstance];
+    
     _lblKoordinate.text = @"Noch keine Daten";
     // Hier wird der SimpleLocationManager gestartet
    // [[SimpleLocationManager getInstance] startUpdatingLocation];
@@ -222,14 +224,13 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void) buttonGedrueckt:(id)sender
-{
-    NSLog(@"Button gedrückt!");
-    
+-(void) buttonGedrueckt:(id)sender {
+    NSLog(@"buttonGedrueckt");
     JobButton* jb = (JobButton*) sender;
     CJob* unserJob = jb.job;
     
-    NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
+    NSLog(@"Job für %@ wurde ausgewaehlt",unserJob.name);
+    [JobCenterZeiger jobAnnehmen:jb.job];
 }
 
 -(void) locationErhalten:(NSNotification*) nachricht
