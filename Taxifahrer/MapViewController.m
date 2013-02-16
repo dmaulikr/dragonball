@@ -14,7 +14,6 @@
 #import "JobGenerator.h"
 #import "JobCenter.h"
 #import "ViewMediator.h"
-#import "JobCenter.h"
 
 
 @interface MapViewController ()
@@ -230,16 +229,7 @@
     JobButton* jb = (JobButton*) sender;
     CJob* unserJob = jb.job;
     
-    
     NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
-    JobCenter* jc = [JobCenter getInstance];
-   
-    [jc jobAnnehmen:jb.job];
-    
- 
-    
-    
-   
 }
 
 -(void) locationErhalten:(NSNotification*) nachricht
