@@ -21,11 +21,10 @@
     IBOutlet UITextField* txtStreetnumber;
     IBOutlet UITextField* txtPLZ;
     
-    
     IBOutlet UIButton* btnSpeichern;
 }
 
--(IBAction) registrieren:(id)sender;
+-(IBAction)registrieren:(id)sender;
 -(IBAction)nachobenschieben:(id)sender;
 -(IBAction)positionwiederherstellen:(id)sender;
 

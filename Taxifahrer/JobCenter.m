@@ -42,7 +42,6 @@ static JobCenter* jobcenter_fernbedienung = nil;
     
     NSLog(@"jobEmpfangen aufgerufen");
     [offeneJobs removeAllObjects];
-    
  
     NSLog(@" Übertrage anommende Jobs in eigenes Array");
     NSMutableArray* incommingjobarray = (NSMutableArray*) briefumschlag.object;

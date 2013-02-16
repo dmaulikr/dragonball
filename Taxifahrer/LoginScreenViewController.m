@@ -15,19 +15,17 @@
 #import "UserdataManager.h"
 #import "LoginSpeichern.h"
 
-
 @implementation LoginScreenViewController
 {
-@public
+    @public
     LoginScreenViewController* lsvc;
 }
+
 @synthesize txtUsername;
 @synthesize txtPassword;
 @synthesize btnLogin;
 @synthesize lblErgebnis;
 
-
- 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,7 +53,6 @@
     request.password = txtPassword.text;
     
 }
-
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {

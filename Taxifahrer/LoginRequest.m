@@ -34,9 +34,6 @@ static LoginRequest* loginrequest = nil;
     //      <update>0</update>
     //      <reactivate>1</reactivate>
 	//</request>
-	
-    //username=@"neff9@taxi.de";
-    //password=@"c3d246";
     
 	//generate XML request
 	DDXMLElement *root = (DDXMLElement *)[DDXMLNode elementWithName: XMLTagRequest];

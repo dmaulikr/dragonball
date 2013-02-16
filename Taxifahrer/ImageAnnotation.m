@@ -16,11 +16,13 @@
 @synthesize mysubtitle;
 @synthesize Job;
 
-- (NSString *)subtitle{
+- (NSString *)subtitle
+{
 	return mysubtitle;
 }
 
-- (NSString *)title{
+- (NSString *)title
+{
 	return mytitle;
 }
 

@@ -11,8 +11,6 @@
 
 @interface AGBViewController ()
 
-
-
 @end
 
 @implementation AGBViewController
@@ -29,7 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    // Labels
+    _lblAGBueberschirift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
+    _lblAGBText.text = NSLocalizedString(@"LABEL_AGBTEXT", @"");
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,4 +51,9 @@
     [[ViewMediator getInstance] vonAGBZuVorRegi];
 }
 
+- (void)dealloc {
+    [_lblAGBueberschirift release];
+    [_lblAGBText release];
+    [super dealloc];
+}
 @end

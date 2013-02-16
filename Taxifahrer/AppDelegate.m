@@ -23,9 +23,18 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+    ViewMediator* mediator = [ViewMediator getInstance];
+    mediator.appdelegate = self;
+    
     self.window.rootViewController = (UIViewController*) [ViewMediator getInstance].navController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(UIWindow*) getWindow
+{
+    return self.window;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

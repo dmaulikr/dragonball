@@ -14,6 +14,8 @@
 #import "AnfangViewController.h"
 #import "VorRegiViewController.h"
 #import "AGBViewController.h"
+#import "TabMainViewController.h"
+#import "TabellenViewController.h"
 
 static ViewMediator* mediator = nil;
 
@@ -26,6 +28,11 @@ static ViewMediator* mediator = nil;
 @synthesize VorRegi;
 @synthesize AGB;
 @synthesize navController;
+
+@synthesize appdelegate;
+@synthesize tabMainController;
+@synthesize navMapController;
+@synthesize navTableController;
 
 +(ViewMediator*) getInstance {
     if (mediator == nil) {
@@ -46,6 +53,15 @@ static ViewMediator* mediator = nil;
         self.AGB = [[AGBViewController alloc] initWithNibName:@"AGBViewController" bundle:nil];
         
         navController = [[UINavigationController alloc] initWithRootViewController:self.Anfang];
+        
+        tabMainController = [[TabMainViewController alloc] initWithNibName:@"TabMainViewController" bundle:nil];
+        tabMainController.mediator = self;
+        
+        mapController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+        tableController = [[TabellenViewController alloc] initWithNibName:@"TabellenViewController" bundle:nil];
+        
+        self.navMapController = [[UINavigationController alloc] initWithRootViewController:mapController];
+        self.navTableController = [[UINavigationController alloc] initWithRootViewController:tableController];
     }
     return self;
 }
@@ -123,6 +139,24 @@ static ViewMediator* mediator = nil;
 -(void) vonAGBZuVorRegi
 {
     [self.AGB.navigationController pushViewController:self.VorRegi animated:YES];
+}
+
+-(void) showMapView {
+    NSLog(@"showMapView");
+    UIWindow* window = [appdelegate getWindow];
+    if (window != nil) {
+        window.rootViewController = navMapController;
+        [window makeKeyAndVisible];
+    }
+}
+
+-(void) showTableView {
+    NSLog(@"showJobsView");
+    UIWindow* window = [appdelegate getWindow];
+    if (window != nil) {
+        window.rootViewController = navTableController;
+        [window makeKeyAndVisible];
+    }
 }
 
 @end

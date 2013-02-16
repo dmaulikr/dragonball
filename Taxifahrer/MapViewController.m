@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
+//#import "SimpleLocationManager.h"
 #import "MapViewController.h"
 #import "ImageAnnotation.h"
-//#import "SimpleLocationManager.h"
 #import "CJob.h"
 #import "JobButton.h"
 #import "JobGenerator.h"
 #import "JobCenter.h"
 #import "ViewMediator.h"
-
+#import "TabMainViewController.h"
 
 @interface MapViewController ()
 
@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     NSLog(@"viewDidLoad des MapViewControllers");
     [mapview setShowsUserLocation:YES];
     //Springe zum Ort des Benutzers
@@ -34,18 +36,17 @@
     [zeiger starteGenerator];
     
     _lblKoordinate.text = @"Noch keine Daten";
-    // Hier wird der SimpleLocationManager gestartet
-   // [[SimpleLocationManager getInstance] startUpdatingLocation];
+    //Hier wird der SimpleLocationManager gestartet
+    //[[SimpleLocationManager getInstance] startUpdatingLocation];
     
     // Ort zuweisen
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 53.55f;
     coordinate.longitude = 10.0f;
-    /*
-    coordinate.latitude = coordinate.latitude;
-    coordinate.longitude = coordinate.longitude;
-   */
+    
+    /* coordinate.latitude = coordinate.latitude;
+    coordinate.longitude = coordinate.longitude; */
     
     NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     
@@ -61,7 +62,13 @@
     [mapview addAnnotation:taxiAnnotation];
     
     [self jobsZeichnen];
-     
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    TabMainViewController* tabMain = [[ViewMediator getInstance] tabMainController];
+    tabMain.view.frame = CGRectMake(0, 367, 320, 49);
+    [self.view addSubview:tabMain.view];
 }
 
 - (IBAction)buttonZuRegi:(id)sender
@@ -179,8 +186,8 @@
     }
     return nil;
 }
-/*
--(void) viewDidAppear:(BOOL)animated
+
+/* -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
@@ -201,8 +208,7 @@
     [[NSNotificationCenter defaultCenter] addobserver:self selector:@selector(JobAngekommen:) name:kJobGeneratorNewJob object:nil];
     
 
-}
-*/
+} */
 
 -(void)JobAngekommen
 {
@@ -236,12 +242,10 @@
 {
     NSLog(@"locationErhalten");
     
-    
     // Wir packen das CLLocation* aus dem übergebenen NSNotification-Objekt (dem StandardObjekt für Nachrichten aus dem NSNotifictionCenter) aus.
     // Hier muss man wissen, welchen Typ das Objekt in der Nachricht haben soll. Da wir wissen, dass die Nachricht vom SimpleLocationManager kommt und wir den SimpleLocationManager selbst geschrieben haben, wandeln wir das Objekt in der Nachricht in eine CLLocation um.
     // Der Anhang der Nachricht befindet sich in dem Property .object.
     CLLocation* loc = (CLLocation*) nachricht.object;
-    
     
     // Aus dem Location-Objekt holen wir uns nun eine Koordinate.
     CLLocationCoordinate2D coord = loc.coordinate;
@@ -249,9 +253,6 @@
     // Diese geben wir nun auf dem Bildschirm aus.
     NSString* bildschirmtext = [[NSString alloc] initWithFormat:@"Längengrad: %f  Breitengrad: %f",coord.longitude,coord.latitude];
     self.lblKoordinate.text = bildschirmtext;
-
-    
-    
 }
 
 -(void) locationFehler:(NSNotification*) nachricht

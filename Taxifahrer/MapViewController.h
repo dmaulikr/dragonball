@@ -14,16 +14,16 @@
 #define MAP_DELTA_RANGE 0.0600 // 0.0025
 
 @class ImageAnnotation;
+@class TabMainViewController;
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
-
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
-
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 
--(void) jobsZeichnen;
 - (IBAction)buttonZuRegi:(id)sender;
+
+-(void) jobsZeichnen;
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
 

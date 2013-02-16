@@ -12,7 +12,6 @@
 @interface LoginScreenViewController : UIViewController
 
 {
-    
     IBOutlet UITextField* txtUsername;
     IBOutlet UITextField* txtPassword;
     IBOutlet UIButton* btnLogin;
@@ -23,10 +22,12 @@
 @property (nonatomic,retain) IBOutlet UITextField* txtPassword;
 @property (nonatomic,retain) IBOutlet UIButton* btnLogin;
 @property (nonatomic,retain) IBOutlet UILabel* lblErgebnis;
+
 - (IBAction)buttonGedrueckt:(id)sender;
 - (IBAction)buttonRegi:(id)sender;
 - (IBAction)buttonMap:(id)sender;
 - (IBAction)buttonPasswortZuruecksetzen:(id)sender;
+
 -(void) saveData;
 -(void) loadData;
 

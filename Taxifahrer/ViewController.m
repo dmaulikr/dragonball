@@ -24,18 +24,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-
-
-
-
-
+// Registrierung
 -(IBAction) speichern:(id)sender
 {
-    
-    
     if (txtEmail == nil || [txtEmail.text isEqualToString:@""])
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
@@ -73,10 +66,6 @@
         [alert show];
     }
     else
-
-    
-    
-    
     {
     
     UserdataManager* usermanager = [[UserdataManager alloc] init];
@@ -87,19 +76,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-
-
-
-
 -(BOOL) textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
-
-
-
 
 -(void) animateTextField: (UITextField*) textField up: (BOOL) up distance: (int) distance
 {
@@ -115,20 +96,19 @@
     [UIView commitAnimations];
 }
 
-
 -(IBAction)nachobenschieben:(id)sender
 {
     [self animateTextField: sender up: NO distance: -140];
 }
-
 
 -(IBAction)positionwiederherstellen:(id)sender;
 {
     [self animateTextField: sender up: NO distance: 140];
 }
 
-- (void)dealloc {
-    
+- (void)dealloc
+{
     [super dealloc];
 }
+
 @end

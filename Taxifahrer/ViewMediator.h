@@ -15,9 +15,27 @@
 @class AnfangViewController;
 @class VorRegiViewController;
 @class AGBViewController;
+@class TabellenViewController;
+@class TabMainViewController;
+@class AppDelegate;
 
 @interface ViewMediator : NSObject
-{}
+{
+    AppDelegate* appdelegate;
+    
+    MapViewController* mapController;
+    TabellenViewController* tableController;
+    UINavigationController* navMapController;
+    UINavigationController* navTableController;
+    
+    TabMainViewController* tabMainController;
+}
+
+@property (nonatomic,assign) AppDelegate* appdelegate;
+@property (nonatomic,retain) TabMainViewController* tabMainController;
+
+@property (nonatomic,retain) UINavigationController* navMapController;
+@property (nonatomic,retain) UINavigationController* navTableController;
 
 @property (nonatomic,retain) UINavigationController* navController;
 
@@ -32,21 +50,38 @@
 +(ViewMediator*) getInstance;
 -(id) init;
 
+//von Login zu ...
 -(void) vonLoginZuRegi;
 -(void) vonLoginZuMap;
--(void) vonRegiZuMap;
+-(void) vonLoginZuVorRegi;
 -(void) vonLoginZuPW;
--(void) vonAnfangZuMap;
--(void) vonAnfangZuLogin;
+
+//von Regi zu ...
+-(void) vonRegiZuMap;
+-(void) vonVorRegiZuAGB;
 -(void) vonRegiZuLogin;
+
+//von PW zu ...
 -(void) vonPWZuLogin;
+
+//von Map zu ...
 -(void) VonMapzuRegi;
 
--(void) vonLoginZuVorRegi;
--(void) vonVorRegiZuAGB;
--(void) vonAGBZuRegi;
--(void) vonVorRegiZuRegi;
+//von Anfang zu ...
+-(void) vonAnfangZuMap;
+-(void) vonAnfangZuLogin;
+
+//von AGB zu ...
 -(void) vonAGBZuLogin;
 -(void) vonAGBZuVorRegi;
+-(void) vonAGBZuRegi;
+
+//von VorRegi zu ...
+-(void) vonVorRegiZuRegi;
+
+//TabMainViewController
+-(void) showMapView;
+-(void) showTableView;
+
 
 @end
