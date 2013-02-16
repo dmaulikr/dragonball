@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CJob.h"
 
 @interface JobCenter : NSObject
 +(JobCenter*) getInstance;
 
+
 @property (nonatomic,retain) NSMutableArray* offeneJobs;
+@property (nonatomic,retain) NSMutableArray* angenommeneJobs;
+
+-(void) jobAnnehmen:(CJob*) job;
+
+
 
 @end

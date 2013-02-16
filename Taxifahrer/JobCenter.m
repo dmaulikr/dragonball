@@ -15,6 +15,7 @@
 static JobCenter* jobcenter_fernbedienung = nil;
 
 @synthesize offeneJobs;
+@synthesize angenommeneJobs;
 
 +(JobCenter*) getInstance
 {
@@ -33,6 +34,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
         //Object inizialisieren
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobEmpfangen:) name:NOTIFICATION_NEWJOB object:nil];
         offeneJobs = [[NSMutableArray alloc] init];
+        angenommeneJobs = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -56,6 +58,12 @@ static JobCenter* jobcenter_fernbedienung = nil;
           
         }
     }
+    
+}
+
+-(void)jobAnnehmen:(CJob*)job
+{
+    NSLog(@"jobAnnehmen aufgerufen");
 }
 
 @end
