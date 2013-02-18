@@ -53,10 +53,10 @@
     // Do any additional setup after loading the view from its nib.
     
     //LABELS
-    /*_lblUeberschrift.text = NSLocalizedString(@"LABEL_PASSWORTUEBERSCHRIFT", @"");
-    _lblPEmail.text = NSLocalizedString(@"LABEL_PASSWORTEMAIL", @"");
+    _lblUeberschrift.text = NSLocalizedString(@"LABEL_PASSWORTUEBERSCHRIFT", @"");
+    _lblEmail.text = NSLocalizedString(@"LABEL_PASSWORTEMAIL", @"");
     _lblPasswortZuschickenButton.text = NSLocalizedString(@"LABEL_PASSWORTZURUECKSETZENBUTTON", @"");
-    _lblAnmeldenButton.text = NSLocalizedString(@"LABEL_PASSWORTANMELDENBUTTON", @""); */
+    _lblAnmeldenButton.text = NSLocalizedString(@"LABEL_PASSWORTANMELDENBUTTON", @""); 
 }
 
 - (void)didReceiveMemoryWarning

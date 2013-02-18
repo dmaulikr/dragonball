@@ -37,10 +37,10 @@
     [self.navigationController setNavigationBarHidden:YES];*/
     
     // LABELS
-    /*_lblEmail.text = NSLocalizedString(@"LABEL_LOGINEMAIL", @"");
+    _lblEmail.text = NSLocalizedString(@"LABEL_LOGINEMAIL", @"");
     _lblPasswort.text = NSLocalizedString(@"LABEL_LOGINPASSWORT", @"");
     _lblPasswortVergessen.text = NSLocalizedString(@"LABEL_LOGINPASSWORTVERGESSEN", @"");
-    _lblNeuRegistrieren.text = NSLocalizedString(@"LABEL_LOGINNEUREGISTRIEREN", @""); */
+    _lblNeuRegistrieren.text = NSLocalizedString(@"LABEL_LOGINNEUREGISTRIEREN", @""); 
 }
 
 
@@ -83,8 +83,6 @@
     NSLog(@"PW pressed");
     [[ViewMediator getInstance] vonLoginZuPW];
 }
-
-
 
 - (void)dealloc {
     [_lblEmail release];

@@ -30,9 +30,9 @@
     // Do any additional setup after loading the view from its nib.
     
     //LABELS
-    /*_lblAGBAkzeptieren.text = NSLocalizedString(@"LABEL_VORREGIAGBAKZEPTIEREN", @"");
+    _lblAGBAkzeptieren.text = NSLocalizedString(@"LABEL_VORREGIAGBAKZEPTIEREN", @"");
     _lblUnsereAGBs.text = NSLocalizedString(@"LABEL_VORREGIUNSEREAGBS", @"");
-    _lblZurRegi.text = NSLocalizedString(@"LABEL_VORREGIZURREGI", @""); */
+    _lblZurRegi.text = NSLocalizedString(@"LABEL_VORREGIZURREGI", @""); 
 }
 
 - (void)didReceiveMemoryWarning

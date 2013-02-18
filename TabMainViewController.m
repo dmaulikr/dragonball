@@ -42,11 +42,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    /*lblKarte.text = NSLocalizedString(@"LABEL_TABMAINKARTE", @"");
+    lblKarte.text = NSLocalizedString(@"LABEL_TABMAINKARTE", @"");
     lblAuftraege.text = NSLocalizedString(@"LABEL_TABMAINAUFTRAG", @"");
     lblBezahlen.text = NSLocalizedString(@"LABEL_TABMAINBEZAHLEN", @"");
     lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");
-    lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");*/
+    lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
 }
 
 - (void)didReceiveMemoryWarning

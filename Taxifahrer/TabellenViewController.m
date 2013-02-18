@@ -48,8 +48,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    int anzahl = [ARRAY count];
-    return anzahl;
+  //  int anzahl = [ARRAY count];
+  //  return anzahl;
 }
 
 
