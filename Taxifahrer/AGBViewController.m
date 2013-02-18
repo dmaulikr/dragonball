@@ -29,9 +29,9 @@
     [super viewDidLoad];
     
     // Labels
-    _lblUeberschrift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
+    /*_lblUeberschrift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
     _lblAGBs.text = NSLocalizedString(@"LABEL_AGBTEXT", @"");
-    _lblZurRegiButton.text = NSLocalizedString(@"LABEL_AGBZURREGIBUTTON", @"");
+    _lblZurRegiButton.text = NSLocalizedString(@"LABEL_AGBZURREGIBUTTON", @""); */
 }
 
 - (void)didReceiveMemoryWarning

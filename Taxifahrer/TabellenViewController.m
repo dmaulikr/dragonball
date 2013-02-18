@@ -9,6 +9,7 @@
 #import "TabellenViewController.h"
 #import "ViewMediator.h"
 #import "TabMainViewController.h"
+#import "JobCenter.h"
 
 @interface TabellenViewController ()
 
@@ -38,6 +39,19 @@
     tabMain.view.frame = CGRectMake(0, 367, 320, 49);
     [self.view addSubview:tabMain.view];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    int anzahl = [ARRAY count];
+    return anzahl;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

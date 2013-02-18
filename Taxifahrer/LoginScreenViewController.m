@@ -31,6 +31,7 @@
     [super viewDidLoad];
    // self.loadData;
     
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
    /* self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
     [self.navigationController setNavigationBarHidden:YES];*/
