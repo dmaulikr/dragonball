@@ -13,8 +13,9 @@
 - (IBAction)buttonZuRegi:(id)sender;
 - (IBAction)buttonZuLogin:(id)sender;
 
-@property (retain, nonatomic) IBOutlet UILabel *lblAGBueberschirift;
-@property (retain, nonatomic) IBOutlet UILabel *lblAGBText;
+@property (retain, nonatomic) IBOutlet UILabel *lblUeberschrift;
+@property (retain, nonatomic) IBOutlet UILabel *lblAGBs;
+@property (retain, nonatomic) IBOutlet UILabel *lblZurRegiButton;
 
 
 @end

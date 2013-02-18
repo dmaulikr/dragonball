@@ -19,6 +19,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //LABELS
+    /*_lblEmail.text = NSLocalizedString(@"LABEL_REGIEMAIL", @"");
+    _lblTelefon.text = NSLocalizedString(@"LABEL_REGITELEFON", @"");
+    _lblVorname.text = NSLocalizedString(@"LABEL_REGIVORNAME", @"");
+    _lblNachname.text = NSLocalizedString(@"LABEL_REGINACHNAME", @"");
+    _lblStrasse.text = NSLocalizedString(@"LABEL_REGISTRASSE", @"");
+    _lblHausnummer.text = NSLocalizedString(@"LABEL_REGIHAUSNUMMER", @"");
+    _lblPostleitzahl.text = NSLocalizedString(@"LABEL_REGIPOSTLEITZAHL", @"");
+    _lblRegistrieren.text = NSLocalizedString(@"LABEL_REGIREGIBUTTON", @""); */
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +118,14 @@
 
 - (void)dealloc
 {
+    [_lblEmail release];
+    [_lblTelefon release];
+    [_lblVorname release];
+    [_lblNachname release];
+    [_lblStrasse release];
+    [_lblHausnummer release];
+    [_lblPostleitzahl release];
+    [_lblRegistrieren release];
     [super dealloc];
 }
 

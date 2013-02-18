@@ -88,12 +88,14 @@ static ViewMediator* mediator = nil;
 
 -(void) vonLoginZuMap
 {
-    [self.Login.navigationController pushViewController:self.Karte animated:YES];
+    //[self.Login.navigationController pushViewController:self.Karte animated:YES];
+    [self showMapView];
 }
 
 -(void) vonRegiZuMap
 {
-    [self.Registrieren.navigationController pushViewController:self.Karte animated:YES];
+    //[self.Registrieren.navigationController pushViewController:self.Karte animated:YES];
+    [self showMapView];
 }
 
 -(void) vonLoginZuPW
@@ -103,7 +105,8 @@ static ViewMediator* mediator = nil;
 
 -(void) vonAnfangZuMap
 {
-    [self.Anfang.navigationController pushViewController:self.Karte animated:YES];
+    //[self.Anfang.navigationController pushViewController:self.Karte animated:YES];
+    [self showMapView];
 }
 
 -(void) vonAnfangZuLogin

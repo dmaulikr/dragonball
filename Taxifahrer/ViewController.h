@@ -24,6 +24,15 @@
     IBOutlet UIButton* btnSpeichern;
 }
 
+@property (retain, nonatomic) IBOutlet UILabel *lblEmail;
+@property (retain, nonatomic) IBOutlet UILabel *lblTelefon;
+@property (retain, nonatomic) IBOutlet UILabel *lblVorname;
+@property (retain, nonatomic) IBOutlet UILabel *lblNachname;
+@property (retain, nonatomic) IBOutlet UILabel *lblStrasse;
+@property (retain, nonatomic) IBOutlet UILabel *lblHausnummer;
+@property (retain, nonatomic) IBOutlet UILabel *lblPostleitzahl;
+@property (retain, nonatomic) IBOutlet UILabel *lblRegistrieren;
+
 -(IBAction)registrieren:(id)sender;
 -(IBAction)nachobenschieben:(id)sender;
 -(IBAction)positionwiederherstellen:(id)sender;

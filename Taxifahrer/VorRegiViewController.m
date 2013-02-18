@@ -28,6 +28,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //LABELS
+    /*_lblAGBAkzeptieren.text = NSLocalizedString(@"LABEL_VORREGIAGBAKZEPTIEREN", @"");
+    _lblUnsereAGBs.text = NSLocalizedString(@"LABEL_VORREGIUNSEREAGBS", @"");
+    _lblZurRegi.text = NSLocalizedString(@"LABEL_VORREGIZURREGI", @""); */
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,4 +53,10 @@
     [[ViewMediator getInstance] vonVorRegiZuRegi];
 }
 
+- (void)dealloc {
+    [_lblAGBAkzeptieren release];
+    [_lblUnsereAGBs release];
+    [_lblZurRegi release];
+    [super dealloc];
+}
 @end

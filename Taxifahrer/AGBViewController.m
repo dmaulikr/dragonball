@@ -29,8 +29,9 @@
     [super viewDidLoad];
     
     // Labels
-    _lblAGBueberschirift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
-    _lblAGBText.text = NSLocalizedString(@"LABEL_AGBTEXT", @"");
+    _lblUeberschrift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
+    _lblAGBs.text = NSLocalizedString(@"LABEL_AGBTEXT", @"");
+    _lblZurRegiButton.text = NSLocalizedString(@"LABEL_AGBZURREGIBUTTON", @"");
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,8 +53,9 @@
 }
 
 - (void)dealloc {
-    [_lblAGBueberschirift release];
-    [_lblAGBText release];
+    [_lblUeberschrift release];
+    [_lblAGBs release];
+    [_lblZurRegiButton release];
     [super dealloc];
 }
 @end

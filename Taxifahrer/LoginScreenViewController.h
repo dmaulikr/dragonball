@@ -23,6 +23,11 @@
 @property (nonatomic,retain) IBOutlet UIButton* btnLogin;
 @property (nonatomic,retain) IBOutlet UILabel* lblErgebnis;
 
+@property (retain, nonatomic) IBOutlet UILabel *lblEmail;
+@property (retain, nonatomic) IBOutlet UILabel *lblPasswort;
+@property (retain, nonatomic) IBOutlet UILabel *lblPasswortVergessen;
+@property (retain, nonatomic) IBOutlet UILabel *lblNeuRegistrieren;
+
 - (IBAction)buttonGedrueckt:(id)sender;
 - (IBAction)buttonRegi:(id)sender;
 - (IBAction)buttonMap:(id)sender;

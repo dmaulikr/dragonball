@@ -48,7 +48,6 @@
 		9098A4A616D008CB0013D093 /* TabellenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9098A4A416D008CA0013D093 /* TabellenViewController.m */; };
 		9098A4A716D008CB0013D093 /* TabellenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4A516D008CB0013D093 /* TabellenViewController.xib */; };
 		9098A4AB16D0090A0013D093 /* TabMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9098A4A916D009090013D093 /* TabMainViewController.m */; };
-		9098A4AC16D0090A0013D093 /* TabMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4AA16D0090A0013D093 /* TabMainViewController.xib */; };
 		9098A4C416D009590013D093 /* tab_auftrag2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4AE16D009590013D093 /* tab_auftrag2.png */; };
 		9098A4C516D009590013D093 /* tab_auftrag2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4AF16D009590013D093 /* tab_auftrag2@2x.png */; };
 		9098A4C616D009590013D093 /* tab_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4B016D009590013D093 /* tab_map.png */; };
@@ -71,6 +70,7 @@
 		9098A4D716D009590013D093 /* tabsel_auftrag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4C116D009590013D093 /* tabsel_auftrag@2x.png */; };
 		9098A4D816D009590013D093 /* tabsel_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4C216D009590013D093 /* tabsel_map.png */; };
 		9098A4D916D009590013D093 /* tabsel_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4C316D009590013D093 /* tabsel_map@2x.png */; };
+		9098A4DA16D01B790013D093 /* TabMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9098A4DC16D01B790013D093 /* TabMainViewController.xib */; };
 		909934EC16B02BB4007CB613 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934EA16B02BB4007CB613 /* LoginScreenViewController.m */; };
 		909934ED16B02BB4007CB613 /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */; };
 		909934F116B02C0B007CB613 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934F016B02C0B007CB613 /* LoginRequest.m */; };
@@ -163,14 +163,13 @@
 		0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobGenerator.m; sourceTree = "<group>"; };
 		9096CDEC16C95CBC00125084 /* JobCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobCenter.h; sourceTree = "<group>"; };
 		9096CDED16C95CBC00125084 /* JobCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobCenter.m; sourceTree = "<group>"; };
-		9098A49416D003320013D093 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9098A49416D003320013D093 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9098A4A116D005860013D093 /* AGBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGBViewController.xib; sourceTree = "<group>"; };
 		9098A4A316D008CA0013D093 /* TabellenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabellenViewController.h; sourceTree = "<group>"; };
 		9098A4A416D008CA0013D093 /* TabellenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabellenViewController.m; sourceTree = "<group>"; };
 		9098A4A516D008CB0013D093 /* TabellenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabellenViewController.xib; sourceTree = "<group>"; };
 		9098A4A816D009090013D093 /* TabMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabMainViewController.h; path = ../TabMainViewController.h; sourceTree = "<group>"; };
 		9098A4A916D009090013D093 /* TabMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabMainViewController.m; path = ../TabMainViewController.m; sourceTree = "<group>"; };
-		9098A4AA16D0090A0013D093 /* TabMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TabMainViewController.xib; path = ../TabMainViewController.xib; sourceTree = "<group>"; };
 		9098A4AE16D009590013D093 /* tab_auftrag2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_auftrag2.png; sourceTree = "<group>"; };
 		9098A4AF16D009590013D093 /* tab_auftrag2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_auftrag2@2x.png"; sourceTree = "<group>"; };
 		9098A4B016D009590013D093 /* tab_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_map.png; sourceTree = "<group>"; };
@@ -193,6 +192,7 @@
 		9098A4C116D009590013D093 /* tabsel_auftrag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabsel_auftrag@2x.png"; sourceTree = "<group>"; };
 		9098A4C216D009590013D093 /* tabsel_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabsel_map.png; sourceTree = "<group>"; };
 		9098A4C316D009590013D093 /* tabsel_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabsel_map@2x.png"; sourceTree = "<group>"; };
+		9098A4DB16D01B790013D093 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TabMainViewController.xib; sourceTree = "<group>"; };
 		909934E916B02BB4007CB613 /* LoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		909934EA16B02BB4007CB613 /* LoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
 		909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
@@ -375,9 +375,6 @@
 				90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */,
 				90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */,
 				90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */,
-				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
-				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
-				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
 				90C0DA7616C193050008FF87 /* VorRegiViewController.h */,
 				90C0DA7716C193050008FF87 /* VorRegiViewController.m */,
 				90C0DA7816C193050008FF87 /* VorRegiViewController.xib */,
@@ -389,7 +386,10 @@
 				9098A4A516D008CB0013D093 /* TabellenViewController.xib */,
 				9098A4A816D009090013D093 /* TabMainViewController.h */,
 				9098A4A916D009090013D093 /* TabMainViewController.m */,
-				9098A4AA16D0090A0013D093 /* TabMainViewController.xib */,
+				9098A4DC16D01B790013D093 /* TabMainViewController.xib */,
+				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
+				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
+				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
 				9098A49516D003320013D093 /* Localizable.strings */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
@@ -543,7 +543,7 @@
 				9098A49316D003320013D093 /* Localizable.strings in Resources */,
 				9098A4A216D005860013D093 /* AGBViewController.xib in Resources */,
 				9098A4A716D008CB0013D093 /* TabellenViewController.xib in Resources */,
-				9098A4AC16D0090A0013D093 /* TabMainViewController.xib in Resources */,
+				9098A4DA16D01B790013D093 /* TabMainViewController.xib in Resources */,
 				9098A4C416D009590013D093 /* tab_auftrag2.png in Resources */,
 				9098A4C516D009590013D093 /* tab_auftrag2@2x.png in Resources */,
 				9098A4C616D009590013D093 /* tab_map.png in Resources */,
@@ -643,6 +643,15 @@
 				9098A49416D003320013D093 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9098A4DC16D01B790013D093 /* TabMainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9098A4DB16D01B790013D093 /* en */,
+			);
+			name = TabMainViewController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

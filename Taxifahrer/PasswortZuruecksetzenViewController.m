@@ -51,6 +51,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //LABELS
+    /*_lblUeberschrift.text = NSLocalizedString(@"LABEL_PASSWORTUEBERSCHRIFT", @"");
+    _lblPEmail.text = NSLocalizedString(@"LABEL_PASSWORTEMAIL", @"");
+    _lblPasswortZuschickenButton.text = NSLocalizedString(@"LABEL_PASSWORTZURUECKSETZENBUTTON", @"");
+    _lblAnmeldenButton.text = NSLocalizedString(@"LABEL_PASSWORTANMELDENBUTTON", @""); */
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,4 +69,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)dealloc {
+    [_lblUeberschrift release];
+    [_lblEmail release];
+    [_lblPasswortZuschickenButton release];
+    [_lblAnmeldenButton release];
+    [super dealloc];
+}
 @end

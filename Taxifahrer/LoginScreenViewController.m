@@ -31,9 +31,15 @@
     [super viewDidLoad];
    // self.loadData;
     
-    self.navigationItem.leftBarButtonItem=nil;
+   /* self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES];*/
+    
+    // LABELS
+    /*_lblEmail.text = NSLocalizedString(@"LABEL_LOGINEMAIL", @"");
+    _lblPasswort.text = NSLocalizedString(@"LABEL_LOGINPASSWORT", @"");
+    _lblPasswortVergessen.text = NSLocalizedString(@"LABEL_LOGINPASSWORTVERGESSEN", @"");
+    _lblNeuRegistrieren.text = NSLocalizedString(@"LABEL_LOGINNEUREGISTRIEREN", @""); */
 }
 
 
@@ -79,4 +85,11 @@
 
 
 
+- (void)dealloc {
+    [_lblEmail release];
+    [_lblPasswort release];
+    [_lblPasswortVergessen release];
+    [_lblNeuRegistrieren release];
+    [super dealloc];
+}
 @end

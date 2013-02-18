@@ -10,6 +10,9 @@
 
 @interface VorRegiViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UILabel *lblAGBAkzeptieren;
+@property (retain, nonatomic) IBOutlet UILabel *lblUnsereAGBs;
+@property (retain, nonatomic) IBOutlet UILabel *lblZurRegi;
 -(IBAction)buttonAGB:(id)sender;
 -(IBAction)buttonRegi:(id)sender;
 
