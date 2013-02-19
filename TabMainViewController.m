@@ -47,6 +47,7 @@
     lblBezahlen.text = NSLocalizedString(@"LABEL_TABMAINBEZAHLEN", @"");
     lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");
     lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
+    farbscheck = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,11 +77,50 @@
 - (IBAction)BezahlenButtonPressed:(id)sender
 {
     NSLog(@"BezahlenButton gedrückt.");
+
 }
+
+
 
 - (IBAction)VerfuegbarButtonPressed:(id)sender
 {
     NSLog(@"VerfügbarButton gedrückt.");
+    //btnVerfuegabr = [UIButton buttonWithType:(UIButtonTypeCustom)];
+   
+  
+   
+    if (farbscheck == 0)
+    {
+    UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
+    [btnVerfuegabr setImage:btnbusy forState:UIControlStateNormal];
+    UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
+    [btnVerfuegabr setImage:btnfree forState:UIControlStateHighlighted];
+
+    farbscheck = 1;
+
+    }
+    
+    else
+    {
+        UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
+        [btnVerfuegabr setImage:btnfree forState:UIControlStateNormal];
+        UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
+        [btnVerfuegabr setImage:btnbusy forState:UIControlStateHighlighted];
+        farbscheck = 0;
+     
+    }
+ 
+
+    
+   
+
+    
+  
+    
+    
+    
+    
+    
 }
 
 - (IBAction)StandbyButtonPressed:(id)sender

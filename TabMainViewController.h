@@ -23,6 +23,8 @@
     UILabel *lblBezahlen;
     UILabel *lblVerfuegbar;
     UILabel *lblStandby;
+    
+    int farbscheck;
 }
 
 @property (nonatomic,retain) IBOutlet UIButton* btnKarte;
