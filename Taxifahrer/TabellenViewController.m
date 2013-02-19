@@ -11,13 +11,14 @@
 #import "TabMainViewController.h"
 #import "JobCenter.h"
 #import "CJob.h"
+#import "JobButton.h"
 
 @interface TabellenViewController ()
 
 @end
 
 @implementation TabellenViewController
-
+/*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,15 +27,26 @@
     }
     return self;
 }
-
+*/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"AUFGERUFEN WORDEN ICH BIN!");
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(tableView:) userInfo:nil repeats:NO];
+    //[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tableView) userInfo:nil repeats:NO];
+    
+    jobcenterzeiger = [JobCenter getInstance];
+    NSMutableArray* allejobs = jobcenterzeiger.offeneJobs;
+    
+    NSLog(@"%d", allejobs.count);
+}
 
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -44,46 +56,6 @@
     [self.view addSubview:tabMain.view];
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    JobCenter* jobcenterzeiger = [JobCenter getInstance];
-    allejobs = jobcenterzeiger.offeneJobs;
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    for (int i = 0; i < [allejobs count];i++)
-    {
-    CJob* beispieljob = [allejobs objectAtIndex:i];
-
-        NSString* test = beispieljob.name;
-      
-        cell.textLabel.text = test;
-       
-    }
-    
-    return cell;
-    
-    
-    [NSTimer scheduledTimerWithTimeInterval:5.00 target:self selector:@selector(self) userInfo:nil repeats:NO];
-    
-}
-
-
-
-- (NSInteger)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-
-{
-    
-    int anzahl = [allejobs count];
-    NSLog(@"NSinteger: %d aus allejobs gezahelt" , anzahl);
-    return anzahl;
-    
-    
-
-    
-}
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -92,15 +64,49 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-  //  int anzahl = [ARRAY count];
-  //  return anzahl;
+    int anzahl = [allejobs count];
+    return anzahl;
+    
+}
+
+-(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        NSLog(@"Abbrechen gedrückt");
+    }
+    
+    else if (buttonIndex == 1)
+    {
+        NSLog(@"Ok gedrückt");
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //int i = indexPath.row;
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    
+    for (int i = 0; i < [allejobs count];i++)
+    {
+    CJob* job = [allejobs objectAtIndex:i];
+
+        NSString* test = allejobs;
+        cell.textLabel.text = allejobs.count;
+        
+        return cell;
+       
+    }
+    //[NSTimer scheduledTimerWithTimeInterval:5.00 target:self selector:@selector(self) userInfo:nil repeats:NO];
+    
 }
 
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end
