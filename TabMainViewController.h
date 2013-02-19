@@ -24,7 +24,8 @@
     UILabel *lblVerfuegbar;
     UILabel *lblStandby;
     
-    int farbscheck;
+    int VerfuegbarCheck;
+    int StandbyCheck;
 }
 
 @property (nonatomic,retain) IBOutlet UIButton* btnKarte;

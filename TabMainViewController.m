@@ -47,7 +47,8 @@
     lblBezahlen.text = NSLocalizedString(@"LABEL_TABMAINBEZAHLEN", @"");
     lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");
     lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
-    farbscheck = 0;
+    VerfuegbarCheck = 0;
+    StandbyCheck = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,49 +86,55 @@
 - (IBAction)VerfuegbarButtonPressed:(id)sender
 {
     NSLog(@"VerfügbarButton gedrückt.");
-    //btnVerfuegabr = [UIButton buttonWithType:(UIButtonTypeCustom)];
    
-  
-   
-    if (farbscheck == 0)
+    if (VerfuegbarCheck == 0)
     {
-    UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
-    [btnVerfuegabr setImage:btnbusy forState:UIControlStateNormal];
-    UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
-    [btnVerfuegabr setImage:btnfree forState:UIControlStateHighlighted];
+        UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
+        [btnVerfuegabr setImage:btnbusy forState:UIControlStateNormal];
+        UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
+        [btnVerfuegabr setImage:btnfree forState:UIControlStateHighlighted];
 
-    farbscheck = 1;
-
+        VerfuegbarCheck = 1;
+        
+        lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINBESCHAEFTIGT", @"");
     }
-    
     else
     {
         UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
         [btnVerfuegabr setImage:btnfree forState:UIControlStateNormal];
         UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
         [btnVerfuegabr setImage:btnbusy forState:UIControlStateHighlighted];
-        farbscheck = 0;
+        VerfuegbarCheck = 0;
         
-        
-     
+        lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");
     }
- 
-
-    
-   
-
-    
-  
-    
-    
-    
-    
-    
 }
 
 - (IBAction)StandbyButtonPressed:(id)sender
 {
     NSLog(@"StandbyButton gedrückt.");
+    
+    if (StandbyCheck == 0)
+    {
+        UIImage * btnstanbdy = [UIImage imageNamed:@"tab5_standbyoff.png"];
+        [btnStandby setImage:btnstanbdy forState:UIControlStateNormal];
+        UIImage * btnstandbyoff = [UIImage imageNamed:@"tab5_standby.png"];
+        [btnStandby setImage:btnstandbyoff forState:UIControlStateHighlighted];
+        
+        StandbyCheck = 1;
+        
+        lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBYOFF", @"");
+    }
+    else
+    {
+        UIImage * btnstandby = [UIImage imageNamed:@"tab5_standby.png"];
+        [btnStandby setImage:btnstandby forState:UIControlStateNormal];
+        UIImage * btnstandbyoff = [UIImage imageNamed:@"tab5_standbyoff.png"];
+        [btnVerfuegabr setImage:btnstandbyoff forState:UIControlStateHighlighted];
+        StandbyCheck = 0;
+        
+        lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
+    }
 }
 
 - (void)dealloc {
