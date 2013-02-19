@@ -47,6 +47,7 @@
     lblBezahlen.text = NSLocalizedString(@"LABEL_TABMAINBEZAHLEN", @"");
     lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");
     lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
+    
     VerfuegbarCheck = 0;
     StandbyCheck = 0;
 }
@@ -81,8 +82,6 @@
 
 }
 
-
-
 - (IBAction)VerfuegbarButtonPressed:(id)sender
 {
     NSLog(@"VerfügbarButton gedrückt.");
@@ -90,9 +89,9 @@
     if (VerfuegbarCheck == 0)
     {
         UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
-        [btnVerfuegabr setImage:btnbusy forState:UIControlStateNormal];
+        [btnVerfuegbar setImage:btnbusy forState:UIControlStateNormal];
         UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
-        [btnVerfuegabr setImage:btnfree forState:UIControlStateHighlighted];
+        [btnVerfuegbar setImage:btnfree forState:UIControlStateHighlighted];
 
         VerfuegbarCheck = 1;
         
@@ -101,9 +100,9 @@
     else
     {
         UIImage * btnfree = [UIImage imageNamed:@"tab5_free.png"];
-        [btnVerfuegabr setImage:btnfree forState:UIControlStateNormal];
+        [btnVerfuegbar setImage:btnfree forState:UIControlStateNormal];
         UIImage * btnbusy = [UIImage imageNamed:@"tab5_busy.png"];
-        [btnVerfuegabr setImage:btnbusy forState:UIControlStateHighlighted];
+        [btnVerfuegbar setImage:btnbusy forState:UIControlStateHighlighted];
         VerfuegbarCheck = 0;
         
         lblVerfuegbar.text = NSLocalizedString(@"LABEL_TABMAINVERFUEGBAR", @"");

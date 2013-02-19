@@ -15,7 +15,7 @@
     IBOutlet UIButton* btnKarte;
     IBOutlet UIButton* btnAuftraege;
     IBOutlet UIButton* btnBezahlen;
-    IBOutlet UIButton* btnVerfuegabr;
+    IBOutlet UIButton* btnVerfuegbar;
     IBOutlet UIButton* btnStandby;
     
     UILabel *lblKarte;
