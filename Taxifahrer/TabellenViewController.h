@@ -11,6 +11,13 @@
 @class TabMainViewController;
 @interface TabellenViewController : UIViewController
 
+{
+    
+    NSMutableArray* allejobs;
+    IBOutlet UITableView* tabelle;
+    
+}
+
 
 
 @end
