@@ -130,7 +130,7 @@
         UIImage * btnstandby = [UIImage imageNamed:@"tab5_standby.png"];
         [btnStandby setImage:btnstandby forState:UIControlStateNormal];
         UIImage * btnstandbyoff = [UIImage imageNamed:@"tab5_standbyoff.png"];
-        [btnVerfuegabr setImage:btnstandbyoff forState:UIControlStateHighlighted];
+        [btnStandby setImage:btnstandbyoff forState:UIControlStateHighlighted];
         StandbyCheck = 0;
         
         lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
