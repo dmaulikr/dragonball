@@ -41,9 +41,20 @@
     allejobs = jobcenterzeiger.offeneJobs;
     
     NSLog(@"%d", allejobs.count);
-    
+   
+
     
     [tabelle reloadData];
+    [NSTimer scheduledTimerWithTimeInterval:00.01 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
+}
+
+
+-(void)neuladen
+{
+    NSLog(@"Lade Daten neu");
+    [tabelle reloadData];
+        [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,22 +98,56 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //int i = indexPath.row;
+    
+    
+    
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
-    for (int i = 0; i < [allejobs count];i++)
-    {
-    CJob* job = [allejobs objectAtIndex:i];
-
-        NSString* test = allejobs;
-        cell.textLabel.text = allejobs.count;
-        
-        return cell;
-       
-    }
-    //[NSTimer scheduledTimerWithTimeInterval:5.00 target:self selector:@selector(self) userInfo:nil repeats:NO];
+   
     
+  
+    NSLog(@"Es gibt %d jobs" , allejobs.count);
+    
+    for (int i = 0; i<[allejobs count]; i++)
+    {
+        
+        i = indexPath.row;
+        CJob* beispieljob = [allejobs objectAtIndex:i];
+        
+      
+        
+        jobname = beispieljob.name;
+        cell.textLabel.text = jobname;
+       
+        return cell;
+        
+        
+    
+    }
+    
+    
+    
+    
+    /* for (int i = 0; i < [alleJobs count];i++) {
+     CJob* beispieljob = [alleJobs objectAtIndex:i];
+     
+     double breitengrad = [beispieljob.latitude doubleValue];
+     double laengengrad = [beispieljob.longitude doubleValue];
+     CLLocationCoordinate2D unsereKoordinate = CLLocationCoordinate2DMake(breitengrad, laengengrad);
+     
+     // Wir erschaffen ein Objekt vom Typ ImageAnnotation. Dieses haben wir selbst definiert
+     ImageAnnotation* jobAnnotation = [[ImageAnnotation alloc] initWithCoordinate:unsereKoordinate];
+     // Das Objekt wird zur Karte addiert (das Objekt, noch nicht das Bild)
+     jobAnnotation.mytitle = ANNOTATION_GREENJOB;
+     jobAnnotation.job = beispieljob;
+     [mapview addAnnotation:jobAnnotation];
+     
+     }
+*/
+    
+
 }
+
 
 
 #pragma mark - Table view delegate
