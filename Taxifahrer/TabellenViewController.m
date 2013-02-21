@@ -41,6 +41,9 @@
     allejobs = jobcenterzeiger.offeneJobs;
     
     NSLog(@"%d", allejobs.count);
+    
+    
+    [tabelle reloadData];
 }
 
 - (void)didReceiveMemoryWarning
