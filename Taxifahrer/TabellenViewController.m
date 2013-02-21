@@ -38,7 +38,7 @@
     //[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tableView) userInfo:nil repeats:NO];
     
     jobcenterzeiger = [JobCenter getInstance];
-    NSMutableArray* allejobs = jobcenterzeiger.offeneJobs;
+    allejobs = jobcenterzeiger.offeneJobs;
     
     NSLog(@"%d", allejobs.count);
 }
