@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+@class ViewMediator;
+
 
 #define MAP_DELTA_RANGE 0.0600 // 0.0025
 
@@ -20,11 +22,14 @@
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
+@property (nonatomic,retain) IBOutlet ViewMediator* mediator;
 
 - (IBAction)buttonZuRegi:(id)sender;
 
 -(void) jobsZeichnen;
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
+
+-(IBAction)Profil:(id)sender;
 
 @end

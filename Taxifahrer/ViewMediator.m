@@ -16,6 +16,9 @@
 #import "AGBViewController.h"
 #import "TabMainViewController.h"
 #import "TabellenViewController.h"
+#import "ProfilViewController.h"
+#import "HelligkeitViewController.h"
+
 
 static ViewMediator* mediator = nil;
 
@@ -28,11 +31,14 @@ static ViewMediator* mediator = nil;
 @synthesize VorRegi;
 @synthesize AGB;
 @synthesize navController;
+@synthesize Profil;
 
 @synthesize appdelegate;
 @synthesize tabMainController;
 @synthesize navMapController;
 @synthesize navTableController;
+@synthesize navProfilController;
+@synthesize HelligkeitController;
 
 +(ViewMediator*) getInstance {
     if (mediator == nil) {
@@ -57,11 +63,16 @@ static ViewMediator* mediator = nil;
         tabMainController = [[TabMainViewController alloc] initWithNibName:@"TabMainViewController" bundle:nil];
         tabMainController.mediator = self;
         
+       // HelligkeitController = [[HelligkeitViewController alloc] initWithNibName:@"HelligkeitViewController" bundle:nil];
+       // HelligkeitController.mediator = self;
+        
         mapController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
         tableController = [[TabellenViewController alloc] initWithNibName:@"TabellenViewController" bundle:nil];
+        profilController = [[ProfilViewController alloc] initWithNibName:@"ProfilViewController" bundle:nil];
         
         self.navMapController = [[UINavigationController alloc] initWithRootViewController:mapController];
         self.navTableController = [[UINavigationController alloc] initWithRootViewController:tableController];
+        self.navProfilController = [[UINavigationController alloc] initWithRootViewController:profilController];
     }
     return self;
 }
@@ -158,6 +169,16 @@ static ViewMediator* mediator = nil;
     UIWindow* window = [appdelegate getWindow];
     if (window != nil) {
         window.rootViewController = navTableController;
+        [window makeKeyAndVisible];
+    }
+}
+
+-(void) showProfilView
+{
+    NSLog(@"showProfilView");
+    UIWindow* window = [appdelegate getWindow];
+    if (window != nil) {
+        window.rootViewController = navProfilController;
         [window makeKeyAndVisible];
     }
 }

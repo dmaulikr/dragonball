@@ -18,6 +18,8 @@
 @class TabellenViewController;
 @class TabMainViewController;
 @class AppDelegate;
+@class ProfilViewController;
+@class HelligkeitViewController;
 
 @interface ViewMediator : NSObject
 {
@@ -25,17 +27,22 @@
     
     MapViewController* mapController;
     TabellenViewController* tableController;
+    ProfilViewController* profilController;
+    
     UINavigationController* navMapController;
     UINavigationController* navTableController;
+    UINavigationController* navProfilController;
     
     TabMainViewController* tabMainController;
 }
 
 @property (nonatomic,assign) AppDelegate* appdelegate;
 @property (nonatomic,retain) TabMainViewController* tabMainController;
+@property (nonatomic,retain) HelligkeitViewController* HelligkeitController;
 
 @property (nonatomic,retain) UINavigationController* navMapController;
 @property (nonatomic,retain) UINavigationController* navTableController;
+@property (nonatomic,retain) UINavigationController* navProfilController;
 
 @property (nonatomic,retain) UINavigationController* navController;
 
@@ -46,6 +53,7 @@
 @property (nonatomic,retain) AnfangViewController* Anfang;
 @property (nonatomic,retain) VorRegiViewController* VorRegi;
 @property (nonatomic,retain) AGBViewController* AGB;
+@property (nonatomic,retain) ProfilViewController* Profil;
 
 +(ViewMediator*) getInstance;
 -(id) init;
@@ -82,6 +90,8 @@
 //TabMainViewController
 -(void) showMapView;
 -(void) showTableView;
+
+-(void) showProfilView;
 
 
 @end

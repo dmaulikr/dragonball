@@ -79,6 +79,12 @@
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
 		90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6516D789AD002C1CDF /* darkmap.png */; };
+		90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */; };
+		90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */; };
+		90AD9E7316D7CF79002C1CDF /* HelligkeitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */; };
+		90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */; };
+		90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E7616D7D17F002C1CDF /* DataManager.m */; };
+		90AD9E7916D7D795002C1CDF /* duhi6.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E7816D7D794002C1CDF /* duhi6.png */; };
 		90BA434316B7D8D000969B5E /* EmailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434216B7D8D000969B5E /* EmailRequest.m */; };
 		90BA434716B7D97200969B5E /* PasswortZuruecksetzenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */; };
 		90BA434816B7D97200969B5E /* PasswortZuruecksetzenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */; };
@@ -207,6 +213,15 @@
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
 		90AD9E6516D789AD002C1CDF /* darkmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkmap.png; sourceTree = "<group>"; };
+		90AD9E6816D7CEF5002C1CDF /* ProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilViewController.h; sourceTree = "<group>"; };
+		90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilViewController.m; sourceTree = "<group>"; };
+		90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
+		90AD9E7016D7CF79002C1CDF /* HelligkeitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelligkeitViewController.h; sourceTree = "<group>"; };
+		90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelligkeitViewController.m; sourceTree = "<group>"; };
+		90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelligkeitViewController.xib; sourceTree = "<group>"; };
+		90AD9E7516D7D17F002C1CDF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		90AD9E7616D7D17F002C1CDF /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		90AD9E7816D7D794002C1CDF /* duhi6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duhi6.png; sourceTree = "<group>"; };
 		90BA434116B7D8D000969B5E /* EmailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailRequest.h; sourceTree = "<group>"; };
 		90BA434216B7D8D000969B5E /* EmailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailRequest.m; sourceTree = "<group>"; };
 		90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswortZuruecksetzenViewController.h; sourceTree = "<group>"; };
@@ -255,14 +270,15 @@
 		0A2A6B8916B7FAF000C24418 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				90AD9E6516D789AD002C1CDF /* darkmap.png */,
-				9098A4AD16D009480013D093 /* TabMainImages */,
+				90AD9E7816D7D794002C1CDF /* duhi6.png */,
 				0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */,
 				90BA437016B7FCB100969B5E /* mapTaxi20.png */,
 				90C0DA6716C17F660008FF87 /* blackbutton.png */,
 				90C0DA6916C17FCB0008FF87 /* owntaxi2@2x.png */,
 				90C0DA6A16C17FCB0008FF87 /* owntaxi2.png */,
 				0AB98C5F16CB2DD600DD63E0 /* Default.png */,
+				90AD9E6E16D7CF32002C1CDF /* TableImages */,
+				9098A4AD16D009480013D093 /* TabMainImages */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -362,38 +378,11 @@
 		0A6FF060169C7F4D00BA9F51 /* Taxifahrer */ = {
 			isa = PBXGroup;
 			children = (
-				0A2A6B8916B7FAF000C24418 /* Images */,
-				0A64CCEF16A4621A00CEB4F2 /* Libary */,
 				0A6FF069169C7F4D00BA9F51 /* AppDelegate.h */,
 				0A6FF06A169C7F4D00BA9F51 /* AppDelegate.m */,
-				0A6FF072169C7F4D00BA9F51 /* ViewController.h */,
-				0A6FF073169C7F4D00BA9F51 /* ViewController.m */,
-				0A6FF075169C7F4D00BA9F51 /* ViewController.xib */,
-				909934E916B02BB4007CB613 /* LoginScreenViewController.h */,
-				909934EA16B02BB4007CB613 /* LoginScreenViewController.m */,
-				909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */,
-				9099350716B039C2007CB613 /* MapViewController.h */,
-				9099350816B039C2007CB613 /* MapViewController.m */,
-				9099350916B039C2007CB613 /* MapViewController.xib */,
-				90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */,
-				90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */,
-				90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */,
-				90C0DA7616C193050008FF87 /* VorRegiViewController.h */,
-				90C0DA7716C193050008FF87 /* VorRegiViewController.m */,
-				90C0DA7816C193050008FF87 /* VorRegiViewController.xib */,
-				90C0DA7116C192D00008FF87 /* AGBViewController.h */,
-				90C0DA7216C192D00008FF87 /* AGBViewController.m */,
-				9098A4A116D005860013D093 /* AGBViewController.xib */,
-				9098A4A316D008CA0013D093 /* TabellenViewController.h */,
-				9098A4A416D008CA0013D093 /* TabellenViewController.m */,
-				9098A4A516D008CB0013D093 /* TabellenViewController.xib */,
-				9098A4A816D009090013D093 /* TabMainViewController.h */,
-				9098A4A916D009090013D093 /* TabMainViewController.m */,
-				9098A4DC16D01B790013D093 /* TabMainViewController.xib */,
-				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
-				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
-				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
-				9098A49516D003320013D093 /* Localizable.strings */,
+				90AD9E6D16D7CEFE002C1CDF /* ViewController */,
+				0A2A6B8916B7FAF000C24418 /* Images */,
+				0A64CCEF16A4621A00CEB4F2 /* Libary */,
 				0A6FF093169C86E400BA9F51 /* UserdataManager */,
 				0A6FF061169C7F4D00BA9F51 /* Supporting Files */,
 			);
@@ -403,6 +392,7 @@
 		0A6FF061169C7F4D00BA9F51 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9098A49516D003320013D093 /* Localizable.strings */,
 				0A6FF062169C7F4D00BA9F51 /* Taxifahrer-Info.plist */,
 				0A6FF063169C7F4D00BA9F51 /* InfoPlist.strings */,
 				0A6FF066169C7F4D00BA9F51 /* main.m */,
@@ -439,6 +429,8 @@
 				90C0DA6516C17EA30008FF87 /* JobButton.m */,
 				9096CDEC16C95CBC00125084 /* JobCenter.h */,
 				9096CDED16C95CBC00125084 /* JobCenter.m */,
+				90AD9E7516D7D17F002C1CDF /* DataManager.h */,
+				90AD9E7616D7D17F002C1CDF /* DataManager.m */,
 			);
 			name = UserdataManager;
 			sourceTree = "<group>";
@@ -470,6 +462,54 @@
 				9098A4C316D009590013D093 /* tabsel_map@2x.png */,
 			);
 			name = TabMainImages;
+			sourceTree = "<group>";
+		};
+		90AD9E6D16D7CEFE002C1CDF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A6FF072169C7F4D00BA9F51 /* ViewController.h */,
+				0A6FF073169C7F4D00BA9F51 /* ViewController.m */,
+				0A6FF075169C7F4D00BA9F51 /* ViewController.xib */,
+				909934E916B02BB4007CB613 /* LoginScreenViewController.h */,
+				909934EA16B02BB4007CB613 /* LoginScreenViewController.m */,
+				909934EB16B02BB4007CB613 /* LoginScreenViewController.xib */,
+				9099350716B039C2007CB613 /* MapViewController.h */,
+				9099350816B039C2007CB613 /* MapViewController.m */,
+				9099350916B039C2007CB613 /* MapViewController.xib */,
+				90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */,
+				90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */,
+				90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */,
+				90C0DA7616C193050008FF87 /* VorRegiViewController.h */,
+				90C0DA7716C193050008FF87 /* VorRegiViewController.m */,
+				90C0DA7816C193050008FF87 /* VorRegiViewController.xib */,
+				90C0DA7116C192D00008FF87 /* AGBViewController.h */,
+				90C0DA7216C192D00008FF87 /* AGBViewController.m */,
+				9098A4A116D005860013D093 /* AGBViewController.xib */,
+				9098A4A316D008CA0013D093 /* TabellenViewController.h */,
+				9098A4A416D008CA0013D093 /* TabellenViewController.m */,
+				9098A4A516D008CB0013D093 /* TabellenViewController.xib */,
+				9098A4A816D009090013D093 /* TabMainViewController.h */,
+				9098A4A916D009090013D093 /* TabMainViewController.m */,
+				9098A4DC16D01B790013D093 /* TabMainViewController.xib */,
+				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
+				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
+				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
+				90AD9E6816D7CEF5002C1CDF /* ProfilViewController.h */,
+				90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */,
+				90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */,
+				90AD9E7016D7CF79002C1CDF /* HelligkeitViewController.h */,
+				90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */,
+				90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		90AD9E6E16D7CF32002C1CDF /* TableImages */ = {
+			isa = PBXGroup;
+			children = (
+				90AD9E6516D789AD002C1CDF /* darkmap.png */,
+			);
+			name = TableImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +610,9 @@
 				9098A4D816D009590013D093 /* tabsel_map.png in Resources */,
 				9098A4D916D009590013D093 /* tabsel_map@2x.png in Resources */,
 				90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */,
+				90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */,
+				90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */,
+				90AD9E7916D7D795002C1CDF /* duhi6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +662,9 @@
 				9096CDEE16C95CBC00125084 /* JobCenter.m in Sources */,
 				9098A4A616D008CB0013D093 /* TabellenViewController.m in Sources */,
 				9098A4AB16D0090A0013D093 /* TabMainViewController.m in Sources */,
+				90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */,
+				90AD9E7316D7CF79002C1CDF /* HelligkeitViewController.m in Sources */,
+				90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

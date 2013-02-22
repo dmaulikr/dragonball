@@ -36,6 +36,11 @@
     self.navigationItem.hidesBackButton=YES;
     [self.navigationController setNavigationBarHidden:YES];*/
     
+    //UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"mapTaxi20.png"]];
+    //self.view.backgroundColor = background;
+    //[background release];
+
+    
     // LABELS
     _lblEmail.text = NSLocalizedString(@"LABEL_LOGINEMAIL", @"");
     _lblPasswort.text = NSLocalizedString(@"LABEL_LOGINPASSWORT", @"");

@@ -22,15 +22,20 @@
 
 @implementation MapViewController
 @synthesize mapview;
+@synthesize mediator;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     NSLog(@"viewDidLoad des MapViewControllers");
     [mapview setShowsUserLocation:YES];
     //Springe zum Ort des Benutzers
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Profil" style:UIBarButtonItemStylePlain target:self action:@selector(Profil:)];
+    self.navigationItem.leftBarButtonItem = rightButton;
+    [rightButton release];
 
     JobGenerator* zeiger = [JobGenerator getInstance];
     [zeiger starteGenerator];
@@ -258,6 +263,14 @@
 -(void) locationFehler:(NSNotification*) nachricht
 {
     NSLog(@"Fehler!");
+}
+
+-(IBAction)Profil:(id)sender
+{
+    NSLog(@"DONE");
+    if (mediator != nil) {
+        [mediator showProfilView];
+    }
 }
 
 - (void)dealloc {
