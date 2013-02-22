@@ -33,6 +33,11 @@
     [super viewDidLoad];
     NSLog(@"AUFGERUFEN WORDEN ICH BIN!");
     
+    
+    UIImageView* imgMap = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"darkmap.png"]];
+    [self.view addSubview:imgMap];
+    tabelle.backgroundColor = [UIColor clearColor];
+    [self.view bringSubviewToFront:tabelle];
 
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
@@ -122,7 +127,8 @@
         
         jobname = beispieljob.name;
         cell.textLabel.text = jobname;
-       
+        cell.textLabel.textColor = [UIColor whiteColor];
+        
         return cell;
     }
     

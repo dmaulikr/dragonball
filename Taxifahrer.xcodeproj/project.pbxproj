@@ -78,6 +78,7 @@
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
+		90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6516D789AD002C1CDF /* darkmap.png */; };
 		90BA434316B7D8D000969B5E /* EmailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434216B7D8D000969B5E /* EmailRequest.m */; };
 		90BA434716B7D97200969B5E /* PasswortZuruecksetzenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BA434516B7D97200969B5E /* PasswortZuruecksetzenViewController.m */; };
 		90BA434816B7D97200969B5E /* PasswortZuruecksetzenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BA434616B7D97200969B5E /* PasswortZuruecksetzenViewController.xib */; };
@@ -205,6 +206,7 @@
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
+		90AD9E6516D789AD002C1CDF /* darkmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkmap.png; sourceTree = "<group>"; };
 		90BA434116B7D8D000969B5E /* EmailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailRequest.h; sourceTree = "<group>"; };
 		90BA434216B7D8D000969B5E /* EmailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailRequest.m; sourceTree = "<group>"; };
 		90BA434416B7D97200969B5E /* PasswortZuruecksetzenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswortZuruecksetzenViewController.h; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		0A2A6B8916B7FAF000C24418 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				90AD9E6516D789AD002C1CDF /* darkmap.png */,
 				9098A4AD16D009480013D093 /* TabMainImages */,
 				0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */,
 				90BA437016B7FCB100969B5E /* mapTaxi20.png */,
@@ -566,6 +569,7 @@
 				9098A4D716D009590013D093 /* tabsel_auftrag@2x.png in Resources */,
 				9098A4D816D009590013D093 /* tabsel_map.png in Resources */,
 				9098A4D916D009590013D093 /* tabsel_map@2x.png in Resources */,
+				90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
