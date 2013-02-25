@@ -78,6 +78,8 @@
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
+		90ACE24116DBB4CD00E4C5BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ACE23F16DBB4CD00E4C5BB /* DetailViewController.m */; };
+		90ACE24216DBB4CD00E4C5BB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90ACE24016DBB4CD00E4C5BB /* DetailViewController.xib */; };
 		90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6516D789AD002C1CDF /* darkmap.png */; };
 		90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */; };
 		90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */; };
@@ -212,6 +214,9 @@
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
+		90ACE23E16DBB4CD00E4C5BB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		90ACE23F16DBB4CD00E4C5BB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		90ACE24016DBB4CD00E4C5BB /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		90AD9E6516D789AD002C1CDF /* darkmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkmap.png; sourceTree = "<group>"; };
 		90AD9E6816D7CEF5002C1CDF /* ProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilViewController.h; sourceTree = "<group>"; };
 		90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilViewController.m; sourceTree = "<group>"; };
@@ -500,6 +505,9 @@
 				90AD9E7016D7CF79002C1CDF /* HelligkeitViewController.h */,
 				90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */,
 				90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */,
+				90ACE23E16DBB4CD00E4C5BB /* DetailViewController.h */,
+				90ACE23F16DBB4CD00E4C5BB /* DetailViewController.m */,
+				90ACE24016DBB4CD00E4C5BB /* DetailViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -613,6 +621,7 @@
 				90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */,
 				90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */,
 				90AD9E7916D7D795002C1CDF /* duhi6.png in Resources */,
+				90ACE24216DBB4CD00E4C5BB /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +674,7 @@
 				90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */,
 				90AD9E7316D7CF79002C1CDF /* HelligkeitViewController.m in Sources */,
 				90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */,
+				90ACE24116DBB4CD00E4C5BB /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -72,7 +72,7 @@
     NSLog(@"AuftragButton gedrückt.");
     
     if (mediator != nil) {
-        [mediator showProfilView];
+        [mediator showTableView];
     }
 }
 
