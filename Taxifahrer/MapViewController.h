@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @class ViewMediator;
+@class ProfilViewController;
 
 
 #define MAP_DELTA_RANGE 0.0600 // 0.0025
@@ -23,6 +24,7 @@
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
+@property (nonatomic,retain) ProfilViewController* Profil;
 
 - (IBAction)buttonZuRegi:(id)sender;
 

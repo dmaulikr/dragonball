@@ -9,6 +9,7 @@
 #import "ProfilViewController.h"
 #import "HelligkeitViewController.h"
 #import "ViewMediator.h"
+#import "MapViewController.h"
 
 @interface ProfilViewController ()
 
@@ -17,12 +18,14 @@
 @implementation ProfilViewController
 
 @synthesize mediator;
+@synthesize Map;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self)
+    {
+        self.Map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     }
     return self;
 }
@@ -55,7 +58,11 @@
 -(IBAction)Karte:(id)sender
 {
     NSLog(@"Wechsle von Profil zu Karte");
-    [ViewMediator showMapView];
+    
+    UINavigationController *navController = self.navigationController;
+    [[self retain] autorelease];
+    // [navController popViewControllerAnimated:NO];
+    [navController pushViewController:self.Map animated:NO];
 }
 
 @end

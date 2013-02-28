@@ -15,6 +15,7 @@
 #import "JobCenter.h"
 #import "ViewMediator.h"
 #import "TabMainViewController.h"
+#import "ProfilViewController.h"
 
 @interface MapViewController ()
 
@@ -23,10 +24,13 @@
 @implementation MapViewController
 @synthesize mapview;
 @synthesize mediator;
+@synthesize Profil;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.Profil = [[ProfilViewController alloc] initWithNibName:@"ProfilViewController" bundle:nil];
     
     NSLog(@"viewDidLoad des MapViewControllers");
     [mapview setShowsUserLocation:YES];
@@ -268,9 +272,15 @@
 -(IBAction)Profil:(id)sender
 {
     NSLog(@"DONE");
-    if (mediator != nil) {
+    
+    UINavigationController *navController = self.navigationController;
+    [[self retain] autorelease];
+   // [navController popViewControllerAnimated:NO];
+    [navController pushViewController:self.Profil animated:NO];
+    
+   /* if (mediator != nil) {
         [mediator showProfilView];
-    }
+    } */
 }
 
 - (void)dealloc {

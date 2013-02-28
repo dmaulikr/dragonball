@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class ViewMediator;
+@class MapViewController;
 
 @interface ProfilViewController : UIViewController
 
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
+@property (nonatomic,retain) MapViewController* Map;
 
 -(IBAction)Karte:(id)sender;
 

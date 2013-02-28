@@ -176,6 +176,7 @@ static ViewMediator* mediator = nil;
 -(void) showProfilView
 {
     NSLog(@"showProfilView");
+    
     UIWindow* window = [appdelegate getWindow];
     if (window != nil) {
         window.rootViewController = navProfilController;
