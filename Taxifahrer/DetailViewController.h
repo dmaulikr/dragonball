@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewMediator;
+
 @interface DetailViewController : UIViewController
+{
+    UIImageView* d_ImageView;
+}
+
+@property (nonatomic,retain) UIImageView* d_ImageView;
 
 @end
