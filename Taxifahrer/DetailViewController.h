@@ -13,6 +13,18 @@
 @interface DetailViewController : UIViewController
 {
     UIImageView* imgDetail;
+    UILabel* lblName;
+    UILabel* lblStrasse;
+    UILabel* lblOrt;
+    UILabel* lblDetails;
+    UILabel* lblTime;
+    UILabel* lblAnnehmen;
+    
+    UIImageView* imgKm;
+    UIImageView* imgZeit;
+    UIImageView* imgUhr;
+    
+    UIButton* bigBackButton;
 }
 
 @property (nonatomic,retain) UIImageView* imgDetail;

@@ -19,6 +19,7 @@
 
 #import "DetailViewController.h"
 #import "TabellenViewController.h"
+#import "JobButton.h"
 
 @interface DetailViewController ()
 
@@ -27,6 +28,7 @@
 @implementation DetailViewController
 
 @synthesize imgDetail;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,9 +45,9 @@
     // Do any additional setup after loading the view from its nib.
     
     // -------- Code aus Thorstens Projekt -imgDetail bereits erstellt ----------
-    /*
+    
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
-    imgDetail.frame = CGRectMake(0, 0+add49, imgDetail.image.size.width, imgDetail.image.size.height);
+    imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
     [self.view addSubview:imgDetail];
     
     // ..
@@ -110,10 +112,13 @@
     bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bigBackButton.titleLabel.text = @"";
     bigBackButton.enabled = NO;
-    bigBackButton.frame = CGRectMake(0, 0+add49, imgDetail.frame.size.width, imgDetail.frame.size.height);
+    bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
-     */
+    
+    button.Job = Job;
+    
+    lblName.text = job.name;
 }
 
 - (void)didReceiveMemoryWarning

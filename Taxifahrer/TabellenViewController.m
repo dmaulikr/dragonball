@@ -18,16 +18,7 @@
 @end
 
 @implementation TabellenViewController
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -89,13 +80,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     int anzahl = [allejobs count];
     return anzahl;
-    
 }
-
-
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
@@ -110,18 +97,14 @@
     }
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
     NSLog(@"Es gibt %d jobs" , allejobs.count);
     
     for (int i = 0; i<[allejobs count]; i++)
     {
-        
         i = indexPath.row;
         CJob* beispieljob = [allejobs objectAtIndex:i];
         
@@ -131,15 +114,31 @@
         
         return cell;
     }
-    
 }
 
-
 #pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    int row = indexPath.row;
+    NSLog(@"RowZahl: %d",row);
     
+    if (row == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    else if (row == 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    else if (row == 2)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 @end

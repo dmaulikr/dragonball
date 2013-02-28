@@ -16,7 +16,6 @@
     NSMutableArray* allejobs;
     IBOutlet UITableView* tabelle;
     NSString* jobname;
-
     
     JobCenter* jobcenterzeiger;
 }
