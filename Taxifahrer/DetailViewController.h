@@ -12,9 +12,9 @@
 
 @interface DetailViewController : UIViewController
 {
-    UIImageView* d_ImageView;
+    UIImageView* imgDetail;
 }
 
-@property (nonatomic,retain) UIImageView* d_ImageView;
+@property (nonatomic,retain) UIImageView* imgDetail;
 
 @end
