@@ -45,7 +45,7 @@
 {
     NSLog(@"LOL");
     HelligkeitViewController* HelligkeitVC = [[ViewMediator getInstance] HelligkeitController];
-    HelligkeitVC.view.frame = CGRectMake(0, 200, 320, 49);
+    HelligkeitVC.view.frame = CGRectMake(100, 200, 160, 49);
     [self.view addSubview:HelligkeitVC.view];
 }
 

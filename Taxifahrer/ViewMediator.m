@@ -63,8 +63,8 @@ static ViewMediator* mediator = nil;
         tabMainController = [[TabMainViewController alloc] initWithNibName:@"TabMainViewController" bundle:nil];
         tabMainController.mediator = self;
         
-       // HelligkeitController = [[HelligkeitViewController alloc] initWithNibName:@"HelligkeitViewController" bundle:nil];
-       // HelligkeitController.mediator = self;
+        HelligkeitController = [[HelligkeitViewController alloc] initWithNibName:@"HelligkeitViewController" bundle:nil];
+        HelligkeitController.mediator = self;
         
         mapController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
         tableController = [[TabellenViewController alloc] initWithNibName:@"TabellenViewController" bundle:nil];

@@ -10,6 +10,7 @@
 
 @class ViewMediator;
 @class MapViewController;
+@class HelligkeitViewController;
 
 @interface ProfilViewController : UIViewController
 

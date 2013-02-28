@@ -10,9 +10,20 @@
 
 @implementation DataManager
 
+static DataManager* DataManager_manager = nil;
+
 @synthesize mapBrightness;
 
 #define UDKeyBrightness @"brightness"
+
++(DataManager*) getInstance
+{
+    if (DataManager_manager == nil)
+    {
+        DataManager_manager = [[DataManager alloc] init];
+    }
+    return DataManager_manager;
+}
 
 -(void) saveMapBrightness:(float)brightness
 {

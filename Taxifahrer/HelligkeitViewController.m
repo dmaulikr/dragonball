@@ -18,13 +18,21 @@
 @synthesize lblTitel;
 @synthesize mediator;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Custom initialization
+        // Initialization code
     }
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

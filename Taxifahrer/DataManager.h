@@ -11,6 +11,7 @@
 @interface DataManager : NSObject
 
 @property float mapBrightness;
++(DataManager*) getInstance;
 
 -(void) saveMapBrightness:(float)brightness;
 
