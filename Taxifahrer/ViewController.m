@@ -41,38 +41,38 @@
 {
     if (txtEmail == nil || [txtEmail.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 
     else if (txtPhone == nil || [txtPhone.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else if (txtlastName == nil || [txtlastName.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else if (txtforename == nil || [txtforename.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else if (txtStreet == nil || [txtStreet.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else if (txtStreetnumber == nil || [txtStreetnumber.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else if (txtPLZ == nil || [txtPLZ.text isEqualToString:@""])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Bitte fülle alle Felder aus." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
     else
@@ -83,7 +83,7 @@
     
         [usermanager requestRegistrationWithSalutation:1 lastName:txtlastName.text forename:txtforename.text username:txtEmail.text taxiID:@"12345" company:@"Taxi Alex" street:txtStreet.text streetnumber:txtStreetnumber.text plz:txtPLZ.text city:@"Hamburg" taxisize:5 advertiseID:@"" phone:txtPhone.text licenseplate:@"HH-R10"];}
     
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField

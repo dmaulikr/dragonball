@@ -77,6 +77,7 @@
 		9099350016B03814007CB613 /* ViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934FF16B03814007CB613 /* ViewMediator.m */; };
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
+		90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A79D3A16DFABFE00B7C5B2 /* job_red3.png */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
 		90ACE24116DBB4CD00E4C5BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ACE23F16DBB4CD00E4C5BB /* DetailViewController.m */; };
 		90ACE24216DBB4CD00E4C5BB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90ACE24016DBB4CD00E4C5BB /* DetailViewController.xib */; };
@@ -212,6 +213,7 @@
 		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		90A79D3A16DFABFE00B7C5B2 /* job_red3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job_red3.png; sourceTree = "<group>"; };
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
 		90ACE23E16DBB4CD00E4C5BB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				90C0DA6916C17FCB0008FF87 /* owntaxi2@2x.png */,
 				90C0DA6A16C17FCB0008FF87 /* owntaxi2.png */,
 				0AB98C5F16CB2DD600DD63E0 /* Default.png */,
+				90A79D3C16DFAC0500B7C5B2 /* Map */,
 				90AD9E6E16D7CF32002C1CDF /* TableImages */,
 				9098A4AD16D009480013D093 /* TabMainImages */,
 			);
@@ -469,6 +472,14 @@
 			name = TabMainImages;
 			sourceTree = "<group>";
 		};
+		90A79D3C16DFAC0500B7C5B2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				90A79D3A16DFABFE00B7C5B2 /* job_red3.png */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		90AD9E6D16D7CEFE002C1CDF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,6 +633,7 @@
 				90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */,
 				90AD9E7916D7D795002C1CDF /* duhi6.png in Resources */,
 				90ACE24216DBB4CD00E4C5BB /* DetailViewController.xib in Resources */,
+				90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

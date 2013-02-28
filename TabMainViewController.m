@@ -123,6 +123,9 @@
         StandbyCheck = 1;
         
         lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBYOFF", @"");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Standby-Modus aus" message:@"Der Standby-Modus ist deaktiviert." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     else
     {
@@ -133,6 +136,9 @@
         StandbyCheck = 0;
         
         lblStandby.text = NSLocalizedString(@"LABEL_TABMAINSTANDBY", @"");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Standby-Modus aktiviert" message:@"Der Standby-Modus ist aktiviert." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 
