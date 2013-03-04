@@ -73,6 +73,8 @@
     [mapview addAnnotation:taxiAnnotation];
     
     [self jobsZeichnen];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobDetail:) name:NOTIFICATION_DETAILFORJOB object:nil];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -80,17 +82,6 @@
     TabMainViewController* tabMain = [[ViewMediator getInstance] tabMainController];
     tabMain.view.frame = CGRectMake(0, 367, 320, 49);
     [self.view addSubview:tabMain.view];
-}
-
--(id) init
-{
-    self = [super init];
-    if (self)
-    {
-        //Object inizialisieren
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobDetail:) name:NOTIFICATION_DETAILFORJOB object:nil];
-    }
-    return self;
 }
 
 -(void) jobsZeichnen
@@ -214,7 +205,6 @@
 {
     // Wenn der ViewController von der Bildfäche verschwindet, braucht er keine Nachrichten mehr, daher meldet er sich
     // .. für alle Nachrichten beim NotificationCenter ab
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void) buttonGedrueckt:(id)sender
@@ -338,8 +328,16 @@
     [self.view addSubview:bigBackButton];
 }
 
+-(IBAction)hideJobDetails
+{
+    NSLog(@"HIDEJOBDETAILLSLSSSSS");
+    [self.view addSubview:mapview];
+}
 
-- (void)dealloc {
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
+
 @end
