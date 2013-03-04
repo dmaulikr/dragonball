@@ -272,13 +272,14 @@
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
-    lblName.text = notification.name;
+    lblName.text = displayedJob.name;
     lblName = [[UILabel alloc] initWithFrame:CGRectMake(13, 14, 227, 21)];
     [lblName setTextColor:[UIColor whiteColor]];
     [lblName setFont:f1];
     [lblName setBackgroundColor:[UIColor clearColor]];
     [imgDetail addSubview:lblName];
     
+    /*
     lblAnnehmen = [[UILabel alloc] initWithFrame:CGRectMake(36, 186, 252, 24)];
     [lblAnnehmen setTextColor:[UIColor whiteColor]];
     [lblAnnehmen setFont:f1];
@@ -286,20 +287,23 @@
     lblAnnehmen.textAlignment = UITextAlignmentCenter;
     lblAnnehmen.text = NSLocalizedString(@"STR_LABEL_DOACCEPT", @"");
     [imgDetail addSubview:lblAnnehmen];
-    
+    */
     // ..
     
+    lblStrasse.text = displayedJob.street;
     lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(13, 38, 227, 21)];
     [lblStrasse setTextColor:[UIColor whiteColor]];
     [lblStrasse setFont:f1];
     [lblStrasse setBackgroundColor:[UIColor clearColor]];
     [imgDetail addSubview:lblStrasse];
     
+    /*
     lblOrt = [[UILabel alloc] initWithFrame:CGRectMake(13, 58, 227, 21)];
     [lblOrt setTextColor:[UIColor whiteColor]];
     [lblOrt setFont:f1];
     [lblOrt setBackgroundColor:[UIColor clearColor]];
     [imgDetail addSubview:lblOrt];
+    
     
     lblDetails = [[UILabel alloc] initWithFrame:CGRectMake(13, 80, 227, 50)];
     [lblDetails setTextColor:[UIColor whiteColor]];
@@ -325,7 +329,7 @@
     imgUhr.image = [UIImage imageNamed:@"gelbeuhr.png"];
     [imgDetail addSubview:imgUhr];
     imgDetail.hidden = YES;
-    
+    */
     bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bigBackButton.titleLabel.text = @"";
     bigBackButton.enabled = NO;
