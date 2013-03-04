@@ -10,6 +10,8 @@
 
 @class JobCenter;
 @class TabMainViewController;
+@class ViewMediator;
+@class MapViewController;
 @interface TabellenViewController : UIViewController
 #define NOTIFICATION_DETAILFORJOB @"job"
 
@@ -22,5 +24,8 @@
 }
 
 @property (nonatomic,retain) NSMutableArray* alleJobs;
+@property (nonatomic,retain) IBOutlet ViewMediator* mediator;
+@property (nonatomic,retain) MapViewController* karte;
+-(IBAction)Profil:(id)sender;
 
 @end

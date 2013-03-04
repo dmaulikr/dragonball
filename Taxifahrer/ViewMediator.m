@@ -92,6 +92,8 @@ static ViewMediator* mediator = nil;
     [self.Registrieren.navigationController pushViewController:self.Login animated:YES];
 }
 
+
+
 -(void) vonLoginZuRegi
 {
     [self.Login.navigationController pushViewController:self.Registrieren animated:YES];    

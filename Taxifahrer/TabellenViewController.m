@@ -15,9 +15,12 @@
 
 @interface TabellenViewController ()
 
+
 @end
 
 @implementation TabellenViewController
+@synthesize mediator;
+@synthesize karte;
 
 - (void)viewDidLoad
 {
@@ -103,11 +106,15 @@
     return cell;
 }
 
+
+
+
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Die Row kann man sich aus dem indexPath-Parameter holen
 	int reihe = indexPath.row;
+    
     
 	// Den Job bekommt man dann ganz normal aus dem Array
 	CJob* job = [allejobs objectAtIndex:reihe];
@@ -116,9 +123,18 @@
     // Hier posten wir den Job mit einer Notification, die ich dafür geschaffen habe.
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILFORJOB object:job];
     
+
+    UINavigationController *navController = self.navigationController;
+    [[self retain] autorelease];
+  
+    //[navController pushViewController:self.karte animated:NO];
+    [navController pushViewController:self.karte animated:NO];
+    
+   
     if (reihe == 0)
     {
         NSLog(@"Reihe: %d", reihe);
+        
     }
     
     else if (reihe == 1)

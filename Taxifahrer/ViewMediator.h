@@ -92,6 +92,7 @@
 -(void) showTableView;
 
 -(void) showProfilView;
+-(void) vonTabellezuKarte;
 
 
 @end
