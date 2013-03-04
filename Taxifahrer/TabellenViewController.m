@@ -49,18 +49,13 @@
     NSLog(@"Lade Daten neu");
     [tabelle reloadData];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
-
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 -(void) viewDidAppear:(BOOL)animated
 {
@@ -69,14 +64,10 @@
     [self.view addSubview:tabMain.view];
 }
 
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -99,45 +90,45 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
-    NSLog(@"Es gibt %d jobs" , allejobs.count);
+    int reihe = indexPath.row;
+    CJob* beispieljob = [allejobs objectAtIndex:reihe];
     
-    for (int i = 0; i<[allejobs count]; i++)
-    {
-        i = indexPath.row;
-        CJob* beispieljob = [allejobs objectAtIndex:i];
-        
-        jobname = beispieljob.name;
-        cell.textLabel.text = jobname;
-        cell.textLabel.textColor = [UIColor whiteColor];
-        
-        return cell;
-    }
+    jobname = beispieljob.name;
+    cell.textLabel.text = jobname;
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    return cell;
 }
 
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int row = indexPath.row;
-    NSLog(@"RowZahl: %d",row);
+    // Die Row kann man sich aus dem indexPath-Parameter holen
+	int reihe = indexPath.row;
     
-    if (row == 0)
+	// Den Job bekommt man dann ganz normal aus dem Array
+	CJob* job = [allejobs objectAtIndex:reihe];
+    
+	// Mit dem Job kann mann dann weiterarbeiten
+    // Hier posten wir den Job mit einer Notification, die ich dafür geschaffen habe.
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILFORJOB object:job];
+    
+    if (reihe == 0)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+        NSLog(@"Reihe: %d", reihe);
     }
     
-    else if (row == 1)
+    else if (reihe == 1)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+        NSLog(@"Reihe: %d", reihe);
     }
     
-    else if (row == 2)
+    else if (reihe == 2)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donnerfels" message:@"12 Grad" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+        NSLog(@"Reihe: %d", reihe);
     }
 }
 

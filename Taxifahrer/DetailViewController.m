@@ -6,17 +6,6 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
-/*
- Gedankengang Dennis:
- 
- User drückt auf einen Job 
- -> Der DetailViewController wird gestartet 
- -> Der gedrückte Job wird daran gesendet 
- -> Das Image (job_red3.png) wird erstellt und das Array der Tabelle mit den enthaltenen Jobs wird ausgewertet und auf den/das (?) Image gelegt
- -> Das Image wird samt Informationen auf die Karte gelegt (Genau wie die TabMains, nehme ich mal an) 
- -> Nebenbei wird noch ein Button über die komplette Karte gelegt (Hinter dem Image), dass wenn man drauf drückt auf die normale Karte kommt
-*/
-
 #import "DetailViewController.h"
 #import "TabellenViewController.h"
 #import "JobButton.h"
@@ -39,12 +28,20 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(id) init
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    // -------- Code aus Thorstens Projekt -imgDetail bereits erstellt ----------
+    self = [super init];
+    if (self)
+    {
+        //Object inizialisieren
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobZeichnen:) name:NOTIFICATION_DETAILFORJOB object:nil];
+    }
+    return self;
+}
+
+-(void) jobZeichnen:(NSNotification*) notification
+{
+    displayedJob = (CJob*) notification.object;
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
@@ -55,6 +52,7 @@
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
+    lblName.text = notification.name;
     lblName = [[UILabel alloc] initWithFrame:CGRectMake(13, 14, 227, 21)];
     [lblName setTextColor:[UIColor whiteColor]];
     [lblName setFont:f1];
@@ -70,7 +68,6 @@
     [imgDetail addSubview:lblAnnehmen];
     
     // ..
-    
     
     lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(13, 38, 227, 21)];
     [lblStrasse setTextColor:[UIColor whiteColor]];
@@ -115,10 +112,16 @@
     bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
-    button.Job = Job;
+    // -------- Code aus Thorstens Projekt -imgDetail bereits erstellt ----------
     
-    lblName.text = job.name;
+
 }
 
 - (void)didReceiveMemoryWarning

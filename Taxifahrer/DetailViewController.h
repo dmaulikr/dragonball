@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class ViewMediator;
+@class CJob;
 
 @interface DetailViewController : UIViewController
 {
@@ -25,6 +26,8 @@
     UIImageView* imgUhr;
     
     UIButton* bigBackButton;
+    
+    CJob* displayedJob;
 }
 
 @property (nonatomic,retain) UIImageView* imgDetail;

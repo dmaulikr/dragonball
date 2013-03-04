@@ -80,11 +80,6 @@
     [self.view addSubview:tabMain.view];
 }
 
-- (IBAction)buttonZuRegi:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 -(void) jobsZeichnen
 {
     NSLog(@"jobsZeichnen");
