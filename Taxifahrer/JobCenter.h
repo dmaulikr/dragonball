@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#define NOTIFICATION_JOBCENTERHASNEWJOBS @"NOTIFICATION_JOBCENTERHASNEWJOBS"
 
 @interface JobCenter : NSObject
 +(JobCenter*) getInstance;

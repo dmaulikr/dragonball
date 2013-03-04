@@ -43,15 +43,20 @@
 
     
     [tabelle reloadData];
-    [NSTimer scheduledTimerWithTimeInterval:00.01 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(neuladen:) name:NOTIFICATION_JOBCENTERHASNEWJOBS object:nil];
+
+ 
 }
 
 
--(void)neuladen
+
+
+-(void)neuladen:(NSNotification*) briefchen 
 {
     NSLog(@"Lade Daten neu");
     [tabelle reloadData];
-    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -54,6 +54,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
             [offeneJobs addObject:job];
           
         }
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_JOBCENTERHASNEWJOBS object:offeneJobs];
     }
 }
 
