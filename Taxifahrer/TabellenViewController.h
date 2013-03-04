@@ -11,12 +11,12 @@
 @class JobCenter;
 @class TabMainViewController;
 @interface TabellenViewController : UIViewController
+#define NOTIFICATION_DETAILFORJOB @"job"
 
 {
     NSMutableArray* allejobs;
     IBOutlet UITableView* tabelle;
     NSString* jobname;
-
     
     JobCenter* jobcenterzeiger;
 }

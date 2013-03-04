@@ -18,16 +18,7 @@
 @end
 
 @implementation TabellenViewController
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,18 +49,13 @@
     NSLog(@"Lade Daten neu");
     [tabelle reloadData];
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(neuladen) userInfo:nil repeats:NO];
-
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 -(void) viewDidAppear:(BOOL)animated
 {
@@ -78,24 +64,16 @@
     [self.view addSubview:tabMain.view];
 }
 
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     int anzahl = [allejobs count];
     return anzahl;
-    
 }
-
-
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
@@ -110,36 +88,48 @@
     }
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
-    NSLog(@"Es gibt %d jobs" , allejobs.count);
+    int reihe = indexPath.row;
+    CJob* beispieljob = [allejobs objectAtIndex:reihe];
     
-    for (int i = 0; i<[allejobs count]; i++)
-    {
-        
-        i = indexPath.row;
-        CJob* beispieljob = [allejobs objectAtIndex:i];
-        
-        jobname = beispieljob.name;
-        cell.textLabel.text = jobname;
-        cell.textLabel.textColor = [UIColor whiteColor];
-        
-        return cell;
-    }
+    jobname = beispieljob.name;
+    cell.textLabel.text = jobname;
+    cell.textLabel.textColor = [UIColor whiteColor];
     
+    return cell;
 }
 
-
 #pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Die Row kann man sich aus dem indexPath-Parameter holen
+	int reihe = indexPath.row;
     
+	// Den Job bekommt man dann ganz normal aus dem Array
+	CJob* job = [allejobs objectAtIndex:reihe];
+    
+	// Mit dem Job kann mann dann weiterarbeiten
+    // Hier posten wir den Job mit einer Notification, die ich dafür geschaffen habe.
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILFORJOB object:job];
+    
+    if (reihe == 0)
+    {
+        NSLog(@"Reihe: %d", reihe);
+    }
+    
+    else if (reihe == 1)
+    {
+        NSLog(@"Reihe: %d", reihe);
+    }
+    
+    else if (reihe == 2)
+    {
+        NSLog(@"Reihe: %d", reihe);
+    }
 }
 
 @end
