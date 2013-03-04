@@ -80,9 +80,6 @@
     imgDetail.hidden = YES;
     bigBackButton.enabled = NO;
     bigBackButton.hidden = YES;
-
-    
-    
 }
 
 -(void) viewDidAppear:(BOOL)animated
