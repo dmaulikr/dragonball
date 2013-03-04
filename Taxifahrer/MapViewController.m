@@ -256,12 +256,18 @@
 
 -(void) jobDetail:(NSNotification*) notification
 {
+
+    
+
+    
+    
+    
     displayedJob = (CJob*) notification.object;
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
-    [self.view addSubview:imgDetail];
-    
+       [self.view addSubview:imgDetail];
+        [self.view bringSubviewToFront:imgDetail];
     // ..
     
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
@@ -271,7 +277,7 @@
     lblName = [[UILabel alloc] initWithFrame:CGRectMake(3, 3, 74, 21)];
     [lblName setTextColor:[UIColor whiteColor]];
     [lblName setFont:f1];
-    [lblName setBackgroundColor:[UIColor clearColor]];
+    [lblName setBackgroundColor:[UIColor redColor]];
     [imgDetail addSubview:lblName];
     
     /*
@@ -331,6 +337,9 @@
     bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
+    
+ 
+
 }
 
 -(IBAction)hideJobDetails
