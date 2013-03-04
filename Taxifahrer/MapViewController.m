@@ -75,6 +75,14 @@
     [self jobsZeichnen];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobDetail:) name:NOTIFICATION_DETAILFORJOB object:nil];
+    
+    
+    imgDetail.hidden = YES;
+    bigBackButton.enabled = NO;
+    bigBackButton.hidden = YES;
+
+    
+    
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -331,6 +339,8 @@
 -(IBAction)hideJobDetails
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
+  
+    
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
 }
