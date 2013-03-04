@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @class ViewMediator;
+@class CJob;
 @class ProfilViewController;
 
 
@@ -20,6 +21,25 @@
 @class TabMainViewController;
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
+{
+    UIImageView* imgDetail;
+    UILabel* lblName;
+    UILabel* lblStrasse;
+    UILabel* lblOrt;
+    UILabel* lblDetails;
+    UILabel* lblTime;
+    UILabel* lblAnnehmen;
+    
+    UIImageView* imgKm;
+    UIImageView* imgZeit;
+    UIImageView* imgUhr;
+    
+    UIButton* bigBackButton;
+    
+    CJob* displayedJob;
+}
+
+@property (nonatomic,retain) UIImageView* imgDetail;
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
