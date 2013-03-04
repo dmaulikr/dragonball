@@ -37,6 +37,7 @@
     UIButton* bigBackButton;
     
     CJob* displayedJob;
+    TabMainViewController* tabMain;
 }
 
 @property (nonatomic,retain) UIImageView* imgDetail;

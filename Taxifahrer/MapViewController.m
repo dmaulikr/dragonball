@@ -79,7 +79,7 @@
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    TabMainViewController* tabMain = [[ViewMediator getInstance] tabMainController];
+    tabMain = [[ViewMediator getInstance] tabMainController];
     tabMain.view.frame = CGRectMake(0, 367, 320, 49);
     [self.view addSubview:tabMain.view];
 }
@@ -263,7 +263,7 @@
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
     lblName.text = displayedJob.name;
-    lblName = [[UILabel alloc] initWithFrame:CGRectMake(13, 14, 227, 21)];
+    lblName = [[UILabel alloc] initWithFrame:CGRectMake(3, 3, 74, 21)];
     [lblName setTextColor:[UIColor whiteColor]];
     [lblName setFont:f1];
     [lblName setBackgroundColor:[UIColor clearColor]];
@@ -322,7 +322,7 @@
     */
     bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bigBackButton.titleLabel.text = @"";
-    bigBackButton.enabled = NO;
+    bigBackButton.enabled = YES;
     bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
@@ -332,6 +332,7 @@
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
     [self.view addSubview:mapview];
+    [self.view addSubview:tabMain.view];
 }
 
 - (void)dealloc
