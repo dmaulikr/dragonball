@@ -17,6 +17,7 @@
 #import "TabMainViewController.h"
 #import "ProfilViewController.h"
 #import "TabellenViewController.h"
+#import "DataManager.h"
 
 @interface MapViewController ()
 
@@ -328,6 +329,8 @@
     
     //imgDetail.hidden = YES;
     
+    [self showYesAndNoButton];
+    
 }
 
 -(IBAction)hideJobDetails
@@ -337,6 +340,69 @@
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
 }
+
+-(void) showYesAndNoButton
+{
+    NSLog(@"showYesAndNoButton");
+    btnJobNo = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnJobNo setBackgroundImage:[UIImage imageNamed:@"no.png"] forState:UIControlStateNormal];
+    btnJobNo.frame = CGRectMake(48, 273, 78, 67);
+    [btnJobNo addTarget:self action:@selector(rejectButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    btnJobNo.titleLabel.text = NSLocalizedString(@"JOB_NO", @"");
+    [btnJobNo setTitle:NSLocalizedString(@"JOB_NO", @"") forState:UIControlStateNormal];
+    
+    btnJobYes = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnJobYes setBackgroundImage:[UIImage imageNamed:@"yes.png"] forState:UIControlStateNormal];
+    btnJobYes.frame = CGRectMake(196, 273, 78, 67);
+    [btnJobYes addTarget:self action:@selector(acceptJob:) forControlEvents:UIControlEventTouchUpInside];
+    [btnJobYes setTitle:NSLocalizedString(@"JOB_YES", @"") forState:UIControlStateNormal];
+    
+    [self.view addSubview:btnJobNo];
+    [self.view bringSubviewToFront:btnJobNo];
+    
+    [self.view addSubview:btnJobYes];
+    [self.view bringSubviewToFront:btnJobYes];
+    
+   // [self adjustDetailView];
+}
+
+-(void) hideYesAndNoButton
+{
+    NSLog(@"hideYesAndNoButton");
+    if (btnJobNo != nil && [btnJobNo superview] != nil)
+        [btnJobNo removeFromSuperview];
+    if (btnJobYes != nil && [btnJobYes superview] != nil)
+        [btnJobYes removeFromSuperview];
+    
+    btnJobNo = nil;
+    btnJobYes = nil;
+}
+
+- (IBAction)acceptJob:(id)sender
+{
+    [self hideYesAndNoButton];
+    self.navigationItem.rightBarButtonItem = nil;
+    
+    int minuten = 0;
+    NSUserDefaults* userdefaults = [NSUserDefaults standardUserDefaults];
+    [[DataManager getInstance] showAcceptCustomerPendingAlert];
+    //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
+    
+    [self.view addSubview:mapview];
+    [self.view addSubview:tabMain.view];
+}
+
+-(IBAction) rejectButtonPressed:(id)sender {
+    NSLog(@"rejectButtonPressed");
+    [self hideYesAndNoButton];
+    
+    // Job auf schwarze Liste setzen, damit er nicht mehr angezeigt wird
+    //DataManager* manager = [DataManager getInstance];
+    //[manager addToBlackList:self.displayedJob.token];
+    
+    [self hideJobDetails];
+}
+
 
 - (void)dealloc
 {

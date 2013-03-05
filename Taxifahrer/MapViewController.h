@@ -35,6 +35,8 @@
     UIImageView* imgUhr;
     
     UIButton* bigBackButton;
+    UIButton* btnJobYes;
+    UIButton* btnJobNo;
     
     CJob* displayedJob;
     TabMainViewController* tabMain;
@@ -53,7 +55,9 @@
 -(void) jobsZeichnen;
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
+-(void) showYesAndNoButton;
 
 -(IBAction)Profil:(id)sender;
+-(IBAction) rejectButtonPressed:(id)sender;
 
 @end

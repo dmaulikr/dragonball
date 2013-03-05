@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface DataManager : NSObject
+{
+        UIAlertView* _customerPendingAlert;
+}
 
 @property float mapBrightness;
 +(DataManager*) getInstance;
 
 -(void) saveMapBrightness:(float)brightness;
+-(void) showAcceptCustomerPendingAlert;
 
 @end

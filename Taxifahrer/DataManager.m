@@ -34,4 +34,10 @@ static DataManager* DataManager_manager = nil;
     [userdefaults synchronize];
 }
 
+-(void)showAcceptCustomerPendingAlert{
+	_customerPendingAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"DIALOG_TITLE_CUSTOMER_ACCEPTANCE_PENDING", @"") message:NSLocalizedString(@"DIALOG_NOTE_CUSTOMER_ACCEPTANCE_PENDING", @"") delegate:nil cancelButtonTitle:@"Weiter" otherButtonTitles:nil];
+	[_customerPendingAlert show];
+    
+}
+
 @end
