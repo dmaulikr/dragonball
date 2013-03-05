@@ -16,6 +16,8 @@
 @interface ProfilTableViewController : UITableViewController
 {
     IBOutlet MottoCell* mottocell;
+    
+    HelligkeitViewController* HelligkeitViewController;
 }
 
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;

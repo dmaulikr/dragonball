@@ -7,7 +7,6 @@
 //
 
 #import "ProfilTableViewController.h"
-#import "HelligkeitViewController.h"
 #import "ViewMediator.h"
 #import "MapViewController.h"
 
@@ -26,9 +25,12 @@
     if (self)
     {
         self.Map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+        
         [mottocell retain];
+        //[HelligkeitViewController retain];
         
         [[NSBundle mainBundle] loadNibNamed:@"MottoCell" owner:self options:nil];
+        //[[NSBundle mainBundle] loadNibNamed:@"HelligkeitViewController" owner:self options:nil];
     }
     return self;
 }
@@ -47,9 +49,9 @@
 -(void) viewDidAppear:(BOOL)animated
 {
     NSLog(@"LOL");
-    HelligkeitViewController* HelligkeitVC = [[ViewMediator getInstance] HelligkeitController];
+    /*HelligkeitViewController* HelligkeitVC = [[ViewMediator getInstance] HelligkeitController];
     HelligkeitVC.view.frame = CGRectMake(100, 200, 160, 49);
-    [self.view addSubview:HelligkeitVC.view];
+    [self.view addSubview:HelligkeitVC.view];*/
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
