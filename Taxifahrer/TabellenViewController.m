@@ -128,13 +128,8 @@
     // Hier posten wir den Job mit einer Notification, die ich dafür geschaffen habe.
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILFORJOB object:job];
     
-
-    //UINavigationController *navController = self.navigationController;
-    //[[self retain] autorelease];
-    //[navController pushViewController:self.karte animated:NO];
-    //[navController pushViewController:karte animated:NO];
-    
     [[ViewMediator getInstance] showMapView];
+    
     if (reihe == 0)
     {
         NSLog(@"Reihe: %d", reihe);

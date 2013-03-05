@@ -266,18 +266,18 @@
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
-       [self.view addSubview:imgDetail];
-        [self.view bringSubviewToFront:imgDetail];
+    [self.view addSubview:imgDetail];
+    [self.view bringSubviewToFront:imgDetail];
     // ..
     
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
     lblName.text = displayedJob.name;
-    lblName = [[UILabel alloc] initWithFrame:CGRectMake(3, 3, 74, 21)];
-    [lblName setTextColor:[UIColor whiteColor]];
-    [lblName setFont:f1];
-    [lblName setBackgroundColor:[UIColor redColor]];
+    lblName = [[UILabel alloc] initWithFrame:CGRectMake(45, 38, 227, 21)];
+    lblName.font = [UIFont fontWithName:@"Arial" size:10.0];
+    [lblName setBackgroundColor:[UIColor whiteColor]];
+    [lblName setTextColor:[UIColor redColor]];
     [imgDetail addSubview:lblName];
     
     /*
@@ -292,10 +292,10 @@
     // ..
     
     lblStrasse.text = displayedJob.street;
-    lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(13, 38, 227, 21)];
+    lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(45, 70, 227, 21)];
     [lblStrasse setTextColor:[UIColor whiteColor]];
     [lblStrasse setFont:f1];
-    [lblStrasse setBackgroundColor:[UIColor clearColor]];
+    [lblStrasse setBackgroundColor:[UIColor redColor]];
     [imgDetail addSubview:lblStrasse];
     
     /*
@@ -337,9 +337,6 @@
     bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
-    
- 
-
 }
 
 -(IBAction)hideJobDetails
