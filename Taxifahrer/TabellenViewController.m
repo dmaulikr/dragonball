@@ -25,8 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"AUFGERUFEN WORDEN ICH BIN!");
-    
+    NSLog(@"viewDidLoad des TabellenVC aufgerufen.");
     
     UIImageView* imgMap = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"darkmap.png"]];
     [self.view addSubview:imgMap];
@@ -38,25 +37,17 @@
     jobcenterzeiger = [JobCenter getInstance];
     allejobs = jobcenterzeiger.offeneJobs;
     
-    NSLog(@"%d", allejobs.count);
+    NSLog(@"JobArray Zähler: %d", allejobs.count);
    
-
-    
     [tabelle reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(neuladen:) name:NOTIFICATION_JOBCENTERHASNEWJOBS object:nil];
-
- 
 }
-
-
-
 
 -(void)neuladen:(NSNotification*) briefchen 
 {
     NSLog(@"Lade Daten neu");
     [tabelle reloadData];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,15 +102,11 @@
     return cell;
 }
 
-
-
-
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Die Row kann man sich aus dem indexPath-Parameter holen
 	int reihe = indexPath.row;
-    
     
 	// Den Job bekommt man dann ganz normal aus dem Array
 	CJob* job = [allejobs objectAtIndex:reihe];
@@ -129,21 +116,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILFORJOB object:job];
     
     [[ViewMediator getInstance] showMapView];
-    
-    if (reihe == 0)
-    {
-        NSLog(@"Reihe: %d", reihe);
-    }
-    
-    else if (reihe == 1)
-    {
-        NSLog(@"Reihe: %d", reihe);
-    }
-    
-    else if (reihe == 2)
-    {
-        NSLog(@"Reihe: %d", reihe);
-    }
+    NSLog(@"Reihe: %d / Job: %@", reihe, jobname);
 }
 
 @end

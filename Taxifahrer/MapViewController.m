@@ -59,7 +59,7 @@
     /* coordinate.latitude = coordinate.latitude;
     coordinate.longitude = coordinate.longitude; */
     
-    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
+    NSLog(@"X: %f, Y: %f", coordinate.latitude, coordinate.longitude);
     
     region.center = coordinate;
     region.span.longitudeDelta=MAP_DELTA_RANGE;
@@ -246,22 +246,15 @@
 
 -(IBAction)Profil:(id)sender
 {
-    NSLog(@"DONE");
+    NSLog(@"zum Profil wechseln");
     
     UINavigationController *navController = self.navigationController;
     [[self retain] autorelease];
-   // [navController popViewControllerAnimated:NO];
     [navController pushViewController:self.Profil animated:NO];
 }
 
 -(void) jobDetail:(NSNotification*) notification
 {
-
-    
-
-    
-    
-    
     displayedJob = (CJob*) notification.object;
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
@@ -277,18 +270,16 @@
     [lblName setFont:f1];
     [lblName setBackgroundColor:[UIColor clearColor]];
     [lblName setTextColor:[UIColor redColor]];
-    lblName.text = [NSString stringWithFormat:@"%@", displayedJob.name];
+    lblName.text = [NSString stringWithFormat:@"Name: %@", displayedJob.name];
     [imgDetail addSubview:lblName];
     
     //lblStrasse.text = displayedJob.street;
     lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(45, 70, 227, 21)];
-    [lblStrasse setTextColor:[UIColor whiteColor]];
+    [lblStrasse setTextColor:[UIColor redColor]];
     [lblStrasse setFont:f1];
     [lblStrasse setBackgroundColor:[UIColor clearColor]];
-    lblStrasse.text = [NSString stringWithFormat:@"%@", displayedJob.street];
+    lblStrasse.text = [NSString stringWithFormat:@"Strasse: %@", displayedJob.street];
     [imgDetail addSubview:lblStrasse];
-    
-    
     
     bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bigBackButton.titleLabel.text = @"";
@@ -297,7 +288,6 @@
     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bigBackButton];
     
-    /*
     lblAnnehmen = [[UILabel alloc] initWithFrame:CGRectMake(36, 186, 252, 24)];
     [lblAnnehmen setTextColor:[UIColor whiteColor]];
     [lblAnnehmen setFont:f1];
@@ -305,7 +295,7 @@
     lblAnnehmen.textAlignment = UITextAlignmentCenter;
     lblAnnehmen.text = NSLocalizedString(@"STR_LABEL_DOACCEPT", @"");
     [imgDetail addSubview:lblAnnehmen];
-     
+    
     lblOrt = [[UILabel alloc] initWithFrame:CGRectMake(13, 58, 227, 21)];
     [lblOrt setTextColor:[UIColor whiteColor]];
     [lblOrt setFont:f1];
@@ -335,14 +325,14 @@
     imgUhr = [[UIImageView alloc] initWithFrame:CGRectMake(150, 163, 25, 33)];
     imgUhr.image = [UIImage imageNamed:@"gelbeuhr.png"];
     [imgDetail addSubview:imgUhr];
-    imgDetail.hidden = YES;
-    */
+    
+    //imgDetail.hidden = YES;
+    
 }
 
 -(IBAction)hideJobDetails
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
-  
     
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];

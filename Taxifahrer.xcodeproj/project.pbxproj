@@ -77,6 +77,7 @@
 		9099350016B03814007CB613 /* ViewMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 909934FF16B03814007CB613 /* ViewMediator.m */; };
 		9099350A16B039C2007CB613 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099350816B039C2007CB613 /* MapViewController.m */; };
 		9099350B16B039C2007CB613 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9099350916B039C2007CB613 /* MapViewController.xib */; };
+		90A19CA416E65D99005DD607 /* gelbeuhr.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CA316E65D99005DD607 /* gelbeuhr.png */; };
 		90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A79D3A16DFABFE00B7C5B2 /* job_red3.png */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
 		90AA31C116DFF56F00C59B5C /* PortraitDetail2.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AA31C016DFF56F00C59B5C /* PortraitDetail2.png */; };
@@ -213,6 +214,7 @@
 		9099350716B039C2007CB613 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9099350816B039C2007CB613 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		9099350916B039C2007CB613 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		90A19CA316E65D99005DD607 /* gelbeuhr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gelbeuhr.png; sourceTree = "<group>"; };
 		90A79D3A16DFABFE00B7C5B2 /* job_red3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job_red3.png; sourceTree = "<group>"; };
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 		90A79D3C16DFAC0500B7C5B2 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				90A19CA316E65D99005DD607 /* gelbeuhr.png */,
 				90AA31C016DFF56F00C59B5C /* PortraitDetail2.png */,
 				90A79D3A16DFABFE00B7C5B2 /* job_red3.png */,
 				90AA31C216DFF64600C59B5C /* PortraitDetail2.png */,
@@ -633,6 +636,7 @@
 				90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */,
 				90AA31C116DFF56F00C59B5C /* PortraitDetail2.png in Resources */,
 				90AA31C316DFF64600C59B5C /* PortraitDetail2.png in Resources */,
+				90A19CA416E65D99005DD607 /* gelbeuhr.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

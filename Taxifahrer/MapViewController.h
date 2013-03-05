@@ -29,7 +29,6 @@
     UILabel* lblDetails;
     UILabel* lblTime;
     UILabel* lblAnnehmen;
-    UILabel* lblPLZ;
     
     UIImageView* imgKm;
     UIImageView* imgZeit;
