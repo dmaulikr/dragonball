@@ -268,17 +268,34 @@
     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
     [self.view addSubview:imgDetail];
     [self.view bringSubviewToFront:imgDetail];
-    // ..
     
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
-    lblName.text = displayedJob.name;
+    //lblName.text = displayedJob.name;
     lblName = [[UILabel alloc] initWithFrame:CGRectMake(45, 38, 227, 21)];
-    lblName.font = [UIFont fontWithName:@"Arial" size:10.0];
-    [lblName setBackgroundColor:[UIColor whiteColor]];
+    [lblName setFont:f1];
+    [lblName setBackgroundColor:[UIColor clearColor]];
     [lblName setTextColor:[UIColor redColor]];
+    lblName.text = [NSString stringWithFormat:@"%@", displayedJob.name];
     [imgDetail addSubview:lblName];
+    
+    //lblStrasse.text = displayedJob.street;
+    lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(45, 70, 227, 21)];
+    [lblStrasse setTextColor:[UIColor whiteColor]];
+    [lblStrasse setFont:f1];
+    [lblStrasse setBackgroundColor:[UIColor clearColor]];
+    lblStrasse.text = [NSString stringWithFormat:@"%@", displayedJob.street];
+    [imgDetail addSubview:lblStrasse];
+    
+    
+    
+    bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    bigBackButton.titleLabel.text = @"";
+    bigBackButton.enabled = YES;
+    bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
+    [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:bigBackButton];
     
     /*
     lblAnnehmen = [[UILabel alloc] initWithFrame:CGRectMake(36, 186, 252, 24)];
@@ -288,23 +305,12 @@
     lblAnnehmen.textAlignment = UITextAlignmentCenter;
     lblAnnehmen.text = NSLocalizedString(@"STR_LABEL_DOACCEPT", @"");
     [imgDetail addSubview:lblAnnehmen];
-    */
-    // ..
-    
-    lblStrasse.text = displayedJob.street;
-    lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(45, 70, 227, 21)];
-    [lblStrasse setTextColor:[UIColor whiteColor]];
-    [lblStrasse setFont:f1];
-    [lblStrasse setBackgroundColor:[UIColor redColor]];
-    [imgDetail addSubview:lblStrasse];
-    
-    /*
+     
     lblOrt = [[UILabel alloc] initWithFrame:CGRectMake(13, 58, 227, 21)];
     [lblOrt setTextColor:[UIColor whiteColor]];
     [lblOrt setFont:f1];
     [lblOrt setBackgroundColor:[UIColor clearColor]];
     [imgDetail addSubview:lblOrt];
-    
     
     lblDetails = [[UILabel alloc] initWithFrame:CGRectMake(13, 80, 227, 50)];
     [lblDetails setTextColor:[UIColor whiteColor]];
@@ -331,12 +337,6 @@
     [imgDetail addSubview:imgUhr];
     imgDetail.hidden = YES;
     */
-    bigBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    bigBackButton.titleLabel.text = @"";
-    bigBackButton.enabled = YES;
-    bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
-    [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:bigBackButton];
 }
 
 -(IBAction)hideJobDetails
