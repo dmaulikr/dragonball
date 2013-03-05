@@ -12,7 +12,7 @@
 
 @class ViewMediator;
 @class CJob;
-@class ProfilViewController;
+@class ProfilTableViewController;
 
 
 #define MAP_DELTA_RANGE 0.0600 // 0.0025
@@ -47,7 +47,7 @@
 @property (retain, nonatomic) IBOutlet MKMapView *mapview;
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
-@property (nonatomic,retain) ProfilViewController* Profil;
+@property (nonatomic,retain) ProfilTableViewController* Profil;
 
 
 - (IBAction)buttonZuRegi:(id)sender;

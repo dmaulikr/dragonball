@@ -15,7 +15,7 @@
 #import "JobCenter.h"
 #import "ViewMediator.h"
 #import "TabMainViewController.h"
-#import "ProfilViewController.h"
+#import "ProfilTableViewController.h"
 #import "TabellenViewController.h"
 #import "DataManager.h"
 
@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.Profil = [[ProfilViewController alloc] initWithNibName:@"ProfilViewController" bundle:nil];
+    self.Profil = [[ProfilTableViewController alloc] initWithNibName:@"ProfilTableViewController" bundle:nil];
     
     NSLog(@"viewDidLoad des MapViewControllers");
     [mapview setShowsUserLocation:YES];

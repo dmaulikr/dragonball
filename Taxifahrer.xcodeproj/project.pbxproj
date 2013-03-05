@@ -80,13 +80,15 @@
 		90A19CA416E65D99005DD607 /* gelbeuhr.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CA316E65D99005DD607 /* gelbeuhr.png */; };
 		90A19CA616E66251005DD607 /* no.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CA516E66251005DD607 /* no.png */; };
 		90A19CA816E6625B005DD607 /* yes.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CA716E6625B005DD607 /* yes.png */; };
+		90A19CAF16E668BB005DD607 /* MottoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CAE16E668BB005DD607 /* MottoCell.xib */; };
+		90A19CB216E66910005DD607 /* MottoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A19CB116E66910005DD607 /* MottoCell.m */; };
+		90A19CB616E66CFA005DD607 /* ProfilTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A19CB416E66CF9005DD607 /* ProfilTableViewController.m */; };
+		90A19CB716E66CFA005DD607 /* ProfilTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A19CB516E66CF9005DD607 /* ProfilTableViewController.xib */; };
 		90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A79D3A16DFABFE00B7C5B2 /* job_red3.png */; };
 		90A853A616BD0E6100BB3D2A /* CJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A853A516BD0E6100BB3D2A /* CJob.m */; };
 		90AA31C116DFF56F00C59B5C /* PortraitDetail2.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AA31C016DFF56F00C59B5C /* PortraitDetail2.png */; };
 		90AA31C316DFF64600C59B5C /* PortraitDetail2.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AA31C216DFF64600C59B5C /* PortraitDetail2.png */; };
 		90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6516D789AD002C1CDF /* darkmap.png */; };
-		90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */; };
-		90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */; };
 		90AD9E7316D7CF79002C1CDF /* HelligkeitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */; };
 		90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */; };
 		90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AD9E7616D7D17F002C1CDF /* DataManager.m */; };
@@ -219,15 +221,18 @@
 		90A19CA316E65D99005DD607 /* gelbeuhr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gelbeuhr.png; sourceTree = "<group>"; };
 		90A19CA516E66251005DD607 /* no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no.png; sourceTree = "<group>"; };
 		90A19CA716E6625B005DD607 /* yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yes.png; sourceTree = "<group>"; };
+		90A19CAE16E668BB005DD607 /* MottoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MottoCell.xib; sourceTree = "<group>"; };
+		90A19CB016E66910005DD607 /* MottoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MottoCell.h; sourceTree = "<group>"; };
+		90A19CB116E66910005DD607 /* MottoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MottoCell.m; sourceTree = "<group>"; };
+		90A19CB316E66CF9005DD607 /* ProfilTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilTableViewController.h; sourceTree = "<group>"; };
+		90A19CB416E66CF9005DD607 /* ProfilTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilTableViewController.m; sourceTree = "<group>"; };
+		90A19CB516E66CF9005DD607 /* ProfilTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilTableViewController.xib; sourceTree = "<group>"; };
 		90A79D3A16DFABFE00B7C5B2 /* job_red3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = job_red3.png; sourceTree = "<group>"; };
 		90A853A516BD0E6100BB3D2A /* CJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJob.m; sourceTree = "<group>"; };
 		90A853A816BD0E6B00BB3D2A /* CJob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJob.h; sourceTree = "<group>"; };
 		90AA31C016DFF56F00C59B5C /* PortraitDetail2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitDetail2.png; sourceTree = "<group>"; };
 		90AA31C216DFF64600C59B5C /* PortraitDetail2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitDetail2.png; sourceTree = "<group>"; };
 		90AD9E6516D789AD002C1CDF /* darkmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkmap.png; sourceTree = "<group>"; };
-		90AD9E6816D7CEF5002C1CDF /* ProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilViewController.h; sourceTree = "<group>"; };
-		90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilViewController.m; sourceTree = "<group>"; };
-		90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
 		90AD9E7016D7CF79002C1CDF /* HelligkeitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelligkeitViewController.h; sourceTree = "<group>"; };
 		90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelligkeitViewController.m; sourceTree = "<group>"; };
 		90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelligkeitViewController.xib; sourceTree = "<group>"; };
@@ -520,12 +525,15 @@
 				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
 				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
 				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
-				90AD9E6816D7CEF5002C1CDF /* ProfilViewController.h */,
-				90AD9E6916D7CEF5002C1CDF /* ProfilViewController.m */,
-				90AD9E6A16D7CEF5002C1CDF /* ProfilViewController.xib */,
+				90A19CB316E66CF9005DD607 /* ProfilTableViewController.h */,
+				90A19CB416E66CF9005DD607 /* ProfilTableViewController.m */,
+				90A19CB516E66CF9005DD607 /* ProfilTableViewController.xib */,
 				90AD9E7016D7CF79002C1CDF /* HelligkeitViewController.h */,
 				90AD9E7116D7CF79002C1CDF /* HelligkeitViewController.m */,
 				90AD9E7216D7CF79002C1CDF /* HelligkeitViewController.xib */,
+				90A19CB016E66910005DD607 /* MottoCell.h */,
+				90A19CB116E66910005DD607 /* MottoCell.m */,
+				90A19CAE16E668BB005DD607 /* MottoCell.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -636,7 +644,6 @@
 				9098A4D816D009590013D093 /* tabsel_map.png in Resources */,
 				9098A4D916D009590013D093 /* tabsel_map@2x.png in Resources */,
 				90AD9E6616D789AD002C1CDF /* darkmap.png in Resources */,
-				90AD9E6C16D7CEF5002C1CDF /* ProfilViewController.xib in Resources */,
 				90AD9E7416D7CF79002C1CDF /* HelligkeitViewController.xib in Resources */,
 				90AD9E7916D7D795002C1CDF /* duhi6.png in Resources */,
 				90A79D3B16DFABFE00B7C5B2 /* job_red3.png in Resources */,
@@ -645,6 +652,8 @@
 				90A19CA416E65D99005DD607 /* gelbeuhr.png in Resources */,
 				90A19CA616E66251005DD607 /* no.png in Resources */,
 				90A19CA816E6625B005DD607 /* yes.png in Resources */,
+				90A19CAF16E668BB005DD607 /* MottoCell.xib in Resources */,
+				90A19CB716E66CFA005DD607 /* ProfilTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,9 +703,10 @@
 				9096CDEE16C95CBC00125084 /* JobCenter.m in Sources */,
 				9098A4A616D008CB0013D093 /* TabellenViewController.m in Sources */,
 				9098A4AB16D0090A0013D093 /* TabMainViewController.m in Sources */,
-				90AD9E6B16D7CEF5002C1CDF /* ProfilViewController.m in Sources */,
 				90AD9E7316D7CF79002C1CDF /* HelligkeitViewController.m in Sources */,
 				90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */,
+				90A19CB216E66910005DD607 /* MottoCell.m in Sources */,
+				90A19CB616E66CFA005DD607 /* ProfilTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

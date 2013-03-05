@@ -18,7 +18,7 @@
 @class TabellenViewController;
 @class TabMainViewController;
 @class AppDelegate;
-@class ProfilViewController;
+@class ProfilTableViewController;
 @class HelligkeitViewController;
 
 @interface ViewMediator : NSObject
@@ -27,7 +27,7 @@
     
     MapViewController* mapController;
     TabellenViewController* tableController;
-    ProfilViewController* profilController;
+    ProfilTableViewController* profilController;
     
     UINavigationController* navMapController;
     UINavigationController* navTableController;
@@ -53,7 +53,7 @@
 @property (nonatomic,retain) AnfangViewController* Anfang;
 @property (nonatomic,retain) VorRegiViewController* VorRegi;
 @property (nonatomic,retain) AGBViewController* AGB;
-@property (nonatomic,retain) ProfilViewController* Profil;
+@property (nonatomic,retain) ProfilTableViewController* Profil;
 
 +(ViewMediator*) getInstance;
 -(id) init;

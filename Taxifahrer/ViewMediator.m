@@ -16,7 +16,7 @@
 #import "AGBViewController.h"
 #import "TabMainViewController.h"
 #import "TabellenViewController.h"
-#import "ProfilViewController.h"
+#import "ProfilTableViewController.h"
 #import "HelligkeitViewController.h"
 
 
@@ -68,7 +68,7 @@ static ViewMediator* mediator = nil;
         
         mapController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
         tableController = [[TabellenViewController alloc] initWithNibName:@"TabellenViewController" bundle:nil];
-        profilController = [[ProfilViewController alloc] initWithNibName:@"ProfilViewController" bundle:nil];
+        profilController = [[ProfilTableViewController alloc] initWithNibName:@"ProfilTableViewController" bundle:nil];
         
         self.navMapController = [[UINavigationController alloc] initWithRootViewController:mapController];
         self.navTableController = [[UINavigationController alloc] initWithRootViewController:tableController];

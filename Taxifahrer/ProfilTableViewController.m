@@ -1,21 +1,21 @@
 //
-//  ProfilViewController.m
+//  ProfilTableViewController.m
 //  Taxifahrer
 //
-//  Created by Dennis Brunne on 22.02.13.
+//  Created by Dennis Brunne on 05.03.13.
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
-#import "ProfilViewController.h"
+#import "ProfilTableViewController.h"
 #import "HelligkeitViewController.h"
 #import "ViewMediator.h"
 #import "MapViewController.h"
 
-@interface ProfilViewController ()
+@interface ProfilTableViewController ()
 
 @end
 
-@implementation ProfilViewController
+@implementation ProfilTableViewController
 
 @synthesize mediator;
 @synthesize Map;
@@ -26,6 +26,9 @@
     if (self)
     {
         self.Map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+        [mottocell retain];
+        
+        [[NSBundle mainBundle] loadNibNamed:@"MottoCell" owner:self options:nil];
     }
     return self;
 }
@@ -48,6 +51,21 @@
     HelligkeitVC.view.frame = CGRectMake(100, 200, 160, 49);
     [self.view addSubview:HelligkeitVC.view];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    cell = mottocell;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
