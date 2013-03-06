@@ -222,9 +222,9 @@
     
     NSLog(@"Job für %@ wurde ausgewählt. [MapViewController]", unserJob.name);
     
-    CJob* newjob = [allejobs objectAtIndex:jb.job]; //Anstatt jb.job unserJob
+   // CJob* newjob = [allejobs objectAtIndex:unserJob];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILTWOFORJOB object:newjob];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILTWOFORJOB object:unserJob];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobDetail:) name:NOTIFICATION_DETAILTWOFORJOB object:nil];
 }
