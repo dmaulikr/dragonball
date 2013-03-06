@@ -332,6 +332,13 @@
     [imgDetail addSubview:imgUhr];
     
     //imgDetail.hidden = YES;
+    CLLocationCoordinate2D coordinate;
+    
+    coordinate.latitude = [displayedJob.latitude doubleValue];
+    coordinate.longitude = [displayedJob.longitude doubleValue];
+    
+    [mapview setCenterCoordinate:coordinate];
+    
     
     [self showYesAndNoButton];
     
@@ -394,6 +401,10 @@
     
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
+    
+  
+    
+    
 }
 
 -(IBAction) rejectButtonPressed:(id)sender {
@@ -403,6 +414,15 @@
     // Job auf schwarze Liste setzen, damit er nicht mehr angezeigt wird
     //DataManager* manager = [DataManager getInstance];
     //[manager addToBlackList:self.displayedJob.token];
+   
+    
+    //Hier soll eig. zur aktuellen Userposition gesprungen werden.
+    MKCoordinateRegion region;
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 53.55f;
+    coordinate.longitude = 10.0f;
+    [mapview setCenterCoordinate:coordinate];
+    
     
     [self hideJobDetails];
 }
