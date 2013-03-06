@@ -20,6 +20,8 @@
 @class ImageAnnotation;
 @class TabMainViewController;
 
+#define NOTIFICATION_DETAILTWOFORJOB @"job"
+
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 {
     UIImageView* imgDetail;
@@ -40,6 +42,8 @@
     
     CJob* displayedJob;
     TabMainViewController* tabMain;
+    
+    NSMutableArray* allejobs;
 }
 
 @property (nonatomic,retain) UIImageView* imgDetail;

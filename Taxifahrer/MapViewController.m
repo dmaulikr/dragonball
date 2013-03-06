@@ -35,7 +35,7 @@
     
     self.Profil = [[ProfilTableViewController alloc] initWithNibName:@"ProfilTableViewController" bundle:nil];
     
-    NSLog(@"viewDidLoad des MapViewControllers");
+    NSLog(@"viewDidLoad des MapViewControllers [MapViewController]");
     [mapview setShowsUserLocation:YES];
     //Springe zum Ort des Benutzers
     
@@ -60,7 +60,7 @@
     /* coordinate.latitude = coordinate.latitude;
     coordinate.longitude = coordinate.longitude; */
     
-    NSLog(@"X: %f, Y: %f", coordinate.latitude, coordinate.longitude);
+    NSLog(@"X: %f, Y: %f [MapViewController]", coordinate.latitude, coordinate.longitude);
     
     region.center = coordinate;
     region.span.longitudeDelta=MAP_DELTA_RANGE;
@@ -92,7 +92,7 @@
 
 -(void) jobsZeichnen
 {
-    NSLog(@"jobsZeichnen");
+    NSLog(@"jobsZeichnen [MapViewController]");
     
     // Alle alten Annotations loeschen
     [mapview removeAnnotations:mapview.annotations];
@@ -215,17 +215,23 @@
 
 -(void) buttonGedrueckt:(id)sender
 {
-    NSLog(@"Button gedrückt!");
+    NSLog(@"Button gedrückt! [MapViewController]");
     
     JobButton* jb = (JobButton*) sender;
     CJob* unserJob = jb.job;
     
-    NSLog(@"Job für %@ wurde ausgewählt.", unserJob.name);
+    NSLog(@"Job für %@ wurde ausgewählt. [MapViewController]", unserJob.name);
+    
+    CJob* newjob = [allejobs objectAtIndex:jb.job]; //Anstatt jb.job unserJob
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DETAILTWOFORJOB object:newjob];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jobDetail:) name:NOTIFICATION_DETAILTWOFORJOB object:nil];
 }
 
 -(void) locationErhalten:(NSNotification*) nachricht
 {
-    NSLog(@"locationErhalten");
+    NSLog(@"locationErhalten [MapViewController]");
     
     // Wir packen das CLLocation* aus dem übergebenen NSNotification-Objekt (dem StandardObjekt für Nachrichten aus dem NSNotifictionCenter) aus.
     // Hier muss man wissen, welchen Typ das Objekt in der Nachricht haben soll. Da wir wissen, dass die Nachricht vom SimpleLocationManager kommt und wir den SimpleLocationManager selbst geschrieben haben, wandeln wir das Objekt in der Nachricht in eine CLLocation um.
@@ -242,16 +248,16 @@
 
 -(void) locationFehler:(NSNotification*) nachricht
 {
-    NSLog(@"Fehler!");
+    NSLog(@"Fehler! [MapViewController]");
 }
 
 -(IBAction)Profil:(id)sender
 {
-    NSLog(@"zum Profil wechseln");
+    NSLog(@"zum Profil wechseln [MapViewController]");
     
     UINavigationController *navController = self.navigationController;
     [[self retain] autorelease];
-    [navController pushViewController:self.Profil animated:NO];
+    [navController pushViewController:self.Profil animated:YES];
 }
 
 -(void) jobDetail:(NSNotification*) notification
@@ -266,7 +272,6 @@
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
-    //lblName.text = displayedJob.name;
     lblName = [[UILabel alloc] initWithFrame:CGRectMake(45, 38, 227, 21)];
     [lblName setFont:f1];
     [lblName setBackgroundColor:[UIColor clearColor]];
@@ -274,7 +279,6 @@
     lblName.text = [NSString stringWithFormat:@"Name: %@", displayedJob.name];
     [imgDetail addSubview:lblName];
     
-    //lblStrasse.text = displayedJob.street;
     lblStrasse = [[UILabel alloc] initWithFrame:CGRectMake(45, 70, 227, 21)];
     [lblStrasse setTextColor:[UIColor redColor]];
     [lblStrasse setFont:f1];
