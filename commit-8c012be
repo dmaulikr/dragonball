@@ -1,0 +1,50 @@
+commit 8c012becd9d4f96bc4d237a3b6d45cbf8d714ac0
+Author: Kevin Wagner <kevinwagner1994@gmx.de>
+Date:   Mon Mar 4 20:58:28 2013 +0100
+
+    Zu Testzwecken den Background auf Rot gestellt. Eine Annotation muss hinzugefuegt wurden. Aus Testzwecken dieser sinnlose commit. *sinnlos undso*
+
+diff --git a/Taxifahrer/MapViewController.m b/Taxifahrer/MapViewController.m
+index c5e4b84..954108d 100755
+--- a/Taxifahrer/MapViewController.m
++++ b/Taxifahrer/MapViewController.m
+@@ -256,12 +256,18 @@
+ 
+ -(void) jobDetail:(NSNotification*) notification
+ {
++
++    
++
++    
++    
++    
+     displayedJob = (CJob*) notification.object;
+     
+     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
+     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
+-    [self.view addSubview:imgDetail];
+-    
++       [self.view addSubview:imgDetail];
++        [self.view bringSubviewToFront:imgDetail];
+     // ..
+     
+     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
+@@ -271,7 +277,7 @@
+     lblName = [[UILabel alloc] initWithFrame:CGRectMake(3, 3, 74, 21)];
+     [lblName setTextColor:[UIColor whiteColor]];
+     [lblName setFont:f1];
+-    [lblName setBackgroundColor:[UIColor clearColor]];
++    [lblName setBackgroundColor:[UIColor redColor]];
+     [imgDetail addSubview:lblName];
+     
+     /*
+@@ -331,6 +337,9 @@
+     bigBackButton.frame = CGRectMake(0, 0, imgDetail.frame.size.width, imgDetail.frame.size.height);
+     [bigBackButton addTarget:self action:@selector(hideJobDetails) forControlEvents:UIControlEventTouchUpInside];
+     [self.view addSubview:bigBackButton];
++    
++ 
++
+ }
+ 
+ -(IBAction)hideJobDetails
