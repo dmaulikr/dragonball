@@ -16,6 +16,7 @@
 -(void) jobsSenden;
 
 @property (nonatomic,retain) NSMutableArray* beispieljobs;
+@property (nonatomic,retain) NSMutableArray* openJobs;
 
 @end
 

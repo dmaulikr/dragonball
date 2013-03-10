@@ -33,11 +33,9 @@ static JobGenerator* generator = nil;
     NSLog(@"Jobs senden");
     beispieljobs = [[NSMutableArray alloc]init];
     
-    
     CJob* beispieljob = nil;
     CJob* beispieljob2 = nil;
     CJob* beispieljob3 = nil;
-
     
     int zahl = arc4random()%5;
     NSLog(@"Generator hat %d gewürfelt.", zahl);
@@ -51,6 +49,7 @@ static JobGenerator* generator = nil;
         beispieljob.latitude = @"53.5533";
         beispieljob.longitude = @"10.005";
         beispieljob.name = @"Schmidt";
+        beispieljob.jobstatus = @"open";
    
         beispieljob2 = [[CJob alloc] init];
         beispieljob2.token = @"HH78912";
@@ -59,6 +58,7 @@ static JobGenerator* generator = nil;
         beispieljob2.latitude = @"53.5573";
         beispieljob2.longitude = @"10.009";
         beispieljob2.name = @"Meier";
+        beispieljob2.jobstatus = @"open";
         
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
@@ -74,6 +74,7 @@ static JobGenerator* generator = nil;
         beispieljob.latitude = @"53.5578";
         beispieljob.longitude = @"10.010";
         beispieljob.name = @"Becker";
+        beispieljob.jobstatus = @"open";
   
         beispieljob2 = [[CJob alloc] init];
         beispieljob2.token = @"HH666";
@@ -82,6 +83,7 @@ static JobGenerator* generator = nil;
         beispieljob2.latitude = @"53.5588";
         beispieljob2.longitude = @"10.016";
         beispieljob2.name = @"Varian";
+        beispieljob2.jobstatus = @"open";
           
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
@@ -96,6 +98,7 @@ static JobGenerator* generator = nil;
         beispieljob.latitude = @"54.12";
         beispieljob.longitude = @"10";
         beispieljob.name = @"Yorkia";
+        beispieljob.jobstatus = @"open";
         
         [beispieljobs addObject:beispieljob];
     }
@@ -109,6 +112,7 @@ static JobGenerator* generator = nil;
         beispieljob.latitude = @"53.5";
         beispieljob.longitude = @"10.12";
         beispieljob.name = @"Monster";
+        beispieljob.jobstatus = @"open";
         
         beispieljob2 = [[CJob alloc] init];
         beispieljob2.token = @"HH666";
@@ -117,6 +121,7 @@ static JobGenerator* generator = nil;
         beispieljob2.latitude = @"54";
         beispieljob2.longitude = @"10";
         beispieljob2.name = @"Gott";
+        beispieljob2.jobstatus = @"open";
         
         beispieljob3 = [[CJob alloc] init];
         beispieljob3.token = @"HH777";
@@ -125,6 +130,7 @@ static JobGenerator* generator = nil;
         beispieljob3.longitude = @"10.009";
         beispieljob3.longitude = @"10";
         beispieljob3.name = @"Luzifer";
+        beispieljob3.jobstatus = @"open";
         
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
@@ -140,6 +146,7 @@ static JobGenerator* generator = nil;
         beispieljob.longitude = @"54";
         beispieljob.latitude = @"10";
         beispieljob.name = @"Dagobert";
+        beispieljob.jobstatus = @"open";
         
         beispieljob2 = [[CJob alloc] init];
         beispieljob2.token = @"HH7836";
@@ -148,6 +155,7 @@ static JobGenerator* generator = nil;
         beispieljob2.latitude = @"53.5575";
         beispieljob2.longitude = @"10.012";
         beispieljob2.name = @"Jarl Kevin";
+        beispieljob2.jobstatus = @"open";
         
         [beispieljobs addObject:beispieljob];
         [beispieljobs addObject:beispieljob2];
@@ -157,7 +165,11 @@ static JobGenerator* generator = nil;
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NEWJOB object:beispieljobs];
     
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(jobsSenden) userInfo:nil repeats:NO];
-    
+}
+
+-(void) angenommendenJobSenden
+{
+    _openJobs = [[NSMutableArray alloc]init];
 }
 
 @end

@@ -26,6 +26,7 @@
 {
     [super viewDidLoad];
     NSLog(@"viewDidLoad des TabellenVC aufgerufen.");
+    self.title = NSLocalizedString( @"STR_SCREEN_TITLE_JOBS",@"");
     
     UIImageView* imgMap = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"darkmap.png"]];
     [self.view addSubview:imgMap];
@@ -44,7 +45,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(neuladen:) name:NOTIFICATION_JOBCENTERHASNEWJOBS object:nil];
 }
 
--(void)neuladen:(NSNotification*) briefchen 
+-(void)neuladen:(NSNotification*) briefchen
 {
     NSLog(@"Lade Daten neu");
     [tabelle reloadData];
@@ -65,13 +66,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    int anzahl = [allejobs count];
-    return anzahl;
+    //int anzahl = [allejobs count];
+    //return anzahl;
+    
+    switch(section){
+        case 0:
+            return [allejobs count];
+            break;
+        case 1:
+            return nil;
+            break;
+        case 2:
+            return nil;
+            break;
+    }
 }
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
