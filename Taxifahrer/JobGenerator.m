@@ -13,6 +13,7 @@
 
 static JobGenerator* generator = nil;
 @synthesize beispieljobs;
+@synthesize acceptJobs;
 
 +(JobGenerator*) getInstance
 {
@@ -26,6 +27,8 @@ static JobGenerator* generator = nil;
 -(void) starteGenerator
 {
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(jobsSenden) userInfo:nil repeats:NO];
+    
+    [self angenommendenJobSenden];
 }
 
 -(void) jobsSenden
@@ -169,7 +172,23 @@ static JobGenerator* generator = nil;
 
 -(void) angenommendenJobSenden
 {
-    _openJobs = [[NSMutableArray alloc]init];
+    NSLog(@"AngenommendeJobSenden aufgerufen");
+    
+    acceptJobs = [[NSMutableArray alloc]init];
+    CJob* acceptJob = nil;
+    
+    acceptJob = [[CJob alloc] init];
+    acceptJob.token = @"HHAcpt";
+    acceptJob.street = @"AceptedStreet";
+    acceptJob.taxisize = @"1";
+    acceptJob.latitude = @"53.5578";
+    acceptJob.longitude = @"10.010";
+    acceptJob.name = @"Aceptor";
+    acceptJob.jobstatus = @"accepted";
+    
+    [acceptJobs addObject:acceptJob];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACCEPTJOB object:acceptJobs];
 }
 
 @end

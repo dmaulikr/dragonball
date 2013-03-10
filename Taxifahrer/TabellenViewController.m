@@ -37,6 +37,7 @@
 
     jobcenterzeiger = [JobCenter getInstance];
     allejobs = jobcenterzeiger.offeneJobs;
+    aceptedJobs = jobcenterzeiger.acceptedJobs;
     
     NSLog(@"JobArray Zähler: %d", allejobs.count);
    
@@ -79,7 +80,7 @@
             return [allejobs count];
             break;
         case 1:
-            return nil;
+            return [aceptedJobs count];
             break;
         case 2:
             return nil;

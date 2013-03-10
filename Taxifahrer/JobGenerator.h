@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #define NOTIFICATION_NEWJOB @"newjob"
+#define NOTIFICATION_ACCEPTJOB @"acceptjob"
 
 
 @interface JobGenerator : NSObject
@@ -16,7 +17,7 @@
 -(void) jobsSenden;
 
 @property (nonatomic,retain) NSMutableArray* beispieljobs;
-@property (nonatomic,retain) NSMutableArray* openJobs;
+@property (nonatomic,retain) NSMutableArray* acceptJobs;
 
 @end
 

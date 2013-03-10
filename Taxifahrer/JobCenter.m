@@ -15,6 +15,7 @@
 static JobCenter* jobcenter_fernbedienung = nil;
 
 @synthesize offeneJobs;
+@synthesize acceptedJobs;
 
 +(JobCenter*) getInstance
 {

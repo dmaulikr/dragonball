@@ -13,5 +13,6 @@
 +(JobCenter*) getInstance;
 
 @property (nonatomic,retain) NSMutableArray* offeneJobs;
+@property (nonatomic,retain) NSMutableArray* acceptedJobs;
 
 @end
