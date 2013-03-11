@@ -327,7 +327,7 @@
     imgZeit = [[UIImageView alloc] initWithFrame:CGRectMake(180, 165, 79, 45)];
     [imgDetail addSubview:imgZeit];
     
-    imgUhr = [[UIImageView alloc] initWithFrame:CGRectMake(150, 163, 25, 33)];
+    imgUhr = [[UIImageView alloc] initWithFrame:CGRectMake(150, 150, 25, 33)];
     imgUhr.image = [UIImage imageNamed:@"gelbeuhr.png"];
     [imgDetail addSubview:imgUhr];
     
