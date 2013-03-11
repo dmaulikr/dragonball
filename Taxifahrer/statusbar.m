@@ -102,7 +102,7 @@
         btnanfahrt.highlighted = YES;
         wait(1);
         btnanfahrt.highlighted = NO;
-        [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
+        [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
     }
 }
 
