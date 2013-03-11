@@ -9,5 +9,14 @@
 #import "ViewController.h"
 
 @interface statusbar : ViewController
+{
+    int anfahrt;
+}
+@property (retain, nonatomic) IBOutlet UIButton *btnanfahrt;
+@property (retain, nonatomic) IBOutlet UIButton *btnbinda;
+@property (retain, nonatomic) IBOutlet UIButton *btnbeginneauftrag;
+@property (retain, nonatomic) IBOutlet UIButton *btnfertig;
+@property (retain, nonatomic) IBOutlet UIButton *btnbeschwerde;
+
 
 @end
