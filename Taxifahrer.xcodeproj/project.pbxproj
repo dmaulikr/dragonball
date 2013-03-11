@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A27E60F16EDE85A00148CEC /* statusbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E60D16EDE85A00148CEC /* statusbar.m */; };
+		0A27E61016EDE85A00148CEC /* statusbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E60E16EDE85A00148CEC /* statusbar.xib */; };
+		0A27E61416EDE9E300148CEC /* statuszerograu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61216EDE9E300148CEC /* statuszerograu.png */; };
+		0A27E61516EDE9E300148CEC /* statuszerograu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */; };
+		0A27E61C16EDEB2F00148CEC /* tab5orange_cab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */; };
+		0A27E61D16EDEB2F00148CEC /* tab5orange_cab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61B16EDEB2F00148CEC /* tab5orange_cab@2x.png */; };
+		0A27E62016EDED8A00148CEC /* marker-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61E16EDED8A00148CEC /* marker-blue.png */; };
+		0A27E62116EDED8A00148CEC /* marker-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61F16EDED8A00148CEC /* marker-red.png */; };
+		0A27E62416EDEEE500148CEC /* redtaxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62216EDEEE500148CEC /* redtaxi.png */; };
+		0A27E62516EDEEE500148CEC /* redtaxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62316EDEEE500148CEC /* redtaxi@2x.png */; };
+		0A27E62816EDEEFF00148CEC /* mapTaxi22.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62616EDEEFF00148CEC /* mapTaxi22.png */; };
+		0A27E62916EDEEFF00148CEC /* mapTaxi22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62716EDEEFF00148CEC /* mapTaxi22@2x.png */; };
+		0A27E62E16EDF02200148CEC /* PopoverBackgroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62C16EDF02200148CEC /* PopoverBackgroundGreen.png */; };
+		0A27E62F16EDF02200148CEC /* PopoverBackgroundGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E62D16EDF02200148CEC /* PopoverBackgroundGreen@2x.png */; };
+		0A27E63216EDF02900148CEC /* PopoverBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E63016EDF02900148CEC /* PopoverBackgroundRed.png */; };
+		0A27E63316EDF02900148CEC /* PopoverBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E63116EDF02900148CEC /* PopoverBackgroundRed@2x.png */; };
+		0A27E63716EDF21E00148CEC /* tab_misuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E63616EDF21E00148CEC /* tab_misuse.png */; };
 		0A2A6B9B16B8101300C24418 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2A6B9A16B8101300C24418 /* CoreLocation.framework */; };
 		0A50B49816AF44BF00257B59 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */; };
 		0A50B49916AF44BF00257B59 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50B48316AF44BF00257B59 /* SBJsonParser.m */; };
@@ -114,6 +131,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A27E60C16EDE85A00148CEC /* statusbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statusbar.h; sourceTree = "<group>"; };
+		0A27E60D16EDE85A00148CEC /* statusbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusbar.m; sourceTree = "<group>"; };
+		0A27E60E16EDE85A00148CEC /* statusbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusbar.xib; sourceTree = "<group>"; };
+		0A27E61216EDE9E300148CEC /* statuszerograu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statuszerograu.png; sourceTree = "<group>"; };
+		0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statuszerograu@2x.png"; sourceTree = "<group>"; };
+		0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab5orange_cab.png; sourceTree = "<group>"; };
+		0A27E61B16EDEB2F00148CEC /* tab5orange_cab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab5orange_cab@2x.png"; sourceTree = "<group>"; };
+		0A27E61E16EDED8A00148CEC /* marker-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker-blue.png"; sourceTree = "<group>"; };
+		0A27E61F16EDED8A00148CEC /* marker-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker-red.png"; sourceTree = "<group>"; };
+		0A27E62216EDEEE500148CEC /* redtaxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redtaxi.png; sourceTree = "<group>"; };
+		0A27E62316EDEEE500148CEC /* redtaxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redtaxi@2x.png"; sourceTree = "<group>"; };
+		0A27E62616EDEEFF00148CEC /* mapTaxi22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapTaxi22.png; sourceTree = "<group>"; };
+		0A27E62716EDEEFF00148CEC /* mapTaxi22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapTaxi22@2x.png"; sourceTree = "<group>"; };
+		0A27E62C16EDF02200148CEC /* PopoverBackgroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundGreen.png; sourceTree = "<group>"; };
+		0A27E62D16EDF02200148CEC /* PopoverBackgroundGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundGreen@2x.png"; sourceTree = "<group>"; };
+		0A27E63016EDF02900148CEC /* PopoverBackgroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundRed.png; sourceTree = "<group>"; };
+		0A27E63116EDF02900148CEC /* PopoverBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundRed@2x.png"; sourceTree = "<group>"; };
+		0A27E63616EDF21E00148CEC /* tab_misuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_misuse.png; sourceTree = "<group>"; };
 		0A2A6B9A16B8101300C24418 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A50B47F16AF44BF00257B59 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0A50B48016AF44BF00257B59 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
@@ -284,6 +319,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A27E61116EDE92E00148CEC /* StatusbarImages */ = {
+			isa = PBXGroup;
+			children = (
+				0A27E63616EDF21E00148CEC /* tab_misuse.png */,
+				0A27E63016EDF02900148CEC /* PopoverBackgroundRed.png */,
+				0A27E63116EDF02900148CEC /* PopoverBackgroundRed@2x.png */,
+				0A27E62C16EDF02200148CEC /* PopoverBackgroundGreen.png */,
+				0A27E62D16EDF02200148CEC /* PopoverBackgroundGreen@2x.png */,
+				0A27E62616EDEEFF00148CEC /* mapTaxi22.png */,
+				0A27E62716EDEEFF00148CEC /* mapTaxi22@2x.png */,
+				0A27E62216EDEEE500148CEC /* redtaxi.png */,
+				0A27E62316EDEEE500148CEC /* redtaxi@2x.png */,
+				0A27E61E16EDED8A00148CEC /* marker-blue.png */,
+				0A27E61F16EDED8A00148CEC /* marker-red.png */,
+				0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */,
+				0A27E61B16EDEB2F00148CEC /* tab5orange_cab@2x.png */,
+				0A27E61216EDE9E300148CEC /* statuszerograu.png */,
+				0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */,
+			);
+			name = StatusbarImages;
+			sourceTree = "<group>";
+		};
 		0A2A6B8916B7FAF000C24418 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +353,7 @@
 				0AB98C5F16CB2DD600DD63E0 /* Default.png */,
 				90A79D3C16DFAC0500B7C5B2 /* Map */,
 				90AD9E6E16D7CF32002C1CDF /* TableImages */,
+				0A27E61116EDE92E00148CEC /* StatusbarImages */,
 				9098A4AD16D009480013D093 /* TabMainImages */,
 			);
 			name = Images;
@@ -522,6 +580,9 @@
 				9098A4A816D009090013D093 /* TabMainViewController.h */,
 				9098A4A916D009090013D093 /* TabMainViewController.m */,
 				9098A4DC16D01B790013D093 /* TabMainViewController.xib */,
+				0A27E60C16EDE85A00148CEC /* statusbar.h */,
+				0A27E60D16EDE85A00148CEC /* statusbar.m */,
+				0A27E60E16EDE85A00148CEC /* statusbar.xib */,
 				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
 				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
 				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
@@ -654,6 +715,22 @@
 				90A19CA816E6625B005DD607 /* yes.png in Resources */,
 				90A19CAF16E668BB005DD607 /* MottoCell.xib in Resources */,
 				90A19CB716E66CFA005DD607 /* ProfilTableViewController.xib in Resources */,
+				0A27E61016EDE85A00148CEC /* statusbar.xib in Resources */,
+				0A27E61416EDE9E300148CEC /* statuszerograu.png in Resources */,
+				0A27E61516EDE9E300148CEC /* statuszerograu@2x.png in Resources */,
+				0A27E61C16EDEB2F00148CEC /* tab5orange_cab.png in Resources */,
+				0A27E61D16EDEB2F00148CEC /* tab5orange_cab@2x.png in Resources */,
+				0A27E62016EDED8A00148CEC /* marker-blue.png in Resources */,
+				0A27E62116EDED8A00148CEC /* marker-red.png in Resources */,
+				0A27E62416EDEEE500148CEC /* redtaxi.png in Resources */,
+				0A27E62516EDEEE500148CEC /* redtaxi@2x.png in Resources */,
+				0A27E62816EDEEFF00148CEC /* mapTaxi22.png in Resources */,
+				0A27E62916EDEEFF00148CEC /* mapTaxi22@2x.png in Resources */,
+				0A27E62E16EDF02200148CEC /* PopoverBackgroundGreen.png in Resources */,
+				0A27E62F16EDF02200148CEC /* PopoverBackgroundGreen@2x.png in Resources */,
+				0A27E63216EDF02900148CEC /* PopoverBackgroundRed.png in Resources */,
+				0A27E63316EDF02900148CEC /* PopoverBackgroundRed@2x.png in Resources */,
+				0A27E63716EDF21E00148CEC /* tab_misuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +784,7 @@
 				90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */,
 				90A19CB216E66910005DD607 /* MottoCell.m in Sources */,
 				90A19CB616E66CFA005DD607 /* ProfilTableViewController.m in Sources */,
+				0A27E60F16EDE85A00148CEC /* statusbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
