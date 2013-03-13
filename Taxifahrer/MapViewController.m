@@ -18,6 +18,7 @@
 #import "ProfilTableViewController.h"
 #import "TabellenViewController.h"
 #import "DataManager.h"
+#import "statusbar.h"
 
 @interface MapViewController ()
 
@@ -28,6 +29,7 @@
 @synthesize mediator;
 @synthesize Profil;
 @synthesize imgDetail;
+
 
 - (void)viewDidLoad
 {
@@ -88,6 +90,10 @@
     tabMain = [[ViewMediator getInstance] tabMainController];
     tabMain.view.frame = CGRectMake(0, 367, 320, 49);
     [self.view addSubview:tabMain.view];
+    
+    statustab = [[ViewMediator getInstance] statusmvc];
+    statustab.view.frame = CGRectMake(0, 367, 320, 49);
+    
 }
 
 -(void) jobsZeichnen
@@ -400,7 +406,9 @@
     //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
     
     [self.view addSubview:mapview];
-    [self.view addSubview:tabMain.view];
+    //[self.view addSubview:tabMain.view];
+    [self.view addSubview:statustab.view];
+    //[self.view bringSubviewToFront:statustab.view];
     
   
     

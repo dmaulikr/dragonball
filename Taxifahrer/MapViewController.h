@@ -19,6 +19,7 @@
 
 @class ImageAnnotation;
 @class TabMainViewController;
+@class statusbar;
 
 #define NOTIFICATION_DETAILTWOFORJOB @"job"
 
@@ -42,6 +43,7 @@
     
     CJob* displayedJob;
     TabMainViewController* tabMain;
+    statusbar* statustab;
     
     NSMutableArray* allejobs;
 }

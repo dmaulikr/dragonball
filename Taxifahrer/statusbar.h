@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Kevin Wagner. All rights reserved.
 //
 
-#import "ViewController.h"
-
-@interface statusbar : ViewController
+#import <UIKit/UIKit.h>
+@class ViewMediator;
+@interface statusbar : UIViewController
 {
     IBOutlet UIButton *btnanfahrt;
     IBOutlet UIButton *btnbinda;
@@ -22,6 +22,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *btnbeginneauftrag;
 @property (retain, nonatomic) IBOutlet UIButton *btnfertig;
 @property (retain, nonatomic) IBOutlet UIButton *btnbeschwerde;
+@property (nonatomic,retain) IBOutlet ViewMediator* mediator;
 
 -(IBAction) btnanfahrtPressed;
 -(IBAction)btnbindaPressed;

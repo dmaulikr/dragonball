@@ -35,7 +35,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="82286025">
@@ -369,7 +369,6 @@
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
-				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -396,10 +395,9 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="171853716">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{320, 568}</string>
-				<reference key="NSSuperview"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -418,7 +416,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 49}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="481077786"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -430,7 +427,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{9, 33}, {41, 14}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="872648225"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -456,7 +452,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{68, 33}, {47, 14}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="563362811"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -482,7 +477,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{126, 33}, {47, 14}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="973945571"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -508,7 +502,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{187, 33}, {58, 14}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="678146559"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -534,7 +527,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{253, 33}, {62, 14}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="843480009"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -560,7 +552,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{6, 9}, {47, 31}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="857760974"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -591,7 +582,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{68, -2}, {47, 31}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="778556075"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -622,7 +612,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{126, 9}, {47, 31}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="798390559"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -656,7 +645,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{193, 9}, {47, 31}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="892908646"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -687,7 +675,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{261, 9}, {45, 25}}</string>
 						<reference key="NSSuperview" ref="989628530"/>
-						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -711,7 +699,6 @@
 				</array>
 				<string key="NSFrameSize">{320, 49}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="681867770"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -2668,200 +2655,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">240</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">NSLayoutConstraint</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">ViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="nachobenschieben:">id</string>
-						<string key="positionwiederherstellen:">id</string>
-						<string key="registrieren:">id</string>
-						<string key="speichern:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="nachobenschieben:">
-							<string key="name">nachobenschieben:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="positionwiederherstellen:">
-							<string key="name">positionwiederherstellen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="registrieren:">
-							<string key="name">registrieren:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="speichern:">
-							<string key="name">speichern:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="btnSpeichern">UIButton</string>
-						<string key="lblEmail">UILabel</string>
-						<string key="lblHausnummer">UILabel</string>
-						<string key="lblNachname">UILabel</string>
-						<string key="lblPostleitzahl">UILabel</string>
-						<string key="lblRegistrieren">UILabel</string>
-						<string key="lblStrasse">UILabel</string>
-						<string key="lblTelefon">UILabel</string>
-						<string key="lblVorname">UILabel</string>
-						<string key="txtEmail">UITextField</string>
-						<string key="txtPLZ">UITextField</string>
-						<string key="txtPassword">UITextField</string>
-						<string key="txtPhone">UITextField</string>
-						<string key="txtStreet">UITextField</string>
-						<string key="txtStreetnumber">UITextField</string>
-						<string key="txtforename">UITextField</string>
-						<string key="txtlastName">UITextField</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="btnSpeichern">
-							<string key="name">btnSpeichern</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblEmail">
-							<string key="name">lblEmail</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblHausnummer">
-							<string key="name">lblHausnummer</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblNachname">
-							<string key="name">lblNachname</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblPostleitzahl">
-							<string key="name">lblPostleitzahl</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblRegistrieren">
-							<string key="name">lblRegistrieren</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblStrasse">
-							<string key="name">lblStrasse</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblTelefon">
-							<string key="name">lblTelefon</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="lblVorname">
-							<string key="name">lblVorname</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtEmail">
-							<string key="name">txtEmail</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtPLZ">
-							<string key="name">txtPLZ</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtPassword">
-							<string key="name">txtPassword</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtPhone">
-							<string key="name">txtPhone</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtStreet">
-							<string key="name">txtStreet</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtStreetnumber">
-							<string key="name">txtStreetnumber</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtforename">
-							<string key="name">txtforename</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="txtlastName">
-							<string key="name">txtlastName</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">statusbar</string>
-					<string key="superclassName">ViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="btnBeginneAuftragPressed">id</string>
-						<string key="btnanfahrtPressed">id</string>
-						<string key="btnbindaPressed">id</string>
-						<string key="btnfertigPressed">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="btnBeginneAuftragPressed">
-							<string key="name">btnBeginneAuftragPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btnanfahrtPressed">
-							<string key="name">btnanfahrtPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btnbindaPressed">
-							<string key="name">btnbindaPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btnfertigPressed">
-							<string key="name">btnfertigPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="btnanfahrt">UIButton</string>
-						<string key="btnbeginneauftrag">UIButton</string>
-						<string key="btnbeschwerde">UIButton</string>
-						<string key="btnbinda">UIButton</string>
-						<string key="btnfertig">UIButton</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="btnanfahrt">
-							<string key="name">btnanfahrt</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="btnbeginneauftrag">
-							<string key="name">btnbeginneauftrag</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="btnbeschwerde">
-							<string key="name">btnbeschwerde</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="btnbinda">
-							<string key="name">btnbinda</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="btnfertig">
-							<string key="name">btnfertig</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/statusbar.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

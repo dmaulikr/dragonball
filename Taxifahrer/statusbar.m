@@ -7,6 +7,7 @@
 //
 
 #import "statusbar.h"
+#import "ViewMediator.h"
 
 @interface statusbar ()
 
@@ -20,6 +21,7 @@
 @synthesize btnfertig;
 @synthesize btnbinda;
 @synthesize btnbeschwerde;
+@synthesize mediator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

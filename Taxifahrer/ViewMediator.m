@@ -18,6 +18,7 @@
 #import "TabellenViewController.h"
 #import "ProfilTableViewController.h"
 #import "HelligkeitViewController.h"
+#import "statusbar.h"
 
 
 static ViewMediator* mediator = nil;
@@ -32,6 +33,8 @@ static ViewMediator* mediator = nil;
 @synthesize AGB;
 @synthesize navController;
 @synthesize Profil;
+@synthesize statusmvc;
+
 
 @synthesize appdelegate;
 @synthesize tabMainController;
@@ -62,6 +65,11 @@ static ViewMediator* mediator = nil;
         
         tabMainController = [[TabMainViewController alloc] initWithNibName:@"TabMainViewController" bundle:nil];
         tabMainController.mediator = self;
+        
+        statusmvc = [[statusbar alloc] initWithNibName:@"statusbar" bundle:nil];
+        statusmvc.mediator = self;
+        
+        
         
         HelligkeitController = [[HelligkeitViewController alloc] initWithNibName:@"HelligkeitViewController" bundle:nil];
         HelligkeitController.mediator = self;

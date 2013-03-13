@@ -20,6 +20,7 @@
 @class AppDelegate;
 @class ProfilTableViewController;
 @class HelligkeitViewController;
+@class statusbar;
 
 @interface ViewMediator : NSObject
 {
@@ -34,10 +35,12 @@
     UINavigationController* navProfilController;
     
     TabMainViewController* tabMainController;
+    statusbar* statusmvc;
 }
 
 @property (nonatomic,assign) AppDelegate* appdelegate;
 @property (nonatomic,retain) TabMainViewController* tabMainController;
+@property (nonatomic,retain) statusbar* statusmvc;
 @property (nonatomic,retain) HelligkeitViewController* HelligkeitController;
 
 @property (nonatomic,retain) UINavigationController* navMapController;
