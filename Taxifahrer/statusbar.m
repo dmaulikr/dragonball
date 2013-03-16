@@ -62,8 +62,6 @@
     anfahrt = 1;
     NSLog(@"Anfahrt wurde gedrueckt");
     btnanfahrt.enabled = NO;
-    UIImage* btnanfahrtangenommen = [UIImage imageNamed:@"tab5orange_cab.png"];
-    [btnanfahrt setImage:btnanfahrtangenommen forState:UIControlStateDisabled];
     btnbinda.enabled = YES;
 }
 
@@ -71,8 +69,6 @@
 {
     NSLog(@"BinDa wurde gedrueckt");
     btnbinda.enabled = NO;
-    UIImage* btnbindabild = [UIImage imageNamed:@"marker-blue.png"];
-    [btnbinda setImage:btnbindabild forState:UIControlStateDisabled];
     btnbeginneauftrag.enabled = YES;
 }
 
@@ -80,8 +76,6 @@
 {
     NSLog(@"BeginneAuftrag gedrueckt");
     btnbeginneauftrag.enabled = NO;
-    UIImage* btnBeginneAuftragBild = [UIImage imageNamed:@"maptaxi22.png"];
-    [btnbeginneauftrag setImage:btnBeginneAuftragBild forState:UIControlStateDisabled];
     btnfertig.enabled = YES;
 }
 
@@ -89,24 +83,40 @@
 {
     NSLog(@"Fertig gedrueckt");
     btnfertig.enabled = NO;
-    UIImage* btnFertigBild = [UIImage imageNamed:@"PopoverBackgroundGreen.png"];
-    [btnfertig setImage:btnFertigBild forState:UIControlStateDisabled];
+    anfahrt = 0;
+    btnanfahrt.enabled = YES;
+    [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
 }
 
 
 
 
-
+//Blinkfunktionen
 -(void)btn1blinkenlassen
 {
     if (anfahrt == 0 && btnanfahrt.enabled == YES)
     {
         btnanfahrt.highlighted = YES;
-        wait(1);
+        [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen2) userInfo:NO repeats:nil];
+       
+    }
+    
+}
+
+
+-(void)btn1blinkenlassen2
+{
+    if (anfahrt == 0 && btnanfahrt.enabled == YES)
+    {
+        
         btnanfahrt.highlighted = NO;
         [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
+        
     }
+    
 }
+
+//Blinkfunktionen Ende
 
 - (void)dealloc {
     [btnanfahrt release];
