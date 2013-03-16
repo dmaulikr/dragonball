@@ -128,6 +128,7 @@
 		90C0DA7416C192D00008FF87 /* AGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C0DA7216C192D00008FF87 /* AGBViewController.m */; };
 		90C0DA7916C193050008FF87 /* VorRegiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C0DA7716C193050008FF87 /* VorRegiViewController.m */; };
 		90C0DA7A16C193050008FF87 /* VorRegiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C0DA7816C193050008FF87 /* VorRegiViewController.xib */; };
+		90F6C6FE16F524F9002EA265 /* tabbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 90F6C6FD16F524F9002EA265 /* tabbutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -301,6 +302,7 @@
 		90C0DA7616C193050008FF87 /* VorRegiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VorRegiViewController.h; sourceTree = "<group>"; };
 		90C0DA7716C193050008FF87 /* VorRegiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VorRegiViewController.m; sourceTree = "<group>"; };
 		90C0DA7816C193050008FF87 /* VorRegiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VorRegiViewController.xib; sourceTree = "<group>"; };
+		90F6C6FD16F524F9002EA265 /* tabbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,21 +324,7 @@
 		0A27E61116EDE92E00148CEC /* StatusbarImages */ = {
 			isa = PBXGroup;
 			children = (
-				0A27E63616EDF21E00148CEC /* tab_misuse.png */,
-				0A27E63016EDF02900148CEC /* PopoverBackgroundRed.png */,
-				0A27E63116EDF02900148CEC /* PopoverBackgroundRed@2x.png */,
-				0A27E62C16EDF02200148CEC /* PopoverBackgroundGreen.png */,
-				0A27E62D16EDF02200148CEC /* PopoverBackgroundGreen@2x.png */,
-				0A27E62616EDEEFF00148CEC /* mapTaxi22.png */,
-				0A27E62716EDEEFF00148CEC /* mapTaxi22@2x.png */,
-				0A27E62216EDEEE500148CEC /* redtaxi.png */,
-				0A27E62316EDEEE500148CEC /* redtaxi@2x.png */,
-				0A27E61E16EDED8A00148CEC /* marker-blue.png */,
-				0A27E61F16EDED8A00148CEC /* marker-red.png */,
-				0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */,
-				0A27E61B16EDEB2F00148CEC /* tab5orange_cab@2x.png */,
-				0A27E61216EDE9E300148CEC /* statuszerograu.png */,
-				0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */,
+				90F6C6FD16F524F9002EA265 /* tabbutton.png */,
 			);
 			name = StatusbarImages;
 			sourceTree = "<group>";
@@ -344,6 +332,7 @@
 		0A2A6B8916B7FAF000C24418 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				90F6C6FC16F52413002EA265 /* Kevins Idiotenimages */,
 				90AD9E7816D7D794002C1CDF /* duhi6.png */,
 				0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */,
 				90BA437016B7FCB100969B5E /* mapTaxi20.png */,
@@ -607,6 +596,28 @@
 			name = TableImages;
 			sourceTree = "<group>";
 		};
+		90F6C6FC16F52413002EA265 /* Kevins Idiotenimages */ = {
+			isa = PBXGroup;
+			children = (
+				0A27E63616EDF21E00148CEC /* tab_misuse.png */,
+				0A27E63016EDF02900148CEC /* PopoverBackgroundRed.png */,
+				0A27E63116EDF02900148CEC /* PopoverBackgroundRed@2x.png */,
+				0A27E62C16EDF02200148CEC /* PopoverBackgroundGreen.png */,
+				0A27E62D16EDF02200148CEC /* PopoverBackgroundGreen@2x.png */,
+				0A27E62616EDEEFF00148CEC /* mapTaxi22.png */,
+				0A27E62716EDEEFF00148CEC /* mapTaxi22@2x.png */,
+				0A27E62216EDEEE500148CEC /* redtaxi.png */,
+				0A27E62316EDEEE500148CEC /* redtaxi@2x.png */,
+				0A27E61E16EDED8A00148CEC /* marker-blue.png */,
+				0A27E61F16EDED8A00148CEC /* marker-red.png */,
+				0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */,
+				0A27E61B16EDEB2F00148CEC /* tab5orange_cab@2x.png */,
+				0A27E61216EDE9E300148CEC /* statuszerograu.png */,
+				0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */,
+			);
+			name = "Kevins Idiotenimages";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -731,6 +742,7 @@
 				0A27E63316EDF02900148CEC /* PopoverBackgroundRed@2x.png in Resources */,
 				0A27E63716EDF21E00148CEC /* tab_misuse.png in Resources */,
 				0ACDD0DD16F521AA00B0575D /* statusbar.xib in Resources */,
+				90F6C6FE16F524F9002EA265 /* tabbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
