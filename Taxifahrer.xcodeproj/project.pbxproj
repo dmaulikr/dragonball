@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A27E60F16EDE85A00148CEC /* statusbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A27E60D16EDE85A00148CEC /* statusbar.m */; };
-		0A27E61016EDE85A00148CEC /* statusbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E60E16EDE85A00148CEC /* statusbar.xib */; };
 		0A27E61416EDE9E300148CEC /* statuszerograu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61216EDE9E300148CEC /* statuszerograu.png */; };
 		0A27E61516EDE9E300148CEC /* statuszerograu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */; };
 		0A27E61C16EDEB2F00148CEC /* tab5orange_cab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */; };
@@ -58,6 +56,8 @@
 		0AB98C5E16CB2D8D00DD63E0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C5D16CB2D8D00DD63E0 /* Icon.png */; };
 		0AB98C6016CB2DD600DD63E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C5F16CB2DD600DD63E0 /* Default.png */; };
 		0AB98C6216CB2EAC00DD63E0 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */; };
+		0ACDD0DC16F521AA00B0575D /* statusbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDD0DA16F521AA00B0575D /* statusbar.m */; };
+		0ACDD0DD16F521AA00B0575D /* statusbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDD0DB16F521AA00B0575D /* statusbar.xib */; };
 		0AF6B2E016BBFAFE00E877C4 /* JobGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */; };
 		9096CDEE16C95CBC00125084 /* JobCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9096CDED16C95CBC00125084 /* JobCenter.m */; };
 		9098A49316D003320013D093 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9098A49516D003320013D093 /* Localizable.strings */; };
@@ -131,9 +131,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A27E60C16EDE85A00148CEC /* statusbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statusbar.h; sourceTree = "<group>"; };
-		0A27E60D16EDE85A00148CEC /* statusbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusbar.m; sourceTree = "<group>"; };
-		0A27E60E16EDE85A00148CEC /* statusbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusbar.xib; sourceTree = "<group>"; };
 		0A27E61216EDE9E300148CEC /* statuszerograu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statuszerograu.png; sourceTree = "<group>"; };
 		0A27E61316EDE9E300148CEC /* statuszerograu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statuszerograu@2x.png"; sourceTree = "<group>"; };
 		0A27E61A16EDEB2F00148CEC /* tab5orange_cab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab5orange_cab.png; sourceTree = "<group>"; };
@@ -209,6 +206,9 @@
 		0AB98C5D16CB2D8D00DD63E0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0AB98C5F16CB2DD600DD63E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Dropbox/ProjekteUndHausaufgaben/TaxiDriverProjekt/iphone/TaxiButton/TaxiButton/Default.png; sourceTree = "<group>"; };
 		0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = ../../../Dropbox/ProjekteUndHausaufgaben/TaxiDriverProjekt/iphone/TaxiCaller/TargetFiles/base/iTunesArtwork.png; sourceTree = "<group>"; };
+		0ACDD0D916F521AA00B0575D /* statusbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statusbar.h; sourceTree = "<group>"; };
+		0ACDD0DA16F521AA00B0575D /* statusbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusbar.m; sourceTree = "<group>"; };
+		0ACDD0DB16F521AA00B0575D /* statusbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusbar.xib; sourceTree = "<group>"; };
 		0AF6B2DE16BBFAFE00E877C4 /* JobGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobGenerator.h; sourceTree = "<group>"; };
 		0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobGenerator.m; sourceTree = "<group>"; };
 		9096CDEC16C95CBC00125084 /* JobCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobCenter.h; sourceTree = "<group>"; };
@@ -580,10 +580,10 @@
 				9098A4A816D009090013D093 /* TabMainViewController.h */,
 				9098A4A916D009090013D093 /* TabMainViewController.m */,
 				9098A4DC16D01B790013D093 /* TabMainViewController.xib */,
-				0A27E60C16EDE85A00148CEC /* statusbar.h */,
-				0A27E60D16EDE85A00148CEC /* statusbar.m */,
-				0A27E60E16EDE85A00148CEC /* statusbar.xib */,
 				90BA435B16B7E37600969B5E /* AnfangViewController.h */,
+				0ACDD0D916F521AA00B0575D /* statusbar.h */,
+				0ACDD0DA16F521AA00B0575D /* statusbar.m */,
+				0ACDD0DB16F521AA00B0575D /* statusbar.xib */,
 				90BA435C16B7E37700969B5E /* AnfangViewController.m */,
 				90BA435D16B7E37700969B5E /* AnfangViewController.xib */,
 				90A19CB316E66CF9005DD607 /* ProfilTableViewController.h */,
@@ -715,7 +715,6 @@
 				90A19CA816E6625B005DD607 /* yes.png in Resources */,
 				90A19CAF16E668BB005DD607 /* MottoCell.xib in Resources */,
 				90A19CB716E66CFA005DD607 /* ProfilTableViewController.xib in Resources */,
-				0A27E61016EDE85A00148CEC /* statusbar.xib in Resources */,
 				0A27E61416EDE9E300148CEC /* statuszerograu.png in Resources */,
 				0A27E61516EDE9E300148CEC /* statuszerograu@2x.png in Resources */,
 				0A27E61C16EDEB2F00148CEC /* tab5orange_cab.png in Resources */,
@@ -731,6 +730,7 @@
 				0A27E63216EDF02900148CEC /* PopoverBackgroundRed.png in Resources */,
 				0A27E63316EDF02900148CEC /* PopoverBackgroundRed@2x.png in Resources */,
 				0A27E63716EDF21E00148CEC /* tab_misuse.png in Resources */,
+				0ACDD0DD16F521AA00B0575D /* statusbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +784,7 @@
 				90AD9E7716D7D17F002C1CDF /* DataManager.m in Sources */,
 				90A19CB216E66910005DD607 /* MottoCell.m in Sources */,
 				90A19CB616E66CFA005DD607 /* ProfilTableViewController.m in Sources */,
-				0A27E60F16EDE85A00148CEC /* statusbar.m in Sources */,
+				0ACDD0DC16F521AA00B0575D /* statusbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

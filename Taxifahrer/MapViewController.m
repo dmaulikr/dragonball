@@ -91,8 +91,7 @@
     tabMain.view.frame = CGRectMake(0, 367, 320, 49);
     [self.view addSubview:tabMain.view];
     
-    statustab = [[ViewMediator getInstance] statusmvc];
-    statustab.view.frame = CGRectMake(0, 367, 320, 49);
+
     
 }
 
@@ -407,11 +406,12 @@
     
     [self.view addSubview:mapview];
     //[self.view addSubview:tabMain.view];
-    [self.view addSubview:statustab.view];
+ 
     //[self.view bringSubviewToFront:statustab.view];
     
-  
-    
+    statustab = [[ViewMediator getInstance] statusmvc];
+    statustab.view.frame = CGRectMake(0, 367, 320, 49);
+    [self.view addSubview:statustab.view];
     
 }
 
