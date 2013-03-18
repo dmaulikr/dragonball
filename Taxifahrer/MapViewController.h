@@ -58,10 +58,12 @@
 
 - (IBAction)buttonZuRegi:(id)sender;
 
++(MapViewController*) getInstance;
 -(void) jobsZeichnen;
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
 -(void) showYesAndNoButton;
+-(void) wiedertabmainzeigen;
 
 -(IBAction)Profil:(id)sender;
 -(IBAction) rejectButtonPressed:(id)sender;

@@ -29,7 +29,16 @@
 @synthesize mediator;
 @synthesize Profil;
 @synthesize imgDetail;
+static MapViewController* MapView = nil;
 
++(MapViewController*) getInstance
+{
+    if (MapView == nil)
+    {
+        MapView = [[MapViewController alloc] init];
+    }
+    return MapView;
+}
 
 - (void)viewDidLoad
 {
@@ -92,7 +101,6 @@
     [self.view addSubview:tabMain.view];
     
 
-    
 }
 
 -(void) jobsZeichnen
@@ -405,13 +413,14 @@
     //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
     
     [self.view addSubview:mapview];
-    //[self.view addSubview:tabMain.view];
+    [self.view addSubview:tabMain.view];
  
     //[self.view bringSubviewToFront:statustab.view];
     
     statustab = [[ViewMediator getInstance] statusmvc];
-    statustab.view.frame = CGRectMake(0, 367, 320, 49);
+    statustab.view.frame = CGRectMake(0, 320, 320, 49);
     [self.view addSubview:statustab.view];
+    
     
 }
 
@@ -433,6 +442,15 @@
     
     
     [self hideJobDetails];
+}
+
+-(void) wiedertabmainzeigen
+{
+    NSLog(@"Leb ich eigentlich?");
+    
+    [self.view addSubview:mapview];
+    [self.view addSubview:tabMain.view];
+    [self.view bringSubviewToFront:tabMain.view];
 }
 
 
