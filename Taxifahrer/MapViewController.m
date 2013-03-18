@@ -92,7 +92,17 @@
     [self.view addSubview:tabMain.view];
     
 
+}
+
+-(void) wiedertabmainzeigen
+{
+    NSLog(@"Leb ich eigentlich?");
+   [self.view addSubview:mapview];
+   
+   // [self.view addSubview:tabMain.view];
+   // [self.view bringSubviewToFront:tabMain.view];
     
+   
 }
 
 -(void) jobsZeichnen

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class ViewMediator;
+@class MapViewController;
 @interface statusbar : UIViewController
 {
     IBOutlet UIButton *btnanfahrt;
@@ -23,6 +24,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *btnfertig;
 @property (retain, nonatomic) IBOutlet UIButton *btnbeschwerde;
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
+@property (nonatomic,retain) MapViewController* mapvc;
 
 -(IBAction) btnanfahrtPressed;
 -(IBAction)btnbindaPressed;

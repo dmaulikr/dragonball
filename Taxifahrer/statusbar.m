@@ -8,6 +8,7 @@
 
 #import "statusbar.h"
 #import "ViewMediator.h"
+#import "MapViewController.h"
 
 @interface statusbar ()
 
@@ -22,6 +23,7 @@
 @synthesize btnbinda;
 @synthesize btnbeschwerde;
 @synthesize mediator;
+@synthesize mapvc;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +38,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
     anfahrt = 0;
     [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
     btnanfahrt.enabled = YES;
@@ -86,6 +89,8 @@
     anfahrt = 0;
     btnanfahrt.enabled = YES;
     [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
+    [mapvc wiedertabmainzeigen];
+
 }
 
 
