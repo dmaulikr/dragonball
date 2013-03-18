@@ -448,13 +448,8 @@ static MapViewController* MapView = nil;
 {
     NSLog(@"Leb ich eigentlich?");
     
-    //[self.view removeFromSuperview:statustab];
-    
-    //[self.view addSubview:mapview];
-    //[self.view addSubview:tabMain.view];
-    //[self.view bringSubviewToFront:tabMain.view];
-    
-    //[statustab.view removeFromSuperview];
+    statustab = [[ViewMediator getInstance] statusmvc];
+    [statustab.view removeFromSuperview];
 }
 
 
