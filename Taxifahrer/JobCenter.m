@@ -72,6 +72,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
     {
         for (int i = 0; i < [incommingacceptjob count]; i++)
         {
+            NSLog(@"Die Forschleife wurde aufgerufen");
             CJob* Acceptjob = [incommingacceptjob objectAtIndex:incommingacceptjob];
             [acceptedJobs addObject:Acceptjob];
         }

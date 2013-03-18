@@ -27,8 +27,10 @@ static JobGenerator* generator = nil;
 -(void) starteGenerator
 {
     [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(jobsSenden) userInfo:nil repeats:NO];
+   
     
     [self angenommendenJobSenden];
+    
 }
 
 -(void) jobsSenden
