@@ -11,6 +11,10 @@
 #define NOTIFICATION_JOBCENTERHASNEWJOBS2 @"NOTIFICATION_JOBCENTERHASNEWJOBS2"
 
 @interface JobCenter : NSObject
+{
+    NSMutableArray* acceptedJobs;
+}
+
 +(JobCenter*) getInstance;
 
 @property (nonatomic,retain) NSMutableArray* offeneJobs;

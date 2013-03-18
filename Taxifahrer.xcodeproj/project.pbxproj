@@ -641,6 +641,8 @@
 		0A6FF093169C86E400BA9F51 /* UserdataManager */ = {
 			isa = PBXGroup;
 			children = (
+				0A31AD8116F76558004691A2 /* BitmapNumbers.h */,
+				0A31AD8216F76558004691A2 /* BitmapNumbers.m */,
 				90BA437516B7FCE500969B5E /* ImageAnnotation.h */,
 				90BA437616B7FCE500969B5E /* ImageAnnotation.m */,
 				0A6FF094169C870900BA9F51 /* UserdataManager.h */,
@@ -754,8 +756,6 @@
 				90A19CB016E66910005DD607 /* MottoCell.h */,
 				90A19CB116E66910005DD607 /* MottoCell.m */,
 				90A19CAE16E668BB005DD607 /* MottoCell.xib */,
-				0A31AD8116F76558004691A2 /* BitmapNumbers.h */,
-				0A31AD8216F76558004691A2 /* BitmapNumbers.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";

@@ -46,6 +46,11 @@
     statusbar* statustab;
     
     NSMutableArray* allejobs;
+    NSMutableArray* alleJobs;
+    CJob* beispieljob;
+    
+    int i;
+    CJob* unserJob;
 }
 
 @property (nonatomic,retain) UIImageView* imgDetail;
@@ -54,7 +59,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *lblKoordinate;
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
 @property (nonatomic,retain) ProfilTableViewController* Profil;
-
 
 - (IBAction)buttonZuRegi:(id)sender;
 

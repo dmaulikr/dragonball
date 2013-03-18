@@ -111,10 +111,10 @@ static MapViewController* MapView = nil;
     [mapview removeAnnotations:mapview.annotations];
     
     JobCenter* jobcenterzeiger = [JobCenter getInstance];
-    NSMutableArray* alleJobs = jobcenterzeiger.offeneJobs;
+    alleJobs = jobcenterzeiger.offeneJobs;
     
-    for (int i = 0; i < [alleJobs count];i++) {
-        CJob* beispieljob = [alleJobs objectAtIndex:i];
+    for (i = 0; i < [alleJobs count];i++) {
+        beispieljob = [alleJobs objectAtIndex:i];
         
         double breitengrad = [beispieljob.latitude doubleValue];
         double laengengrad = [beispieljob.longitude doubleValue];
@@ -231,7 +231,7 @@ static MapViewController* MapView = nil;
     NSLog(@"Button gedrückt! [MapViewController]");
     
     JobButton* jb = (JobButton*) sender;
-    CJob* unserJob = jb.job;
+    unserJob = jb.job;
     
     NSLog(@"Job für %@ wurde ausgewählt. [MapViewController]", unserJob.name);
     
@@ -404,6 +404,12 @@ static MapViewController* MapView = nil;
 
 - (IBAction)acceptJob:(id)sender
 {
+    JobCenter* Center = [[JobCenter alloc] init];
+    [Center.acceptedJobs addObject:unserJob];
+    
+    [allejobs removeObjectAtIndex:unserJob];
+    //[allejobs removeObject:i];
+    
     [self hideYesAndNoButton];
     self.navigationItem.rightBarButtonItem = nil;
     
@@ -412,16 +418,17 @@ static MapViewController* MapView = nil;
     [[DataManager getInstance] showAcceptCustomerPendingAlert];
     //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
     
-    [self.view addSubview:mapview];
-    [self.view addSubview:tabMain.view];
+    [self hideYesAndNoButton];
+    lblAnnehmen.text = [NSString stringWithFormat:@"Auftrag angenommenn."];
+    
+    //[self.view addSubview:mapview];
+    //[self.view addSubview:tabMain.view];
  
     //[self.view bringSubviewToFront:statustab.view];
     
     statustab = [[ViewMediator getInstance] statusmvc];
     statustab.view.frame = CGRectMake(0, 320, 320, 49);
     [self.view addSubview:statustab.view];
-    
-    
 }
 
 -(IBAction) rejectButtonPressed:(id)sender {
