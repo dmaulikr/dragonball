@@ -89,8 +89,10 @@
     anfahrt = 0;
     btnanfahrt.enabled = YES;
     [NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
-    [mapvc wiedertabmainzeigen];
-
+    //[mapvc wiedertabmainzeigen];
+    
+    MapViewController* zeiger = [MapViewController getInstance];
+    [zeiger wiedertabmainzeigen];
 }
 
 

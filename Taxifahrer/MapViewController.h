@@ -58,6 +58,7 @@
 
 - (IBAction)buttonZuRegi:(id)sender;
 
++(MapViewController*) getInstance;
 -(void) jobsZeichnen;
 -(void) locationErhalten:(NSNotification*) nachricht;
 -(void) locationFehler:(NSNotification*) nachricht;
