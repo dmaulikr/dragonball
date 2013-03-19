@@ -102,26 +102,6 @@
     [zeiger wiedertabmainzeigen];
 }
 
-/*
--(void) jobEmpfangen:(NSNotification*) briefumschlag //notification
-{
-    NSLog(@"jobEmpfangen aufgerufen");
-    [offeneJobs removeAllObjects];
-    
-    NSLog(@" Übertrage anommende Jobs in eigenes Array");
-    NSMutableArray* incommingjobarray = (NSMutableArray*) briefumschlag.object;
-    
-    if (incommingjobarray != nil && [incommingjobarray count] > 0)
-    {
-        for (int i = 0; i < [incommingjobarray count]; i++)
-        {
-            CJob* job = [incommingjobarray objectAtIndex:i];
-            [offeneJobs addObject:job];
-        }
-        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_JOBCENTERHASNEWJOBS object:offeneJobs];
-    }
-}
-*/
 
 
 //Blinkfunktionen
