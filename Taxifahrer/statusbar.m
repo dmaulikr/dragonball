@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    [JobCenter getInstance];
     anfahrt = 0;
     [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(btn1blinkenlassen) userInfo:NO repeats:nil];
     btnanfahrt.enabled = YES;
@@ -55,10 +55,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//Notiz an mich (Kevin)
-//Status 0 muss noch hinzugefuegt werden
-//Bedenke, dass beim freischalten nach Erledigung des Auftrages ein neuer Auftrag verfuegbar sein muss, damit die Dinger wieder blinken/es nutzbar ist
 
 
 
@@ -90,22 +86,42 @@
     btnfertig.enabled = NO;
     anfahrt = 0;
     btnanfahrt.enabled = YES;
-    MapViewController* zeiger = [MapViewController getInstance];
-    [JobCenter getInstance];
+    [self angenommenejobszubeendetejobs];
     
-    //Baustelle
-    [jc.acceptedJobs removeLastObject];
-    //Baustelle Ende
-    
-    [zeiger wiedertabmainzeigen];
-    
-    
-    
-    
-    
+  
 }
 
 
+-(void) angenommenejobszubeendetejobs
+{
+    NSLog(@"angenommenejobszubeendetejobs [statusbar]");
+    [JobCenter getInstance];
+    MapViewController* zeiger = [MapViewController getInstance];
+    [jc.finishedJobs addObject:jc.acceptedJobs.lastObject];
+    [jc.acceptedJobs removeLastObject];
+    [zeiger wiedertabmainzeigen];
+}
+
+/*
+-(void) jobEmpfangen:(NSNotification*) briefumschlag //notification
+{
+    NSLog(@"jobEmpfangen aufgerufen");
+    [offeneJobs removeAllObjects];
+    
+    NSLog(@" Übertrage anommende Jobs in eigenes Array");
+    NSMutableArray* incommingjobarray = (NSMutableArray*) briefumschlag.object;
+    
+    if (incommingjobarray != nil && [incommingjobarray count] > 0)
+    {
+        for (int i = 0; i < [incommingjobarray count]; i++)
+        {
+            CJob* job = [incommingjobarray objectAtIndex:i];
+            [offeneJobs addObject:job];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_JOBCENTERHASNEWJOBS object:offeneJobs];
+    }
+}
+*/
 
 
 //Blinkfunktionen

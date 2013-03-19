@@ -32,6 +32,7 @@
 -(IBAction)btnbindaPressed;
 -(IBAction)btnBeginneAuftragPressed;
 -(IBAction)btnfertigPressed;
+-(void) angenommenejobszubeendetejobs;
 
 
 @end

@@ -20,5 +20,5 @@
 
 @property (nonatomic,retain) NSMutableArray* offeneJobs;
 @property (nonatomic,retain) NSMutableArray* acceptedJobs;
-
+@property (nonatomic,retain) NSMutableArray* finishedJobs;
 @end

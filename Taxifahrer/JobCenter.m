@@ -17,6 +17,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
 
 @synthesize offeneJobs;
 @synthesize acceptedJobs;
+@synthesize finishedJobs;
 
 +(JobCenter*) getInstance
 {
@@ -37,6 +38,7 @@ static JobCenter* jobcenter_fernbedienung = nil;
         
         offeneJobs = [[NSMutableArray alloc] init];
         acceptedJobs = [[NSMutableArray alloc] init];
+        finishedJobs = [[NSMutableArray alloc]init];
     }
     return self;
 }

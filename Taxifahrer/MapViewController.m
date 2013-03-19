@@ -275,6 +275,7 @@ static MapViewController* MapView = nil;
 
 -(void) jobDetail:(NSNotification*) notification
 {
+ 
     displayedJob = (CJob*) notification.object;
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
@@ -361,8 +362,11 @@ static MapViewController* MapView = nil;
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
     
+  
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
+
+    
 }
 
 -(void) showYesAndNoButton
@@ -451,12 +455,16 @@ static MapViewController* MapView = nil;
     [self hideJobDetails];
 }
 
+
+
 -(void) wiedertabmainzeigen
 {
     NSLog(@"wiedertabmainanzeigen");
     
     statustab = [[ViewMediator getInstance] statusmvc];
     [statustab.view removeFromSuperview];
+    
+   
 }
 
 
