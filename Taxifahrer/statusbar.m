@@ -9,6 +9,7 @@
 #import "statusbar.h"
 #import "ViewMediator.h"
 #import "MapViewController.h"
+#import "JobCenter.h"
 
 @interface statusbar ()
 
@@ -24,6 +25,7 @@
 @synthesize btnbeschwerde;
 @synthesize mediator;
 @synthesize mapvc;
+@synthesize jc;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -89,7 +91,17 @@
     anfahrt = 0;
     btnanfahrt.enabled = YES;
     MapViewController* zeiger = [MapViewController getInstance];
+    [JobCenter getInstance];
+    
+    //Baustelle
+    [jc.acceptedJobs removeLastObject];
+    //Baustelle Ende
+    
     [zeiger wiedertabmainzeigen];
+    
+    
+    
+    
     
 }
 

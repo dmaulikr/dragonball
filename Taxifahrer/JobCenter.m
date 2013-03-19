@@ -9,6 +9,7 @@
 #import "JobCenter.h"
 #import "JobGenerator.h"
 #import "CJob.h"
+#import "statusbar.h"
 
 @implementation JobCenter
 

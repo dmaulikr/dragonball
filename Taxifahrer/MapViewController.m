@@ -453,7 +453,7 @@ static MapViewController* MapView = nil;
 
 -(void) wiedertabmainzeigen
 {
-    NSLog(@"Leb ich eigentlich?");
+    NSLog(@"wiedertabmainanzeigen");
     
     statustab = [[ViewMediator getInstance] statusmvc];
     [statustab.view removeFromSuperview];
