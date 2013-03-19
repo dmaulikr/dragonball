@@ -275,7 +275,6 @@ static MapViewController* MapView = nil;
 
 -(void) jobDetail:(NSNotification*) notification
 {
- 
     displayedJob = (CJob*) notification.object;
     
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
@@ -355,18 +354,14 @@ static MapViewController* MapView = nil;
     
     
     [self showYesAndNoButton];
-    
 }
 
 -(IBAction)hideJobDetails
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
     
-  
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
-
-    
 }
 
 -(void) showYesAndNoButton
@@ -404,6 +399,9 @@ static MapViewController* MapView = nil;
     
     btnJobNo = nil;
     btnJobYes = nil;
+    
+    btnJobNo.hidden = YES;
+    btnJobYes.hidden = YES;
 }
 
 - (IBAction)acceptJob:(id)sender
@@ -443,14 +441,12 @@ static MapViewController* MapView = nil;
     //DataManager* manager = [DataManager getInstance];
     //[manager addToBlackList:self.displayedJob.token];
    
-    
     //Hier soll eig. zur aktuellen Userposition gesprungen werden.
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 53.55f;
     coordinate.longitude = 10.0f;
     [mapview setCenterCoordinate:coordinate];
-    
     
     [self hideJobDetails];
 }
@@ -463,8 +459,6 @@ static MapViewController* MapView = nil;
     
     statustab = [[ViewMediator getInstance] statusmvc];
     [statustab.view removeFromSuperview];
-    
-   
 }
 
 
