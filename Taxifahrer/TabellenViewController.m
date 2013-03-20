@@ -21,6 +21,9 @@
 @implementation TabellenViewController
 @synthesize mediator;
 @synthesize karte;
+@synthesize offeneJobs;
+@synthesize acceptedJobs;
+@synthesize beendeteJobs;
 
 - (void)viewDidLoad
 {
@@ -36,8 +39,9 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
     jobcenterzeiger = [JobCenter getInstance];
-    allejobs = jobcenterzeiger.offeneJobs;
+    offeneJobs = jobcenterzeiger.offeneJobs;
     aceptedJobs = jobcenterzeiger.acceptedJobs;
+    beendeteJobs = jobcenterzeiger.finishedJobs;
     
     NSLog(@"JobArray Zähler: %d", allejobs.count);
    
@@ -77,7 +81,7 @@
     
     switch(section){
         case 0:
-            return [allejobs count];
+            return [offeneJobs count];
             break;
         case 1:
             return [aceptedJobs count];
@@ -107,7 +111,7 @@
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     
     int reihe = indexPath.row;
-    CJob* beispieljob = [allejobs objectAtIndex:reihe];
+    CJob* beispieljob = [offeneJobs objectAtIndex:reihe];
     
     jobname = beispieljob.name;
     cell.textLabel.text = jobname;
@@ -123,7 +127,7 @@
 	int reihe = indexPath.row;
     
 	// Den Job bekommt man dann ganz normal aus dem Array
-	CJob* job = [allejobs objectAtIndex:reihe];
+	CJob* job = [offeneJobs objectAtIndex:reihe];
     
 	// Mit dem Job kann mann dann weiterarbeiten
     // Hier posten wir den Job mit einer Notification, die ich dafür geschaffen habe.
