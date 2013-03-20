@@ -24,9 +24,8 @@
     JobCenter* jobcenterzeiger;
 }
 
-@property (nonatomic,retain) NSMutableArray* offeneJobs;
+@property (nonatomic,retain) NSMutableArray* alleJobs;
 @property (nonatomic,retain) NSMutableArray* acceptedJobs;
-@property (nonatomic,retain) NSMutableArray* beendeteJobs;
 @property (nonatomic,retain) IBOutlet ViewMediator* mediator;
 @property (nonatomic,retain) MapViewController* karte;
 -(IBAction)Profil:(id)sender;
