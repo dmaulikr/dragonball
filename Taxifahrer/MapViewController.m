@@ -178,7 +178,17 @@ static MapViewController* MapView = nil;
             meinLabel.text = Job.street;
             meinLabel.textAlignment = NSTextAlignmentCenter;
             meinLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel.textColor = [UIColor greenColor];
+            
+            if ([Job.jobstatus isEqualToString:@"open"])
+            {
+             meinLabel.textColor = [UIColor greenColor];
+            }
+            
+            else
+            {
+              meinLabel.textColor = [UIColor redColor];
+            }
+           
             meinLabel.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel];
             
@@ -186,7 +196,17 @@ static MapViewController* MapView = nil;
             meinLabel2.text = Job.name;
             meinLabel2.textAlignment = NSTextAlignmentCenter;
             meinLabel2.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel2.textColor = [UIColor greenColor];
+            if ([Job.jobstatus isEqualToString:@"open"])
+            {
+                meinLabel2.textColor = [UIColor greenColor];
+            }
+            
+            else
+            {
+                meinLabel2.textColor = [UIColor redColor];
+            }
+
+            
             meinLabel2.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel2];
             
@@ -194,7 +214,16 @@ static MapViewController* MapView = nil;
             meinLabel3.text = Job.taxisize;
             meinLabel3.textAlignment = NSTextAlignmentCenter;
             meinLabel3.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel3.textColor = [UIColor greenColor];
+            if ([Job.jobstatus isEqualToString:@"open"])
+            {
+                meinLabel3.textColor = [UIColor greenColor];
+            }
+            
+            else
+            {
+                meinLabel3.textColor = [UIColor redColor];
+            }
+
             meinLabel3.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel3];
             
