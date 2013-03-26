@@ -178,7 +178,7 @@ static MapViewController* MapView = nil;
             meinLabel.text = Job.street;
             meinLabel.textAlignment = NSTextAlignmentCenter;
             meinLabel.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel.textColor = [UIColor greenColor];
+            //meinLabel.textColor = [UIColor greenColor];
             meinLabel.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel];
             
@@ -186,7 +186,7 @@ static MapViewController* MapView = nil;
             meinLabel2.text = Job.name;
             meinLabel2.textAlignment = NSTextAlignmentCenter;
             meinLabel2.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel2.textColor = [UIColor greenColor];
+            //meinLabel2.textColor = [UIColor greenColor];
             meinLabel2.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel2];
             
@@ -194,9 +194,22 @@ static MapViewController* MapView = nil;
             meinLabel3.text = Job.taxisize;
             meinLabel3.textAlignment = NSTextAlignmentCenter;
             meinLabel3.font = [UIFont fontWithName:@"Arial" size:10.0];
-            meinLabel3.textColor = [UIColor greenColor];
+            //meinLabel3.textColor = [UIColor greenColor];
             meinLabel3.backgroundColor = [UIColor clearColor];
             [_annotationView addSubview:meinLabel3];
+            
+            if ([Job.jobstatus isEqualToString:@"accepted"])
+            {
+                meinLabel.textColor = [UIColor redColor];
+                meinLabel2.textColor = [UIColor redColor];
+                meinLabel3.textColor = [UIColor redColor];
+            }
+            else if ([Job.jobstatus isEqualToString:@"open"])
+            {
+                meinLabel.textColor = [UIColor greenColor];
+                meinLabel2.textColor = [UIColor greenColor];
+                meinLabel3.textColor = [UIColor greenColor];
+            }
             
             // Malfläche zurückliefern
             return _annotationView;
@@ -380,11 +393,11 @@ static MapViewController* MapView = nil;
     [btnJobYes addTarget:self action:@selector(acceptJob:) forControlEvents:UIControlEventTouchUpInside];
     [btnJobYes setTitle:NSLocalizedString(@"JOB_YES", @"") forState:UIControlStateNormal];
     
-    [self.view addSubview:btnJobNo];
-    [self.view bringSubviewToFront:btnJobNo];
+    [imgDetail addSubview:btnJobNo];
+    [imgDetail bringSubviewToFront:btnJobNo];
     
-    [self.view addSubview:btnJobYes];
-    [self.view bringSubviewToFront:btnJobYes];
+    [imgDetail addSubview:btnJobYes];
+    [imgDetail bringSubviewToFront:btnJobYes];
     
    // [self adjustDetailView];
 }
@@ -392,13 +405,13 @@ static MapViewController* MapView = nil;
 -(void) hideYesAndNoButton
 {
     NSLog(@"hideYesAndNoButton");
-    if (btnJobNo != nil && [btnJobNo superview] != nil)
+    /*if (btnJobNo != nil && [btnJobNo superview] != nil)
         [btnJobNo removeFromSuperview];
     if (btnJobYes != nil && [btnJobYes superview] != nil)
         [btnJobYes removeFromSuperview];
-    
-    btnJobNo = nil;
-    btnJobYes = nil;
+    */
+    //btnJobNo = nil;
+    //btnJobYes = nil;
     
     btnJobNo.hidden = YES;
     btnJobYes.hidden = YES;
@@ -420,7 +433,6 @@ static MapViewController* MapView = nil;
     [[DataManager getInstance] showAcceptCustomerPendingAlert];
     //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
     
-    [self hideYesAndNoButton];
     lblAnnehmen.text = [NSString stringWithFormat:@"Auftrag angenommenn."];
     
     //[self.view addSubview:mapview];
