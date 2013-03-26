@@ -21,6 +21,8 @@
 @implementation TabellenViewController
 @synthesize mediator;
 @synthesize karte;
+@synthesize alleJobs;
+@synthesize acceptedJobs;
 
 - (void)viewDidLoad
 {
