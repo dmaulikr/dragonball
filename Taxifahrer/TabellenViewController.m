@@ -72,15 +72,22 @@
     return 2;
 }
 
-- (NSString *)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+/*- (NSString *)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 40;
-}
+}*/
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     //return [Sectins objectAtIndex:section];
     
+    if(section == 0)
+        return @"Offene Jobs";
+    else
+        return @"Angenommende Jobs";
+
+    
+    /*
     if(section == 0)
     {
         return @"Offene Jobs";
@@ -93,6 +100,7 @@
     {
         return @"Title2";
     }
+     */
 }
 
 
@@ -140,7 +148,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"Cell %i", indexPath.section]];
+    //UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"Cell %i", indexPath.section]];
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+    }
     
     int reihe = indexPath.row;
     CJob* beispieljob = [allejobs objectAtIndex:reihe];
@@ -169,5 +184,17 @@
     [[ViewMediator getInstance] showMapView];
     NSLog(@"Reihe: %d / Job: %@", reihe, jobname);
 }
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	
+	[self tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
+	
+	//return UITableViewCellAccessoryDetailDisclosureButton;
+	return UITableViewCellAccessoryDisclosureIndicator;
+}
+
 
 @end

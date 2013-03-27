@@ -22,6 +22,8 @@
     NSString* jobname;
     
     JobCenter* jobcenterzeiger;
+    
+    NSMutableArray* Testarray;
 }
 
 @property (nonatomic,retain) NSMutableArray* alleJobs;
