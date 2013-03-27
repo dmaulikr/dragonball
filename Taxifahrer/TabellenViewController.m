@@ -69,15 +69,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 2;
 }
+
+- (NSString *)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    //return [Sectins objectAtIndex:section];
+    
+    if(section == 0)
+    {
+        return @"Offene Jobs";
+    }
+    else if(section == 1)
+    {
+        return @"Angenommenden Jobs";
+    }
+    else
+    {
+        return @"Title2";
+    }
+}
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //int anzahl = [allejobs count];
     //return anzahl;
     
-    switch(section){
+    if(section == 0)
+    {
+        return [allejobs count];
+    }
+    else if(section == 1)
+    {
+        return [aceptedJobs count];
+    }
+    
+    /*switch(section){
         case 0:
             return [allejobs count];
             break;
@@ -88,6 +122,7 @@
             return nil;
             break;
     }
+     */
 }
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -105,8 +140,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"Cell %i", indexPath.section]];
     
     int reihe = indexPath.row;
     CJob* beispieljob = [allejobs objectAtIndex:reihe];
@@ -116,6 +150,7 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
+    
 }
 
 #pragma mark - Table view delegate
