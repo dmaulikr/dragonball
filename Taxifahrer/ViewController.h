@@ -33,6 +33,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *lblPostleitzahl;
 @property (retain, nonatomic) IBOutlet UILabel *lblRegistrieren;
 
+
 -(IBAction)registrieren:(id)sender;
 -(IBAction)nachobenschieben:(id)sender;
 -(IBAction)positionwiederherstellen:(id)sender;
