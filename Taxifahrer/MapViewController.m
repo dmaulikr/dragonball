@@ -454,6 +454,7 @@ static MapViewController* MapView = nil;
     //[[DataManager getInstance] requestAcceptClient:[userdefaults stringForKey:UDKeyUserName] :[userdefaults stringForKey:UDKeyPassword] :self.displayedJob : minuten];
     
     [self hideYesAndNoButton];
+    [self hideJobDetails];
     lblAnnehmen.text = [NSString stringWithFormat:@"Auftrag angenommenn."];
     
     //[self.view addSubview:mapview];
