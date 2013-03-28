@@ -51,6 +51,8 @@
     
     int i;
     int ButtonZaehler;
+    int JobDetailsZaehler;
+    
     CJob* unserJob;
 }
 

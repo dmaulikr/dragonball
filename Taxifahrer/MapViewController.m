@@ -94,6 +94,7 @@ static MapViewController* MapView = nil;
     bigBackButton.hidden = YES;
     
     ButtonZaehler = 0;
+    JobDetailsZaehler = 0;
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -289,11 +290,14 @@ static MapViewController* MapView = nil;
 {
     displayedJob = (CJob*) notification.object;
     
+    if (JobDetailsZaehler == 0)
+    {
+    
     imgDetail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PortraitDetail2.png"]];
     imgDetail.frame = CGRectMake(0, 0, imgDetail.image.size.width, imgDetail.image.size.height);
     [self.view addSubview:imgDetail];
     [self.view bringSubviewToFront:imgDetail];
-    
+        
     UIFont* f1 = [UIFont systemFontOfSize: 18.0f];
     UIFont* f2 = [UIFont systemFontOfSize: 13.0f];
     
@@ -363,14 +367,29 @@ static MapViewController* MapView = nil;
     coordinate.longitude = [displayedJob.longitude doubleValue];
     
     [mapview setCenterCoordinate:coordinate];
+        
+    JobDetailsZaehler = 1;
+    }
+    else 
+    {
+        imgDetail.hidden = NO;
+        [self.view bringSubviewToFront:imgDetail];
+        bigBackButton.enabled = YES;
+        [self.view bringSubviewToFront:bigBackButton];
+        
+        lblName.text = [NSString stringWithFormat:@"Name: %@", displayedJob.name];
+        lblStrasse.text = [NSString stringWithFormat:@"Strasse: %@", displayedJob.street];
     
-    
+    }
     [self showYesAndNoButton];
 }
 
 -(IBAction)hideJobDetails
 {
     NSLog(@"HIDEJOBDETAILLSLSSSSS");
+    
+    imgDetail.hidden = YES;
+    bigBackButton.enabled = NO;
     
     [self.view addSubview:mapview];
     [self.view addSubview:tabMain.view];
