@@ -50,6 +50,7 @@
     CJob* beispieljob;
     
     int i;
+    int ButtonZaehler;
     CJob* unserJob;
 }
 

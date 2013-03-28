@@ -92,6 +92,8 @@ static MapViewController* MapView = nil;
     imgDetail.hidden = YES;
     bigBackButton.enabled = NO;
     bigBackButton.hidden = YES;
+    
+    ButtonZaehler = 0;
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -376,6 +378,9 @@ static MapViewController* MapView = nil;
 
 -(void) showYesAndNoButton
 {
+    if (ButtonZaehler == 0)
+    {
+    
     NSLog(@"showYesAndNoButton");
     btnJobNo = [UIButton buttonWithType:UIButtonTypeCustom];
     [btnJobNo setBackgroundImage:[UIImage imageNamed:@"no.png"] forState:UIControlStateNormal];
@@ -396,12 +401,22 @@ static MapViewController* MapView = nil;
     [self.view addSubview:btnJobYes];
     [self.view bringSubviewToFront:btnJobYes];
     
+    }
+    else 
+    {
+        btnJobNo.hidden = NO;
+        btnJobYes.hidden = NO;
+        
+        [self.view bringSubviewToFront:btnJobNo];
+        [self.view bringSubviewToFront:btnJobYes];
+    }
+    
    // [self adjustDetailView];
 }
 
 -(void) hideYesAndNoButton
 {
-    NSLog(@"hideYesAndNoButton");
+    /*NSLog(@"hideYesAndNoButton");
     if (btnJobNo != nil && [btnJobNo superview] != nil)
         [btnJobNo removeFromSuperview];
     if (btnJobYes != nil && [btnJobYes superview] != nil)
@@ -409,9 +424,17 @@ static MapViewController* MapView = nil;
     
     btnJobNo = nil;
     btnJobYes = nil;
+    */
     
     btnJobNo.hidden = YES;
     btnJobYes.hidden = YES;
+    
+    if (ButtonZaehler == 0)
+    {
+    ButtonZaehler = 1;
+    }
+    //[mapview removeAnnotation:btnJobYes];
+    //[mapview removeAnnotation:btnJobNo];
 }
 
 - (IBAction)acceptJob:(id)sender
