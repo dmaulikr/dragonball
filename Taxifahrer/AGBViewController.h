@@ -10,6 +10,7 @@
 
 @interface AGBViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UITextView *agbtextscroll;
 - (IBAction)buttonZuRegi:(id)sender;
 - (IBAction)buttonZuLogin:(id)sender;
 

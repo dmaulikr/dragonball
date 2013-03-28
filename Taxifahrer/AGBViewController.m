@@ -11,9 +11,11 @@
 
 @interface AGBViewController ()
 
+
 @end
 
 @implementation AGBViewController
+@synthesize agbtextscroll;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +33,8 @@
     // Labels
     _lblUeberschrift.text = NSLocalizedString(@"LABEL_AGBHEADLINE", @"");
     _lblAGBs.text = NSLocalizedString(@"LABEL_AGBTEXT", @"");
-    _lblZurRegiButton.text = NSLocalizedString(@"LABEL_AGBZURREGIBUTTON", @""); 
+    _lblZurRegiButton.text = NSLocalizedString(@"LABEL_AGBZURREGIBUTTON", @"");
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +59,9 @@
     [_lblUeberschrift release];
     [_lblAGBs release];
     [_lblZurRegiButton release];
+    
+    [agbtextscroll release];
+   
     [super dealloc];
 }
 @end
