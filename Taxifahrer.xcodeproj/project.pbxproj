@@ -104,7 +104,6 @@
 		0AB98C6216CB2EAC00DD63E0 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */; };
 		0ACDD0DC16F521AA00B0575D /* statusbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDD0DA16F521AA00B0575D /* statusbar.m */; };
 		0ACDD0DD16F521AA00B0575D /* statusbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDD0DB16F521AA00B0575D /* statusbar.xib */; };
-		0ADA09EC1704EFE500D82FF8 /* taxidelogo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADA09EB1704EFE500D82FF8 /* taxidelogo3.png */; };
 		0AF6B2E016BBFAFE00E877C4 /* JobGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */; };
 		9096CDEE16C95CBC00125084 /* JobCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9096CDED16C95CBC00125084 /* JobCenter.m */; };
 		9098A49316D003320013D093 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9098A49516D003320013D093 /* Localizable.strings */; };
@@ -304,7 +303,6 @@
 		0ACDD0D916F521AA00B0575D /* statusbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statusbar.h; sourceTree = "<group>"; };
 		0ACDD0DA16F521AA00B0575D /* statusbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusbar.m; sourceTree = "<group>"; };
 		0ACDD0DB16F521AA00B0575D /* statusbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusbar.xib; sourceTree = "<group>"; };
-		0ADA09EB1704EFE500D82FF8 /* taxidelogo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = taxidelogo3.png; path = ../../TaxiDriverThorsten/taxidelogo3.png; sourceTree = "<group>"; };
 		0AF6B2DE16BBFAFE00E877C4 /* JobGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobGenerator.h; sourceTree = "<group>"; };
 		0AF6B2DF16BBFAFE00E877C4 /* JobGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobGenerator.m; sourceTree = "<group>"; };
 		9096CDEC16C95CBC00125084 /* JobCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobCenter.h; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 				0A31ADBE16F7666D004691A2 /* Numberset1 */,
 				90F6C6FC16F52413002EA265 /* Kevins Idiotenimages */,
 				90AD9E7816D7D794002C1CDF /* duhi6.png */,
-				0ADA09EB1704EFE500D82FF8 /* taxidelogo3.png */,
 				0AB98C6116CB2EAC00DD63E0 /* iTunesArtwork.png */,
 				90BA437016B7FCB100969B5E /* mapTaxi20.png */,
 				90C0DA6716C17F660008FF87 /* blackbutton.png */,
@@ -963,7 +960,6 @@
 				0A31AE1916F766E2004691A2 /* sm_9g.png in Resources */,
 				0A31AE1A16F766E2004691A2 /* sm_decimalg.png in Resources */,
 				0A31AE1B16F766E2004691A2 /* sm_kmg2.png in Resources */,
-				0ADA09EC1704EFE500D82FF8 /* taxidelogo3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
