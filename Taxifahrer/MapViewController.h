@@ -22,6 +22,7 @@
 @class statusbar;
 
 #define NOTIFICATION_DETAILTWOFORJOB @"job"
+#define NOTIFICATION_ACCEPTEDJOB @"AcceptedJob"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 {

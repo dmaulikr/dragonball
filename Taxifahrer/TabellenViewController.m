@@ -83,7 +83,7 @@
     
     if(section == 0)
         return @"Offene Jobs";
-    else
+    else if (section == 1)
         return @"Angenommende Jobs";
 
     

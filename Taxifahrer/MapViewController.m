@@ -459,11 +459,18 @@ static MapViewController* MapView = nil;
 - (IBAction)acceptJob:(id)sender
 {
     JobCenter* Center = [[JobCenter alloc] init];
+    
+    NSLog(@"%@", unserJob.jobstatus);
+    
+    //unserJob.jobstatus = @"accepted";
     [Center.acceptedJobs addObject:unserJob];
     
     [allejobs removeObjectAtIndex:unserJob];
-    //[allejobs removeObject:i];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACCEPTEDJOB object:Center.acceptedJobs];
+    
+    //[allejobs removeObject:i];
+
     [self hideYesAndNoButton];
     self.navigationItem.rightBarButtonItem = nil;
     
